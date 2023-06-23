@@ -1,0 +1,75 @@
+body{
+	background-image:url('../img/background.jpg');
+	background-size:cover;
+	background-position:0px -180px;
+}
+
+.conteiner{
+	width:65%;
+	margin:auto;
+	padding-top:20px;
+}
+
+.nav{
+	margin-bottom:150px;
+}
+
+.name{
+	color:white;
+	font-size:30px;
+	display:inline-block;
+}
+
+.soc-network{
+	display:inline-block;
+	float:right;
+}
+
+ul li a img{
+	width:20px;
+	height:20px;
+}
+
+ul{
+	margin:7px 0 0 0;
+}
+
+li{
+	display:inline-block;
+	margin-right:20px;
+}
+
+.main{
+	text-align:center;
+	color:white;
+	margin-bottom:150px;
+}
+
+.main h1{
+	letter-spacing:20px;
+	
+}
+
+.main p{
+	margin:50px 0 30px 0;
+}
+
+.main a{
+	width:200px;
+	padding:10px 0 10px 0;
+	display:inline-block;
+	border-radius:30px;
+	background-color:transparent;
+	border:2px solid white;
+	color:white;
+	text-decoration:none;
+}
+
+.copyright{
+	text-align:center;
+	color:gray;
+}
+
+.copyright span{
+	color:white;
+}

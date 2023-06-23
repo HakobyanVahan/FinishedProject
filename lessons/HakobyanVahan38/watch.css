@@ -1,0 +1,9 @@
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(red, purple);
+    font-size: 50px;
+    color: white;
+}

@@ -1,0 +1,55 @@
+.conteiner{
+	width:60%;
+	margin:auto;
+}
+	
+.parent{
+	display:inline-block;
+}
+
+.block{
+	width:49%;
+	border:3px solid orange;
+	box-sizing:border-box;
+	float:left;
+	margin-bottom:20px;
+	line-height:30px;
+	padding:15px;
+}
+
+.block_1 p{
+	height:60px;
+}
+
+.block_2 p{
+	height:60px;
+}
+
+.block_3 p{
+	height:100px;
+}
+
+.block_4 p{
+	height:100px;
+}
+
+.block_5 p{
+	height:60px;
+}
+
+.block_6 p{
+	height:60px;
+}
+
+h3{
+	margin:0;
+}
+
+p{
+	margin:0;
+	overflow:hidden;
+}
+
+.margin{
+	margin-right:2%;
+}

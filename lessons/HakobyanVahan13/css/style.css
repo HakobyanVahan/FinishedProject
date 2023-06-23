@@ -1,0 +1,161 @@
+*{
+	box-sizing:border-box;
+	margin:0;
+	padding:0;
+}
+
+p{
+	margin:16px 0;
+}
+
+div{
+	border:3px solid black;
+	margin-bottom:10px;
+	padding:10px;
+}
+
+.parent_3{
+	display:inline-block;
+	width:100%;
+}
+
+/* 1 */
+div p{
+	color:red;
+}
+
+/* 2 */
+div span{
+	color:green;
+}
+
+/* 3 */
+div a{
+	color:orange;
+}
+
+/* 4 */
+.parent_block2 .child_block{
+	border:2px dotted #0095B6;
+	
+}
+
+/* 5 */
+.parent_block2 .child_child_block{
+	border:5px dashed #8A2BE2;
+}
+
+/* 6 */
+.parent_block2 i{
+	font-size:20px;
+	color: #0095B6;
+	font-weight:bold;
+}
+
+/* 7 */
+.parent_3 .block1{
+	float:left;
+	width:50%;
+}
+
+/* 8 */
+.parent_3 .block2{
+	float:left;
+	width:50%;
+}
+
+/* 8 */
+.parent_3 .tag_p_parent{
+	background-color:#F7E7CE;
+	color:white;
+}
+
+/* 9 */
+.parent_3 .tag_p_parent p{
+	color:black;
+}
+
+/* 10 */
+.parent_3 .text_block_parent{
+	background-color:#00FF7F;
+}
+
+/* 11 */
+.parent_3 b{
+	color:red;
+}
+
+/* 12 */
+.parent_3 small{
+	color:#8000FF;
+}
+
+li{
+	display:inline-block;
+	margin-right:3%;
+}
+
+/* 13 */
+ul .listitem1{
+	background-color:#708090;
+}
+
+/* 14 */
+ul .listitem2{
+	background-color:#C0C0C0;
+}
+
+/* 15 */
+ul .listitem3{
+	background-color:#483C32;
+}
+
+/* 16 */
+ul .listitem4{
+	background-color:#FF00FF;
+}
+
+/* 17 */
+ul .listitem5{
+	background-color:#FF00AF;
+}
+
+/* 18 */
+ul .listitem6{
+	background-color:#800000;
+}
+
+/* 19 */
+ul .listitem7{
+	background-color:#FF4500;
+}
+
+/* 20 */
+ul .listitem8{
+	background-color:#E52B50;
+}
+
+/* 21 */
+ul .listitem9{
+	background-color:#007FFF;
+}
+
+/* 22 */
+ul .listitem10{
+	background-color:#89CFF0;
+}
+
+/* 23 */
+ul .listitemdiv{
+	color:white;
+}
+
+/* 24 */
+ul .listitemdivother{
+	color:#FFBF00;
+}
+
+/* 25 */
+ul p{
+	color:#8DB600;
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="traffic-ligth">
+        <div class="traffic-ligth__red"></div>
+        <div class="traffic-ligth__yellow"></div>
+        <div class="traffic-ligth__green"></div>
+    </div>
+
+    <script>
+        let red = document.getElementsByClassName('traffic-ligth__red');
+        let yellow = document.getElementsByClassName('traffic-ligth__yellow')
+        let green = document.getElementsByClassName('traffic-ligth__green')
+        var x = '';
+
+
+        function forRed(params) {
+            red.item(0).style.backgroundColor = 'red';
+            setTimeout(() => {
+                red.item(0).style.backgroundColor = 'gray';
+                x = 'gray';
+                forYellow();
+            }, 5000)
+        }
+
+        forRed()
+
+        function forYellow(params) {
+            if (x === 'gray') {
+                yellow.item(0).style.backgroundColor = 'yellow';
+
+                setTimeout(() => {
+                    yellow.item(0).style.backgroundColor = 'gray';
+                    x = 'gray';
+                    forGreen();
+                }, 5000)
+            }
+            if (x === '') {
+                yellow.item(0).style.backgroundColor = 'yellow';
+
+                setTimeout(() => {
+                    yellow.item(0).style.backgroundColor = 'gray';
+                    forRed();
+                }, 5000)
+            }
+        }
+
+
+        function forGreen(params) {
+
+            if (x === 'gray') {
+                green.item(0).style.backgroundColor = 'green';
+                setTimeout(() => {
+                    green.item(0).style.backgroundColor = 'gray';
+                    x = '';
+                    forYellow();
+                }, 5000)
+
+            }
+        }
+
+    </script>
+</body>
+
+</html>

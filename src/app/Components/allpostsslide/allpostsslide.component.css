@@ -1,0 +1,68 @@
+.allPosts-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
+    margin-bottom: 65px;
+}
+
+.allPosts-text {
+    width: 624px;
+}
+
+.allPosts-text__subtitle {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #592EA9;
+    margin-bottom: 40px;
+}
+
+.allPosts-text__title {
+    font-family: 'Sen';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 48px;
+    letter-spacing: -2px;
+    color: #232536;
+    margin-bottom: 30px;
+}
+
+.allPosts-text__paragraph {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 28px;
+    color: #6D6E76;
+}
+
+@media screen and (max-width:1000px) {
+    .allPosts-item {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .allPosts-title {
+        text-align: center;
+    }
+
+    .allPosts-text {
+        text-align: center;
+        width: 100%;
+    }
+
+    .allPosts-image {
+        margin-bottom: 30px;
+        width: 100%;
+    }
+
+    .allPosts-img {
+        width: 100%;
+    }
+}

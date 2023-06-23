@@ -1,0 +1,25 @@
+<header class="author-header">
+    <div class="author-header-container">
+        <div class="author-header-inner">
+            <div class="author-header-firstBlock" *ngFor="let item of oneAuhtorData">
+                <app-one-authors [oneAuthorInner]="item"></app-one-authors>
+            </div>
+            <div class="author-pattern">
+                <div class="yellow"></div>
+                <div class="purple"></div>
+            </div>
+        </div>
+    </div>
+</header>
+<main class="main">
+    <section class="my-posts">
+        <div class="my-posts-container">
+            <div class="my-posts-inner">
+                <h2 class="my-posts-title">My Posts</h2>
+                <div class="my-posts-item" *ngFor="let item of myPostsData">
+                    <app-mypostscom [myPostsInner]="item"></app-mypostscom>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>

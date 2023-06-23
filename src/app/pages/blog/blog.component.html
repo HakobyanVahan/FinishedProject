@@ -1,0 +1,64 @@
+<main class="main">
+    <header class="blog-header">
+        <div class="blog-header-container">
+            <div class="blog-header-inner">
+                <div class="blog-header-text">
+                    <p class="text__subtitle">FEATURES-POST</p>
+                    <h2 class="text__title">
+                        Step-by-step guide to choosing great font pairs
+                    </h2>
+                    <p class="text__name-date">
+                        By <a href="">John Doe</a> | May 23, 2022
+                    </p>
+                    <p class="text__paragraph">
+                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                        pariatur. Excepteur sint occaecat cupidatat non proident.
+                    </p>
+                    <a href="#" class="text-link general-button">Read More ></a>
+                </div>
+                <div class="blog-header-image">
+                    <img src="assets/img/image7.jpg" alt="" class="blog-header-image__img">
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="allPosts">
+        <div class="allPosts-container">
+            <div class="allPosts-inner">
+                <h2 class="allPosts-title">All Posts</h2>
+                <div class="line"></div>
+                <div class="allPosts-items">
+                    <div *ngFor="let item of allPostsSlideInner">
+                        <app-allpostsslide [allPostsSlideInner]="item"></app-allpostsslide>
+                    </div>
+                </div>
+                <div class="pagination">
+                    <div class="pagination-inner">
+                        <div class="prev pg-btn">
+                            &#8249; Prev
+                        </div>
+                        <div class="next pg-btn">
+                            Next &#8250;
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="global-category">
+        <div class="global-category-container general-nav-container">
+            <div class="global-category-inner">
+                <h2 class="global-category-title">
+                    Choose A Catageory
+                </h2>
+                <div class="global-category-item-parent">
+                    <a routerLink="/layout/category" class="global-category-item" *ngFor="let item of categoryData">
+                        <app-category [categoryInner]="item"></app-category>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <app-aside></app-aside>
+</main>

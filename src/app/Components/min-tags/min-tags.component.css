@@ -1,0 +1,12 @@
+.all-tag__item {
+    border: 2px solid #6D6E76;
+    padding: 8px 38px;
+    margin-bottom: 16px;
+    border-radius: 28px;
+    font-family: 'Sen';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 32px;
+    color: #99999F;
+}

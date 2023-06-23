@@ -1,0 +1,190 @@
+*{
+	margin:0;
+	box-sizing:border-box;
+}
+
+.block-1{
+	min-height:560px;
+	background-image: url('../img/gift.jpg');
+	background-repeat:no-repeat;
+	background-size:cover;
+	background-position:center center;
+}
+
+.block-1 > .container{
+	width:750px;
+	margin:auto;
+	padding:100px 0;
+	text-align:center;
+}
+
+.block-1 .logo{
+	width:100%;
+	margin:0 auto 20px auto;
+	text-align:center;
+}
+
+.block-1 > .container > .text{
+	background-color: rgb(255 255 255 / 83%);
+	padding:60px 88px;
+	display:inline-block;
+	text-align:center;
+	font-size:75px;
+	color: #be0f34;
+	border-radius:15px;
+	font-weight:800;
+}
+
+.block-2{
+	min-height:800px;
+	text-align:center;
+}
+
+.block-2 .berrypie, .gifts{
+	float:left;
+	width:350px;
+	overflow:hidden;
+}
+
+.block-2 .text{
+	font-size:30px;
+	line-height:40px;
+	font-weight:500;
+	text-align:center;
+	margin-bottom:20px;
+}
+
+.block-2 .berrypie{
+	margin-right:50px;
+}
+
+.block-2 > .container{
+	display:inline-block;
+	width:750px;
+	margin:auto;
+	padding:45px 0;
+	text-align:center;
+}
+
+.berrypie .img{
+	width:100%;
+	height:350px;
+}
+
+.berrypie .img  img{
+	width: 100%;
+	height:100%;
+}
+
+.berrypie .description{
+	padding:18px 0;
+	background-color:#be0f34;
+	margin-bottom:15px;
+}
+
+.berrypie > .description > p{
+	line-height:35px;
+	color:white;
+	font-size:25px;
+	height:105px;
+	overflow:hidden;
+}
+
+.berrypie .description h2{
+	font-size:30px;
+	font-weight:800;
+	margin-bottom:10px;
+	color:white;
+}
+
+.berrypie > .button > a {
+	border:4px solid #be0f34;
+	border-radius:15px;
+	text-decoration:none;
+	padding:9px 30px;
+	display:inline-block;
+	color: #be0f34;
+	font-size:25px;
+}
+
+.gifts > .img{
+	width:100%;
+	height:350px;
+}
+
+.gifts > .img > img{
+	width:100%;
+	height:100%;
+}
+
+.gifts > .description{
+	padding:18px 0;
+	background-color:#be0f34;
+	margin-bottom:15px;
+}
+
+.gifts > .description > p{
+	line-height:35px;
+	color:white;
+	font-size:25px;
+	height:105px;
+	overflow:hidden;
+}
+
+.gifts > .description > h2{
+	font-size:30px;
+	font-weight:800;
+	margin-bottom:10px;
+	color:white;
+}
+
+.gifts > .button > a{
+	border:4px solid #be0f34;
+	border-radius:15px;
+	text-decoration:none;
+	padding:9px 30px;
+	display:inline-block;
+	color: #be0f34;
+	font-size:25px;
+}
+
+.block-3{
+	min-height:130px;
+	background-color: #be0f34;
+}
+
+.block-3 > .container{
+	width:750px;
+	margin:auto;
+	padding:30px 0;
+	text-align:center;
+}
+
+.block-3 p {
+	font-size:20px;
+	color:white;
+	letter-spacing:2px;
+	margin-bottom:20px;
+}
+
+.block-4 > .container{
+	width:750px;
+	margin:auto;
+	padding:20px 0;
+	text-align:center
+}
+
+.copyright{
+	margin-bottom:20px;
+}
+
+.copyright > p{
+	font-size:13px;
+	line-height:18px;
+}
+
+.unsubscribe{
+	display:inline-block;
+	font-size:15px;
+	border-bottom:1px solid black;
+}

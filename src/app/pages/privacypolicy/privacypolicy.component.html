@@ -1,0 +1,18 @@
+<main class="main">
+    <header class="privacy-policy-header">
+        <div class="privacy-header-inner">
+            <h1 class="privacy-title">Privacy Policy</h1>
+            <p class="privacy-paragraph">Last Updated on 27th January 2022</p>
+        </div>
+    </header>
+
+    <section class="privacy-section">
+        <div class="privacy-section-container">
+            <div class="privacy-section-inner">
+                <div class="textParent" *ngFor="let item of textData">
+                    <app-textcom [textInner]="item"></app-textcom>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>

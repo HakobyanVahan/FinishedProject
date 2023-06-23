@@ -1,0 +1,192 @@
+<main class="main">
+    <header class="header">
+        <div class="header-container general-nav-container">
+            <div class="header-inner">
+                <div class="header-text-block">
+                    <p class="header-text-block__subtitle">
+                        Posted on <span>startup</span>
+                    </p>
+                    <h1 class="header-text-block__title">
+                        Step-by-step guide to choosing great font pairs
+                    </h1>
+                    <p class="header-text-block-author">By <span>James West </span> | May 23, 2022 </p>
+                    <p class="header-text-block__quote">
+                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                        pariatur. Excepteur sint occaecat cupidatat non proident.
+                    </p>
+                    <a href="" class="header-text-block__link general-button">
+                        Read more >
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="posts">
+        <div class="posts-container">
+            <div class="posts-inner">
+                <div class="featured-post">
+                    <h2 class="featured-post__title">Featured Post</h2>
+                    <div class="featured-post-block">
+                        <img src="assets/img/image1.jpg" alt="" class="featured-post-block__img">
+                        <div class="featured-post-block-textBlock">
+                            <p class="featured-post-block-textBlock__nameDate">By <a href="">John Doe</a> | May 23,
+                                2022</p>
+                            <h3 class="featured-post-block-textBlock__title">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                            </h3>
+                            <p class="featured-post-block-textBlock__quote">
+                                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
+                            </p>
+                            <div class="featured-post-block-textBlock__link general-button">Read More ></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="all-posts">
+                    <div class="all-posts-titleLink">
+                        <h2 class="all-posts__title">All Posts</h2>
+                        <a routerLink="/layout/blog" class="all-posts__links">View All</a>
+                    </div>
+                    <div class="all-posts-block">
+                        <div class="all-posts-block-item" *ngFor="let item of allPostsData">
+                           <app-allposts  [allPostsInner]="item"></app-allposts>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="mission">
+        <div class="mission-container general-nav-container">
+            <div class="mission-inner">
+                <div class="mission-pattern">
+                    <div class="mission-pattern__yellow"></div>
+                    <div class="mission-pattern__purple"></div>
+                </div>
+                <div class="main-block">
+                    <div class="main-block-firstBlock">
+                        <p class="first-block-subtitle">ABOUT US</p>
+                        <h2 class="first-block-title">
+                            We are a community of content writers who share their learnings
+                        </h2>
+                        <p class="first-block-text">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                            incididunt ut labore et dolore magna aliqua.
+
+                        </p>
+                        <div class="link-parent">
+                            <a href="" class="first-block-link">Read More ></a>
+                        </div>
+                    </div>
+                    <div class="main-block-secondBlock">
+                        <div class="main-block-secondBlock">
+                            <p class="second-block-subtitle">OUR MISSION</p>
+                            <h2 class="second-block-title">
+                                Creating valuable content for creatives all around the world </h2>
+                            <p class="second-block-text">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="global-category">
+        <div class="global-category-container general-nav-container">
+            <div class="global-category-inner">
+                <h2 class="global-category-title">
+                    Choose A Catageory
+                </h2>
+                <div class="global-category-item-parent">
+                    <a routerLink="/layout/category" class="global-category-item" *ngFor="let item of categoryData">
+                        <app-category [categoryInner]="item"></app-category>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="special-post">
+        <div class="special-post-container general-nav-container">
+            <div class="special-post-inner">
+                <img src="assets/img/image2.jpg" alt="" class="special-post__img">
+                <div class="special-post-textBlock">
+                    <p class="special-post__subtitle">WHY WE STARTED</p>
+                    <h2 class="special-post__title">
+                        It started out as a simple idea and evolved into our passion
+                    </h2>
+                    <p class="special-post__paragraph">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip.
+                    </p>
+                    <a href="" class="special-post__link general-button">Discover our story ></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="authors">
+        <div class="authors-container  general-nav-container">
+            <div class="authors-inner">
+                <h2 class="authors-title">List of Authors</h2>
+                <div class="authors-items">
+                    <a *ngFor="let item of authorsData">
+                        <app-authors [authorsInner]="item"></app-authors>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="components">
+        <div class="components-container general-nav-container">
+            <div class="components-inner">
+                <img src="assets/img/Featuredin.png" alt="" class="components-logo">
+                <img src="assets/img/Logo1.png" alt="" class="components-logo">
+                <img src="assets/img/Logo2.png" alt="" class="components-logo">
+                <img src="assets/img/Logo3.png" alt="" class="components-logo">
+                <img src="assets/img/Logo4.png" alt="" class="components-logo">
+                <img src="assets/img/Logo5.png" alt="" class="components-logo">
+            </div>
+        </div>
+    </section>
+    <section class="testimonials">
+        <div class="testimonials-container general-nav-container">
+            <div class="testimonials-inner">
+                <div class="testimonials-firstTextBlock">
+                    <p class="firstTextBlock__subtitle">TESTIMONIAL</p>
+                    <h2 class="firstTextBlock__title">What people say about our blog</h2>
+                    <div class="p firstTextBlock__paragraph">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                    </div>
+                </div>
+                <div class="line"></div>
+                <div class="testimonials-secondTextBlock">
+                    <h4 class="secondTextBlock__title">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                        do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    </h4>
+
+                    <div class="profileControls">
+                        <div class="profileBlock">
+                            <img src="assets/img/Profilepicture.png" alt="" class="profileBlock__img">
+                            <div class="profile-text">
+                                <h4 class="profile-text__name">Jonathan Vallem</h4>
+                                <p class="profile-text__country">New york, USA</p>
+                            </div>
+                        </div>
+                        <div class="controlsBlock">
+                            <div class="backControl ctrl-style">
+                                <img src="assets/img/Arrow1 (1).png" alt="" class="arrow-icon">
+                            </div>
+                            <div class="nextControl ctrl-style">
+                                <img src="assets/img/Arrow2.png" alt="" class="arrow-icon">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <app-aside></app-aside>
+</main>

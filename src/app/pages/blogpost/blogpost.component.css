@@ -1,0 +1,237 @@
+:root {
+    --black: #232536;
+    --yellow: #FFD050;
+    --purple: #592EA9;
+    --darkGrey: #4C4C4C;
+    --mediumGrey: #6D6E76;
+    --ligthGrey: #F4F4F4;
+    --lavender: #F4F0F8;
+    --ligthYellow: #FBF6FEA;
+}
+
+.blog-post-header-container {
+    max-width: 1280px;
+    margin: auto;
+}
+
+.blog-post-header-inner {
+    padding: 124px 20px 68px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.blog-post-header-text {
+    width: 768px;
+}
+
+.blog-post-account {
+    display: flex;
+    align-items: center;
+    margin-bottom: 45px;
+}
+
+.blog-post__img {
+    width: 48px;
+    height: 48px;
+    margin-right: 16px;
+}
+
+.blog-post-account__title>a {
+    font-family: 'Sen';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 40px;
+    letter-spacing: -1px;
+    color: #592EA9;
+    text-decoration: none;
+}
+
+.blog-post-account__date {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 28px;
+    color: #6D6E76;
+}
+
+.blog-post-header-text__title {
+    font-family: 'Sen';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 64px;
+    letter-spacing: -2px;
+    color: #232536;
+    margin-bottom: 56px;
+}
+
+.picture-container {
+    max-width: 1280px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    padding: 0 20px 76px 20px;
+}
+
+.picture-image {
+    width: 100%;
+}
+
+.text-block-container {
+    max-width: 1280px;
+    margin: auto;
+}
+
+.text-block-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 20px 100px 20px;
+}
+
+.text-block-item {
+    width: 843px;
+    margin-bottom: 48px;
+}
+
+.text-block-item__title {
+    font-family: 'Sen';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 48px;
+    letter-spacing: -2px;
+    color: #232536;
+    margin-bottom: 26px;
+}
+
+.text-block-item__paragraph {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 28px;
+    color: #6D6E76;
+}
+
+.second-paragraph {
+    margin-bottom: 24px;
+}
+
+.text-block-item__ul {
+    list-style-position: inside;
+    margin: 24px 0;
+}
+
+.text-block-item__li {
+    font-family: 'Sen';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32px;
+    color: #494A52;
+}
+
+
+.other-container {
+    max-width: 1280px;
+    margin: auto;
+}
+
+.other-inner {
+    padding: 0 20px 140px 20px;
+}
+
+.other-title {
+    font-family: 'Sen';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 48px;
+    letter-spacing: -2px;
+    color: #000000;
+    margin-bottom: 64px;
+}
+
+.other-item{
+    margin-bottom: 30px;
+    display: block;
+    text-decoration: none;
+}
+
+
+.other-items{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.other-line{
+    height: 1px;
+    background-color: #D3D4D6;
+    margin-top: 70px;
+}
+
+@media screen and (max-width:900px) {
+    .text-block-inner{
+        padding-bottom: 20px;
+    }
+
+    .text-block-item {
+        width: 100%;
+    }
+
+    .other-title{
+        text-align: center;
+    }
+
+    .other-items{
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width:800px) {
+    .blog-post-header-inner {
+        padding-top: 50px;
+    }
+
+    .blog-post-header-text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+    }
+
+    .blog-post-header-text__title {
+        font-size: 25px;
+    }
+
+    .blog-post-account__date {
+        font-size: 13px;
+    }
+
+    .text-block-item {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width:500px) {
+    .text-block-item__title {
+        font-size: 20px;
+    }
+
+    .text-block-item__li {
+        font-size: 15px;
+    }
+
+    .other-image{
+        width: 100%;
+    }
+
+    .other-item-text{
+        width: 100%;
+    }
+}

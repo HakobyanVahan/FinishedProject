@@ -1,0 +1,16 @@
+<div class="author-header-firstBlock">
+    <img src="{{oneAuthorInner.img}}" alt="" class="author-header-image">
+    <div class="header-firstBlock-textBlock">
+        <h1 class="firstTextBlock__title">
+            {{oneAuthorInner.title}}
+        </h1>
+        <p class="firstTextBlock__paragraph">
+            {{oneAuthorInner.paragraph}}
+        </p>
+        <div class="author-social-links">
+            <a href="" class="social-links" *ngFor="let item of oneAuthorInner.socialsIcons">
+                <img src="{{item}}" alt="" class="social-links__img">
+            </a>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //Փոխանցել ֆունկցիային 3 հատ թիվ, պարզել թե այդ թվերը հանդիսանում են Պյութագորյան թվեր
+
+// function pyth(num1, num2, num3) {
+//     if (Math.pow(num1, 2) == Math.pow(num2, 2) + Math.pow(num3, 2)) {
+//         return true;
+//     }
+//     if (Math.pow(num2, 2) == Math.pow(num1, 2) + Math.pow(num3, 2)) {
+//         return true;
+//     }
+//     if (Math.pow(num3, 2) == Math.pow(num2, 2) + Math.pow(num1, 2)) {
+//         return true;
+//     }
+//     return false;
+// }
+
+// console.log(pyth(20, 21, 29));
+
+// Ստեղծել 2 հատ ֆունկցիա որպես պարամետր փոխանցել թվեր մեկը վերադարձնե ամենամեծ թիվը մյուսը ամենափոքր
+
+// function min() {
+//     var i = arguments[0];
+//     for (var j = 0; j < arguments.length; j++) {
+//         if (i > arguments[j]) {
+//             i = arguments[j];
+//         }
+//     }
+//     return i;
+// }
+
+// console.log(min(7, 9, 10, 6, 4));
+
+// function max() {
+//     var i = arguments[0];
+//     for (var j = 0; j < arguments.length; j++) {
+//         if (i < arguments[j]) {
+//             i = arguments[j];
+//         }
+//     }
+//     return i;
+// }
+
+// console.log(max(7, 9, 10, 11, 6, 4));
+
+//Ստեղծել ֆունկցիա որը առաջի պարամեր կնդունե մասսիվ, հետո ինչ գուզենք, դրանք քցե մասսիվի մեջ և հետ վերադարձնե
+
+// var arr = [true, 'Hello', 'JavaScript', null, undefined]
+// var j = arr.length - 1;
+// var x = 1
+
+// function add() {
+//     for (var i = 0; i < arguments.length; i++) {
+//         arr[j + x] = arguments[i];
+//         x++;
+//     }
+//     return arr;
+// }
+
+// console.log(add.call(arr, 10, 20, true, false, 80, 'Hello'));
+
+//Ունինք միամ մասիվ, փոխանցենք ֆունկցիային էդ մասսիվը ու միամ primitive տիպի արժեք եթե մասսիվի մեջ կա էդ արժեքից  տպե ինդեքսը եթե չե վերադարցնե -1
+
+// var arr = [true, false, 9, 'Hello', 'js']
+
+// function search() {
+//     for (var i = 0; i < arr.length; i++) {
+//         if (arr[i] === arguments[0]) {
+//             return i;
+//         }
+//     }
+//     return -1;
+// }
+
+// console.log(search.call(arr, 'js'));
+
+//Նույն խնդիրը բայց index - ները վերագրե մասսիվին
+
+// var arr = [true, false, 9, 'js', 'Hello', 'js', false]
+// var empty = [];
+// var j = 0;
+
+// function search() {
+//     for (var i = 0; i < arr.length; i++) {
+//         if (arr[i] === arguments[0]) {
+//             empty[j] = i;
+//             j++;
+//         }
+//     }
+//     if (empty.length > 0) {
+//         return empty;
+//     }
+//     return -1;
+// }
+// console.log(search.call(arr, 'js'));
+
+//Ունենք թվային և դատարկ մասսիվ, դատարկ մասսիվի մեջ տպել թվայինի թվերը աճման կարգով
+//?
+    </script>
+</body>
+
+</html>

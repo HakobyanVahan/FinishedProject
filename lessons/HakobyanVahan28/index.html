@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Մասսիվի տարրերը հակառակ սկզբունքով տեղադրել դատարկ մասսիվի մեջ
+
+// var arr1 = [1, 2, 3, 4, 'hello', 'world', 'js'];
+// var arr2 = [];
+
+// var j = 0;
+// for (var i = arr1.length - 1; i >= 0; i--) {
+//     arr2[j] = arr1[i];
+//     j++;
+// }
+
+// console.log(arr2);
+// console.log(arr1);
+
+//Ստեղծել թվային մասսիվ, console - ում տպել մասսիվի ամենամեծ թիվը
+// var numArr = [10, 20, 30, 40, 50];
+// var maxNum = 0;
+
+// for (var i in numArr) {
+//     if (maxNum < numArr[i]) {
+//         maxNum = numArr[i];
+//     }
+// }
+
+// console.log(maxNum);
+
+//Ստեղծել թվային մասսիվ, console - ում տպել մասսիվի ամենափոքր թիվը
+
+// var numArr = [10, 5, 6, 20, 30, 40, 50];
+// var minNum;
+
+// for (var i in numArr) {
+//     if (typeof minNum === 'undefined') {
+//         minNum = numArr[i];
+//     }
+
+//     if (numArr[i] < minNum) {
+//         minNum = numArr[i];
+//     }
+// }
+
+// console.log(minNum);
+
+//Ստեղծել թվային մասսիվ, console - ում տպել այն թվերը որոնք զույգ են
+
+// var numArr = [10, 5, 6, 23, 30, 47, 50];
+
+// for (var i in numArr) {
+//     if (numArr[i] % 2 == 0) {
+//         console.log(numArr[i]);
+//     }
+// }
+
+//Առանց երկրորդ մասսիվի reverse անել մասսիվի տարրերը
+
+// var arr1 = [1, 2, 3, 4, 'hello', 'world', 'js'];
+// var arr2 = ['js', 'world', 'hello', 4, 3, 2, 1];
+// var j = 1;
+// var x = 0;
+
+// for (; j != arr1.length - 1; j++) {
+//     var i = arr1.length - j;
+//     arr1[x] = arr1[i];
+//     x++;
+// }
+// console.log(arr1);
+
+//??
+
+//Ստեղծել թվային և դատարկ մասսիվ, դատարկ մասսիվի մեջ տեղադրել թվայինի թվերը աճման կարգով
+//??
+
+
+// var obj = {
+//     point: 0,
+//     up: function () {
+//         this.point++;
+//         return this;
+//     },
+//     down: function () {
+//         this.point--;
+//         return this;
+//     },
+//     start: function () {
+//         this.point = 0;
+//         return this;
+//     }
+// }
+
+// obj.up().up().up().up().down().start().up().down().up();
+// obj.up();
+// obj.up();
+// obj.down();
+// console.log(obj.point);
+
+//Ստեղծել օբյեկտ, for ցիկլի օգնությամբ տպել օբյեկտի այն հատկությունները, որոնց արժեքները թվեր են
+
+// var obj = {
+//     true: 1,
+//     name: 'Bob',
+//     abcd: 2,
+//     address: '??',
+//     some: 3,
+//     var: 5
+// }
+
+// for (var i in obj) {
+//     if (typeof obj[i] === 'number') {
+//         console.log(obj[i]);
+//     }
+// }
+
+//Ստեղծել ֆունկցիա, որը պարամետր կնդունե օբյեկտ և կվերադաձնե տվյալ օբյեկտի հատկությունների քանակը
+
+// var count = 0;
+// var user = {
+//     name: 'John',
+//     lastname: 'Smith',
+//     age: 19,
+//     height: 180,
+//     f: function () {
+//         for (var i in user) {
+//             if (typeof user[i] !== 'function') {
+//                 count++;
+//             }
+//         }
+//     }
+// }
+
+// user.f();
+// console.log(count);
+
+
+
+    </script>
+</body>
+
+</html>

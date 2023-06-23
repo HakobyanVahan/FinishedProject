@@ -1,0 +1,48 @@
+body{
+	background-image:url('../img/pink-purple.jpg');
+	background-repeat:no-repeat;
+	background-size:cover;
+}
+
+.reg_form{
+	width:600px;
+	height:500px;
+	margin:50px auto;
+	border-radius:15px;
+	background-color:white;
+}
+
+.form_block{
+	width:450px;
+	margin:auto;
+	padding-top:20px;
+}
+.css{
+	width:200px;
+	height:30px;
+	border-radius:5px;
+}
+
+ input{
+	background-color:#FAFAFA;
+	border:2px solid #F1F1F1;
+}
+
+.subject_css{
+	width:450px;
+	height:30px;
+	padding-left:20px;
+	margin-top:10px; margin-bottom:20px;
+	border-radius:5px;
+    background-color:#FAFAFA;
+	border:2px solid #F1F1F1;
+}
+
+button{
+	width:100px;
+	height:35px;
+	background-color:#4572D9;
+	color:white;
+	border:none;
+	border-radius:5px;
+}

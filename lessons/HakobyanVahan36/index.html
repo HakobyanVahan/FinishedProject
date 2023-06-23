@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // class Device {
+        //     constructor(_model, _price, _color, _pubYear, _energySaving) {
+        //         this.model = _model;
+        //         this.price = _price;
+        //         this.color = _color;
+        //         this.pubYear = _pubYear;
+        //         this.energySaving = _energySaving;
+        //     }
+
+        //     energySavingMode() {
+        //         if (this.energySaving === 'A++') {
+        //             return 200000;
+        //         } else if (this.energySaving === 'A+') {
+        //             return 150000;
+        //         }
+        //         return 100000;
+        //     }
+        // }
+
+        // class Phone extends Device {
+        //     constructor(_CPU, _memory, _OS, _battery, ...params) {
+        //         super(...params);
+        //         this.CPU = _CPU;
+        //         this.memory = _memory;
+        //         this.OS = _OS;
+        //         this.battery = _battery;
+        //     }
+        //     energySavingMode() {
+        //         return this.price + super.energySavingMode()
+        //     }
+        // }
+
+        // let samsung = new Phone("exynos", "128 bg", "Androind", "3500Mah", "A52", 150000, "black", 2020, "A+");
+        // console.log(samsung.energySavingMode());
+
+        // class Tv extends Device {
+        //     constructor(_smartMode, _displayInch, _contrast, ...params) {
+        //         super(...params)
+        //         this.smartMode = _smartMode;
+        //         this.displayInch = _displayInch;
+        //         this.contrast = _contrast;
+        //     }
+        //     energySavingMode() {
+        //         return this.price + super.energySavingMode();
+        //     }
+        // }
+
+        // let lenovo = new Tv("Smart tv", 200, "5000:1", "lenovo", 300000, "white", "A++")
+        // console.log(lenovo.energySavingMode());
+
+        // class Refrigetaor extends Device {
+        //     constructor(_capacity, _temperature, _freezingFunction, ...params) {
+        //         super(...params);
+        //         this.capacity = _capacity;
+        //         this.temperature = _temperature;
+        //         this.freezingFunction = _freezingFunction;
+        //     }
+
+        //     energySavingMode() {
+        //         return this.price + super.energySavingMode();
+        //     }
+        // }
+
+        // let fridge = new Refrigetaor(100, '50°C', true, 'Mitsubishi', 400000, 'gray', 2017, 'A');
+        // console.log(fridge.energySavingMode());
+
+        // class Computer extends Device {
+        //     constructor(_RAM, _videocart, _modelOfDisplay, ...params) {
+        //         super(...params);
+        //         this.RAM = _RAM;
+        //         this.videocart = _videocart;
+        //         this.modelOfDisplay = _modelOfDisplay;
+        //     }
+
+        //     energySavingMode() {
+        //         return this.price + super.energySavingMode();
+        //     }
+
+        //     memoryOfRam() {
+        //         if (this.RAM > 8) {
+        //             return 300000;
+        //         }
+        //         return 100000;
+        //     }
+        // }
+
+        // let asus = new Computer(9, false, 'LG', 'Asus', 150000, 'black', 2013, 'A');
+        // console.log(asus.energySavingMode());
+
+        // class Laptop extends Computer{
+        //     constructor(_touchPad, _size, _materialOfCase, ...params) {
+        //         super(...params)
+        //         this.touchPad = _touchPad;
+        //         this.size = _size;
+        //         this.materialOfCase = _materialOfCase;
+
+        //     }
+        //     memoryOfRam(){
+        //         return this.price + super.memoryOfRam() + super.energySavingMode()
+        //     }
+        // }
+
+        // let hp = new Laptop(true, "1200px", "absorption", 9, false, "LG", "hp", 240000, "gray", 2020, "A++");
+        // console.log(hp.memoryOfRam())
+
+        class Car {
+            constructor(_doors, _salon, _enginePower, _hp, _price) {
+                this.doors = _doors;
+                this.salon = _salon;
+                this.enginePower = _enginePower;
+                this.hp = _hp;
+                this.price = _price;
+            }
+
+            enginePowerMethod() {
+                if (this.enginePower >= 1 && this.enginePower <= 3) {
+                    return 1000;
+                } else if (this.enginePower >= 3 && this.enginePower <= 5) {
+                    return 2000;
+                }
+            }
+
+            salonChar() {
+                if (this.salon === 'red') {
+                    return 500;
+                } else if (this.salon === 'full') {
+                    return 2000;
+                }
+                return 1000;
+            }
+
+            returnPrice() {
+                return this.price;
+            }
+        }
+
+        class BMW extends Car {
+            constructor(_color, _model, _drive, ...params) {
+                super(...params);
+                this.color = _color;
+                this.model = _model;
+                this.drive = _drive;
+            }
+
+            returnPrice() {
+                return this.price + super.enginePowerMethod() + super.salonChar();
+            }
+        }
+
+        let c = new BMW('white', '540i', 'FWD', 4, 'full', 4, 320, 8800);
+        console.log(c.returnPrice());
+
+        class Benz extends Car {
+            constructor(_year, _creator, _wheelSize, ...params) {
+                super(...params);
+                this.year = _year;
+                this.creator = _creator;
+                this.wheelSize = _wheelSize;
+            }
+
+            returnPrice() {
+                return this.price + super.enginePowerMethod() + super.salonChar();
+            }
+        }
+
+        let auto = new Benz(2009, 'Carl Benz', 'R17', 2, 'Leather', 2.8, 170, 6000);
+        console.log(auto.returnPrice());
+
+        class Lexus extends Car {
+            constructor(_fuelType, _bodyType, _transmissionType, ...params) {
+                super(...params);
+                this.fuelType = _fuelType;
+                this.bodyType = _bodyType;
+                this.transmissionType = _transmissionType;
+            }
+
+            returnPrice() {
+                return this.price + super.enginePowerMethod() + super.salonChar();
+            }
+        }
+
+        let authomobile = new Lexus('diesel', 'crossover', 'authomat', 4, 'beige leather', 5, 850, 75000)
+        console.log(authomobile.returnPrice());
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,176 @@
+:root {
+    --black: #232536;
+    --yellow: #FFD050;
+    --purple: #592EA9;
+    --darkGrey: #4C4C4C;
+    --mediumGrey: #6D6E76;
+    --ligthGrey: #F4F4F4;
+    --lavender: #F4F0F8;
+    --ligthYellow: #FBF6FEA;
+}
+
+.author-header {
+    background-color: var(--lavender);
+}
+
+.author-header-container {
+    max-width: 1024px;
+    margin: auto;
+}
+
+.author-header-inner {
+    padding: 128px 20px 0 20px;
+}
+
+.author-header-firstBlock {
+    display: flex;
+    align-items: center;
+    margin-bottom: 105px;
+}
+
+.author-header-image {
+    margin-right: 32px;
+}
+
+.header-firstBlock-textBlock {
+    width: 670px;
+}
+
+.firstTextBlock__title {
+    font-family: 'Sen';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 64px;
+    display: flex;
+    align-items: center;
+    letter-spacing: -2px;
+    color: #232536;
+    margin-bottom: 24px;
+}
+
+.firstTextBlock__paragraph {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 28px;
+    display: flex;
+    align-items: center;
+    color: #6D6E76;
+    margin-bottom: 24px;
+}
+
+.author-pattern {
+    display: flex;
+}
+
+.yellow {
+    width: 775px;
+    height: 24px;
+    background-color: var(--yellow);
+}
+
+.purple {
+    width: calc(100% - 775px);
+    height: 24px;
+    background-color: #592EA9;
+}
+
+.my-posts-container {
+    max-width: 1024px;
+    margin: auto;
+}
+
+.my-posts-inner {
+    padding: 143px 20px 61px 20px;
+}
+
+.my-posts-title {
+    font-family: 'Sen';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 64px;
+    letter-spacing: -2px;
+    color: #232536;
+    margin-bottom: 65px;
+}
+
+.my-posts-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 65px;
+}
+
+.posts-item-img{
+    margin-right: 32px;
+}
+
+.posts-item-textBlock {
+    width: 580px;
+}
+
+.posts-textBlock__nameless {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #592EA9;
+    margin-bottom: 37px;
+}
+
+.posts-textBlock__title {
+    font-family: 'Sen';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 48px;
+    letter-spacing: -2px;
+    color: #232536;
+    margin-bottom: 32px;
+}
+
+.posts-textBlock__paragraph {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 28px;
+    color: #6D6E76;
+}
+
+@media screen and (max-width:800px) {
+    .author-header-firstBlock {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header-firstBlock-textBlock {
+        width: 100%;
+        text-align: center;
+    }
+
+    .author-header-image {
+        margin: 0 0 30px 0;
+    }
+
+    .my-posts-item{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .posts-item-textBlock{
+        text-align: center;
+        width: 100%;
+    }
+
+    .posts-item-img{
+        margin-bottom: 30px;
+        margin-right: 0;
+        width: 80%;
+    }
+}

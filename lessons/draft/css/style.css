@@ -1,0 +1,30 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    justify-content: center;
+    text-align: center;
+}
+
+.open-menu {
+    width: 100vw;
+    background-color: #ff6727;
+    transition-duration: 1s;
+    height: 0px;
+    overflow: hidden;
+}
+
+.open-menu-item_items {
+    list-style: none;
+    font-size: 25px;
+    font-style: italic;
+    color: black
+}
+
+.open-check:checked+.open-menu {
+    overflow-y: scroll;
+    height: 200px;
+}

@@ -1,0 +1,38 @@
+.authors-item{
+    text-decoration: none;
+}
+
+.authors-item__img {
+    margin-bottom: 20px;
+}
+
+.authors-item__name {
+    font-family: 'Sen';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 40px;
+    letter-spacing: -1px;
+    color: #232536;
+}
+
+.authors__job {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+    color: #6D6E76;
+    margin-bottom: 20px;
+}
+
+.authors-item {
+    background-color: #F4F4F4;
+    padding: 40px 28px;
+    transition: 1s;
+}
+
+.authors-item:hover{
+    background: #FBF6EA;
+}

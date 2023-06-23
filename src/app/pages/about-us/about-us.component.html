@@ -1,0 +1,95 @@
+<main class="main">
+    <header class="about-us-header">
+        <div class="about-us-header-container">
+            <div class="about-us-header-inner">
+                <div class="general-textBlock">
+                    <div class="about-us-header-firstTextBlock">
+                        <p class="firstTextBlock__subtitle">ABOUT US</p>
+                        <h2 class="firstTextBlock__title">
+                            We are a team of content writers who share their learnings
+                        </h2>
+                    </div>
+                    <div class="about-us-header-secondTextBlock">
+                        <p class="secondTextBlock__paragraph">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                            incididunt ut
+                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                            ullamco
+                            laboris nisi ut aliquip ex ea commodo consequat.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="overview">
+        <div class="overview-container">
+            <div class="overview-inner">
+                <div class="overview-statics">
+                    <div class="overview-statics-item">
+                        <h2 class="statics-item__title">12+</h2>
+                        <p class="statics-item__paragraph">Blogs Published</p>
+                    </div>
+                    <div class="overview-statics-item">
+                        <h2 class="statics-item__title">18K+</h2>
+                        <p class="statics-item__paragraph">Views On Finesweet</p>
+                    </div>
+                    <div class="overview-statics-item">
+                        <h2 class="statics-item__title">30K+</h2>
+                        <p class="statics-item__paragraph">Total active Users</p>
+                    </div>
+                </div>
+                <div class="overview-pattern">
+                    <div class="overview-pattern__purple"></div>
+                    <div class="overview-pattern__yellow"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="missionVission">
+        <div class="missionVission-container">
+            <div class="missionVission-inner">
+                <div class="missionVissionFirstTextBlock">
+                    <h3 class="mvFirstSubtitle">OUR MISSION</h3>
+                    <h2 class="mvFirstTitle">
+                        Creating valuable content for creatives all around the world
+                    </h2>
+                    <p class="mvFirstParagraph">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Non blandit massa enim nec. Scelerisque viverra mauris in
+                        aliquam sem. At risus viverra adipiscing at in tellus.
+                    </p>
+                </div>
+                <div class="missionVissionSecondTextBlock">
+                    <h3 class="mvSecondSubtitle">OUR VISION</h3>
+                    <h2 class="mvSecondTitle">A platform that empowers individuals to improve</h2>
+                    <p class="mvSecondParagraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                        eiusmod tempor incididunt ut labore et dolore magna aliqua. Non blandit massa enim nec.
+                        Scelerisque viverra mauris in aliquam sem. At risus viverra adipiscing at in tellus.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="moreAboutUs">
+        <div class="moreAboutUs-container">
+            <div class="moreAboutUs-inner">
+                <!-- <div class="moreAboutUsblock" *ngFor="let item of knowMoreData">
+                    <app-know-more [knowMoreInner]="item"></app-know-more>
+                </div> -->
+            </div>
+        </div>
+    </section>
+    <section class="authors">
+        <div class="authors-container  general-nav-container">
+            <div class="authors-inner">
+                <h2 class="authors-title">List of Authors</h2>
+                <div class="authors-items">
+                    <div *ngFor="let item of authorsData">
+                        <app-authors [authorsInner]="item"></app-authors>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <app-aside></app-aside>
+</main>

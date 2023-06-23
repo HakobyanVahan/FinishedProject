@@ -1,0 +1,1355 @@
+*{
+	margin:0;
+	padding:0;
+	box-sizing:border-box;
+}
+
+.child{
+	background-color:gold;
+	padding:25px;
+	margin-left:10px;
+}
+
+.child-child{
+	width:30%;
+	border:3px solid black;
+}
+
+.child-child:nth-child(2){
+	margin:0 5% 0 5%;
+}
+
+/* First */
+
+.parent1{
+	width:80%;
+	border:3px solid black;
+	margin:auto;
+	padding:10px;
+	display:flex;
+	flex-direction:row-reverse;
+	justify-content:space-between;
+	margin-bottom:15px;
+}
+
+
+/* Second */
+
+.parent2{
+	width:80%;
+	border:3px solid black;
+	margin:auto;
+	padding:10px;
+	display:flex;
+	flex-direction:row-reverse;
+	justify-content:space-around;
+	margin-bottom:15px;
+}
+
+/* Third */
+
+.parent3{
+	width:80%;
+	border:3px solid black;
+	margin:auto;
+	padding:10px;
+	display:flex;
+	flex-direction:row-reverse;
+	justify-content:space-evenly;
+	margin-bottom:15px;
+}
+
+/* Fourth */
+
+.parent4{
+	width:80%;
+	border:3px solid black;
+	margin:auto;
+	padding:10px;
+	display:flex;
+	flex-direction:row-reverse;
+	justify-content:flex-end;
+	margin-bottom:15px;
+}
+
+/* Fiveth */
+
+.parent5{
+	width:80%;
+	border:3px solid black;
+	margin:auto;
+	padding:10px;
+	display:flex;
+	flex-direction:row-reverse;
+	justify-content:center;
+	margin-bottom:15px;
+}
+
+/* Sixth */
+
+.parent6{
+	width:80%;
+	height:600px;
+	border:3px solid black;
+	margin:auto;
+	padding:10px;
+	display:flex;
+	flex-direction:column;
+	justify-content:center;
+	margin-bottom:15px;
+}
+
+/* Seventh */
+
+.parent7{
+	width:80%;
+	height:600px;
+	border:3px solid black;
+	margin:auto;
+	padding:10px;
+	display:flex;
+	flex-direction:column;
+	justify-content:flex-start;
+	margin-bottom:15px;
+}
+
+/* Eighth */
+
+.parent8{
+	width:80%;
+	height:600px;
+	border:3px solid black;
+	margin:auto;
+	padding:10px;
+	display:flex;
+	flex-direction:column;
+	justify-content:flex-end;
+	margin-bottom:15px;
+}
+
+/* Nineth */
+
+.parent9{
+	width:80%;
+	height:600px;
+	border:3px solid black;
+	margin:auto;
+	padding:10px;
+	display:flex;
+	flex-direction:column;
+	justify-content:space-between;
+	margin-bottom:15px;
+}
+
+/* Tenth */
+
+.parent10{
+	width:80%;
+	height:600px;
+	border:3px solid black;
+	margin:auto;
+	padding:10px;
+	display:flex;
+	flex-direction:column;
+	justify-content:space-between;
+	margin-bottom:15px;
+}
+
+/* Eleventh */
+
+.parent11{
+	width:80%;
+	height:600px;
+	border:3px solid black;
+	margin:auto;
+	padding:10px;
+	display:flex;
+	flex-direction:column;
+	justify-content:space-around;
+	margin-bottom:15px;
+}
+
+/* Twelfth */
+
+.parent12{
+	width:80%;
+	height:600px;
+	border:3px solid black;
+	margin:auto;
+	padding:10px;
+	display:flex;
+	flex-direction:column;
+	justify-content:space-evenly;
+	margin-bottom:15px;
+}
+
+/* Thirteenth */
+
+.parent13{
+	width:80%;
+	height:600px;
+	border:3px solid black;
+	margin:auto;
+	padding:10px;
+	display:flex;
+	flex-direction:column-reverse;
+	justify-content:flex-end;
+	margin-bottom:15px;
+}
+
+/* Fourteenth */
+
+.parent14{
+	width:80%;
+	height:600px;
+	border:3px solid black;
+	margin:auto;
+	padding:10px;
+	display:flex;
+	flex-direction:column-reverse;
+	justify-content:flex-start;
+	margin-bottom:15px;
+}
+
+/* Fiveteenth */
+
+.parent15{
+	width:80%;
+	height:600px;
+	border:3px solid black;
+	margin:auto;
+	padding:10px;
+	display:flex;
+	flex-direction:row;
+	justify-content:flex-start;
+	align-items:flex-start;
+	margin-bottom:15px;
+}
+
+/*	Sixteenth */
+
+.parent16{
+	width:80%;
+	height:600px;
+	border:3px solid black;
+	margin:auto;
+	padding:10px;
+	display:flex;
+	flex-direction:row;
+	justify-content:flex-start;
+	align-items:flex-end;
+	margin-bottom:15px;
+}
+
+/*	Seventeenth */
+
+.parent17{
+	width:80%;
+	height:600px;
+	border:3px solid black;
+	margin:auto;
+	padding:10px;
+	display:flex;
+	flex-direction:row;
+	justify-content:flex-start;
+	align-items:center;
+	margin-bottom:15px;
+}
+
+/*	Eighteenth */
+
+.parent18{
+	width:80%;
+	height:600px;
+	border:3px solid black;
+	margin:auto;
+	padding:10px;
+	display:flex;
+	flex-direction:row;
+	justify-content:flex-start;
+	align-items: baseline;
+	margin-bottom:15px;
+}
+
+/*	Nineteenth */
+
+.parent19{
+	width:80%;
+	height:600px;
+	border:3px solid black;
+	margin:auto;
+	padding:10px;
+	display:flex;
+	flex-direction:row;
+	justify-content:flex-end;
+	align-items: baseline;
+	margin-bottom:15px;
+}
+
+/*	Twenty */
+
+.parent20{
+	width:80%;
+	height:600px;
+	border:3px solid black;
+	margin:auto;
+	padding:10px;
+	display:flex;
+	flex-direction:row;
+	justify-content:center;
+	align-items: center;
+	margin-bottom:15px;
+}
+
+/*	Twentyone */
+
+.parent21{
+	width:80%;
+	height:600px;
+	border:3px solid black;
+	margin:auto;
+	padding:10px;
+	display:flex;
+	flex-direction:row;
+	flex-wrap:nowrap;
+	justify-content:flex-start;
+	margin-bottom:15px;
+}
+
+/*	Twentytwo */
+
+.parent22{
+	width:80%;
+	height:600px;
+	border:3px solid black;
+	margin:auto;
+	padding:10px;
+	display:flex;
+	flex-direction:row;
+	flex-wrap:wrap;
+	justify-content:flex-start;
+	margin-bottom:15px;
+}
+
+/*	Twentythree */
+
+.parent23{
+	width:80%;
+	height:600px;
+	border:3px solid black;
+	margin:auto;
+	padding:10px;
+	display:flex;
+	flex-direction:row;
+	flex-wrap:wrap;
+	justify-content:flex-start;
+	align-content:flex-start;
+	margin-bottom:15px;
+}
+
+/*	Twentyfour */
+
+.parent24{
+	width:80%;
+	height:600px;
+	border:3px solid black;
+	margin:auto;
+	padding:10px;
+	display:flex;
+	flex-direction:row;
+	flex-wrap:wrap;
+	justify-content:flex-start;
+	align-content:flex-end;
+	margin-bottom:15px;
+}
+
+/*	Twentyfive */
+
+.parent25{
+	width:80%;
+	height:600px;
+	border:3px solid black;
+	margin:auto;
+	padding:10px;
+	display:flex;
+	flex-direction:row;
+	flex-wrap:wrap;
+	justify-content:flex-start;
+	align-content:center;
+	margin-bottom:15px;
+}
+	
+/*	Twentysix */
+
+.parent26{
+	width:80%;
+	height:600px;
+	border:3px solid black;
+	margin:auto;
+	padding:10px;
+	display:flex;
+	flex-direction:row;
+	flex-wrap:wrap;
+	justify-content:flex-start;
+	align-content:space-between;
+	margin-bottom:15px;
+}	
+
+/*	Twentyseven */
+
+.parent27{
+	width:80%;
+	height:600px;
+	border:3px solid black;
+	margin:auto;
+	padding:10px;
+	display:flex;
+	flex-direction:row;
+	flex-wrap:wrap;
+	justify-content:flex-start;
+	align-content:space-around;
+	margin-bottom:15px;
+}
+
+/*	Twentyeight */
+
+.parent28{
+	width:80%;
+	height:600px;
+	border:3px solid black;
+	margin:auto;
+	padding:10px;
+	display:flex;
+	flex-direction:row;
+	flex-wrap:wrap;
+	justify-content:flex-start;
+	align-content:space-evenly;
+	margin-bottom:15px;
+}
+
+/*	Twentyeight */
+
+.parent28{
+	width:80%;
+	height:600px;
+	border:3px solid black;
+	margin:auto;
+	padding:10px;
+	display:flex;
+	flex-direction:row;
+	flex-wrap:wrap;
+	justify-content:flex-start;
+	align-content:space-evenly;
+	margin-bottom:15px;
+}
+
+/*	Twentynine */
+
+.parent29{
+	width:80%;
+	height:600px;
+	border:3px solid black;
+	margin:auto;
+	padding:10px;
+	display:flex;
+	flex-direction:row;
+	flex-wrap:wrap-reverse;
+	justify-content:flex-start;
+	margin-bottom:15px;
+}
+
+/*	Thirty */
+
+.parent30{
+	width:80%;
+	border:3px solid black;
+	margin:auto;
+	padding:10px;
+	display:flex;
+	flex-direction:row;
+	flex-wrap:wrap-reverse;
+	justify-content:flex-start;
+	margin-bottom:15px;
+}
+
+/*	Thirtyone */
+
+.parent31{
+	width:80%;
+	border:3px solid black;
+	margin:auto;
+	padding:10px;
+	display:flex;
+	flex-direction:row;
+	justify-content:flex-start;
+	margin-bottom:15px;
+}
+
+/*	Thirtytwo */
+
+.parent32{
+	width:80%;
+	border:3px solid black;
+	margin:auto;
+	padding:10px;
+	display:flex;
+	flex-direction:row;
+	justify-content:flex-start;
+	margin-bottom:15px;
+}
+
+/*	Thirtythree */
+
+.parent33{
+	width:80%;
+	border:3px solid black;
+	margin:auto;
+	padding:10px;
+	display:flex;
+	flex-direction:row;
+	justify-content:flex-start;
+	margin-bottom:15px;
+}
+
+/*	Thirtyfour */
+
+.parent34{
+	width:80%;
+	border:3px solid black;
+	margin:auto;
+	padding:10px;
+	display:flex;
+	flex-direction:row;
+	justify-content:flex-start;
+	margin-bottom:15px;
+}
+
+/*	Thirtyfive */
+
+.parent35{
+	width:80%;
+	border:3px solid black;
+	margin:auto;
+	padding:10px;
+	display:flex;
+	flex-direction:row;
+	justify-content:flex-start;
+	margin-bottom:15px;
+}
+
+/*	Thirtysix */
+
+.parent36{
+	width:80%;
+	border:3px solid black;
+	margin:auto;
+	padding:10px;
+	display:flex;
+	flex-direction:row;
+	justify-content:space-between;
+	margin-bottom:15px;
+}
+
+.parent-too{
+	display:flex;
+}
+
+.child__child{
+	margin-right:10px;
+}
+
+/*	Thirtyseven */
+
+.parent37{
+	width:80%;
+	border:3px solid black;
+	margin:auto;
+	padding:10px;
+	display:flex;
+	flex-direction:column;
+	align-items:center;
+	margin-bottom:15px;
+}
+
+.menu_child{
+	border:2px solid black;
+	width:50px;
+	text-align:center;
+	margin-bottom:10px;
+}
+
+/* Thirtyeight */
+
+.parent38{
+	width:80%;
+	border:3px solid black;
+	margin:auto;
+	padding:10px;
+	display:flex;
+	flex-direction:column;
+	align-items:center;
+	margin-bottom:15px;
+}
+
+.first{
+	display:flex;
+	width:100%;
+	justify-content:space-between;
+	flex-direction:row;
+}
+
+/* Thirtynine */
+
+.parent39{
+	width:80%;
+	border:3px solid black;
+	margin:auto;
+	padding:10px;
+	display:flex;
+	flex-direction:row-reverse;
+	justify-content:space-between;
+	margin-bottom:15px;
+}
+
+
+/* Fourty */
+
+.parent40{
+	width:80%;
+	border:3px solid black;
+	margin:auto;
+	padding:10px;
+	display:flex;
+	flex-direction:row-reverse;
+	justify-content:space-around;
+	margin-bottom:15px;
+}
+
+/* Fourtyone */
+
+.parent41{
+	width:80%;
+	border:3px solid black;
+	margin:auto;
+	padding:10px;
+	display:flex;
+	flex-direction:row-reverse;
+	justify-content:space-evenly;
+	margin-bottom:15px;
+}
+
+/* Fourtytwo */
+
+.parent42{
+	width:80%;
+	border:3px solid black;
+	margin:auto;
+	padding:10px;
+	display:flex;
+	flex-direction:row-reverse;
+	justify-content:flex-end;
+	margin-bottom:15px;
+}
+
+/* Fourtythree */
+
+.parent43{
+	width:80%;
+	border:3px solid black;
+	margin:auto;
+	padding:10px;
+	display:flex;
+	flex-direction:row-reverse;
+	justify-content:center;
+	margin-bottom:15px;
+}
+
+/* Fourtyfive */
+
+.parent44{
+	width:80%;
+	height:600px;
+	border:3px solid black;
+	margin:auto;
+	padding:10px;
+	display:flex;
+	flex-direction:column;
+	justify-content:center;
+	margin-bottom:15px;
+}
+
+/* Fourtysix */
+
+.parent45{
+	width:80%;
+	height:600px;
+	border:3px solid black;
+	margin:auto;
+	padding:10px;
+	display:flex;
+	flex-direction:column;
+	justify-content:flex-start;
+	margin-bottom:15px;
+}
+
+/* Fourtyseven */
+
+.parent46{
+	width:80%;
+	height:600px;
+	border:3px solid black;
+	margin:auto;
+	padding:10px;
+	display:flex;
+	flex-direction:column;
+	justify-content:flex-end;
+	margin-bottom:15px;
+}
+
+/* Fourtyeight */
+
+.parent47{
+	width:80%;
+	height:600px;
+	border:3px solid black;
+	margin:auto;
+	padding:10px;
+	display:flex;
+	flex-direction:column;
+	justify-content:space-between;
+	margin-bottom:15px;
+}
+
+/* Fourtynine */
+
+.parent48{
+	width:80%;
+	height:600px;
+	border:3px solid black;
+	margin:auto;
+	padding:10px;
+	display:flex;
+	flex-direction:column;
+	justify-content:space-between;
+	margin-bottom:15px;
+}
+
+/* Fivety */
+
+.parent49{
+	width:80%;
+	height:600px;
+	border:3px solid black;
+	margin:auto;
+	padding:10px;
+	display:flex;
+	flex-direction:column;
+	justify-content:space-around;
+	margin-bottom:15px;
+}
+
+/* Fivetyone */
+
+.parent50{
+	width:80%;
+	height:600px;
+	border:3px solid black;
+	margin:auto;
+	padding:10px;
+	display:flex;
+	flex-direction:column;
+	justify-content:space-evenly;
+	margin-bottom:15px;
+}
+
+/* Fivetytwo */
+
+.parent51{
+	width:80%;
+	height:600px;
+	border:3px solid black;
+	margin:auto;
+	padding:10px;
+	display:flex;
+	flex-direction:column-reverse;
+	justify-content:flex-end;
+	margin-bottom:15px;
+}
+
+/* Fivetythree */
+
+.parent52{
+	width:80%;
+	height:600px;
+	border:3px solid black;
+	margin:auto;
+	padding:10px;
+	display:flex;
+	flex-direction:column-reverse;
+	justify-content:flex-start;
+	margin-bottom:15px;
+}
+
+/* Fivetyfour */
+
+.parent53{
+	width:80%;
+	height:600px;
+	border:3px solid black;
+	margin:auto;
+	padding:10px;
+	display:flex;
+	flex-direction:row;
+	justify-content:flex-start;
+	align-items:flex-start;
+	margin-bottom:15px;
+}
+
+/*	Fivetyfive */
+
+.parent54{
+	width:80%;
+	height:600px;
+	border:3px solid black;
+	margin:auto;
+	padding:10px;
+	display:flex;
+	flex-direction:row;
+	justify-content:flex-start;
+	align-items:flex-end;
+	margin-bottom:15px;
+}
+
+/*	Fivetysix */
+
+.parent55{
+	width:80%;
+	height:600px;
+	border:3px solid black;
+	margin:auto;
+	padding:10px;
+	display:flex;
+	flex-direction:row;
+	justify-content:flex-start;
+	align-items:center;
+	margin-bottom:15px;
+}
+
+/*	Fivetyseven */
+
+.parent56{
+	width:80%;
+	height:600px;
+	border:3px solid black;
+	margin:auto;
+	padding:10px;
+	display:flex;
+	flex-direction:row;
+	justify-content:flex-start;
+	align-items: baseline;
+	margin-bottom:15px;
+}
+
+/*	Fivetyeight */
+
+.parent57{
+	width:80%;
+	height:600px;
+	border:3px solid black;
+	margin:auto;
+	padding:10px;
+	display:flex;
+	flex-direction:row;
+	justify-content:flex-end;
+	align-items: baseline;
+	margin-bottom:15px;
+}
+
+/*	Fivetynine */
+
+.parent58{
+	width:80%;
+	height:600px;
+	border:3px solid black;
+	margin:auto;
+	padding:10px;
+	display:flex;
+	flex-direction:row;
+	justify-content:center;
+	align-items: center;
+	margin-bottom:15px;
+}
+
+
+/* sixty */
+
+.parent59{
+	width:80%;
+	border:3px solid black;
+	margin:auto;
+	padding:10px;
+	display:flex;
+	flex-direction:row-reverse;
+	justify-content:space-around;
+	margin-bottom:15px;
+}
+
+/* sixtyone */
+
+.parent60{
+	width:80%;
+	border:3px solid black;
+	margin:auto;
+	padding:10px;
+	display:flex;
+	flex-wrap:wrap;
+}
+
+.block{
+	width:50%;
+	padding:10px;
+	border:2px solid black;
+}
+
+.parent61{
+	width:80%;
+	border:3px solid black;
+	margin:auto;
+	padding:10px;
+	display:flex;
+	align-items:flex-start;
+	flex-wrap:wrap;
+}
+
+.parent62{
+	width:80%;
+	border:3px solid black;
+	margin:auto;
+	padding:10px;
+	display:flex;
+	align-items:flex-start;
+	flex-wrap:wrap;
+}
+
+.parent63{
+	width:80%;
+	border:3px solid black;
+	margin:auto;
+	padding:10px;
+	display:flex;
+	align-items:flex-end;
+	flex-wrap:wrap;
+}
+
+.parent64{
+	width:80%;
+	height:600px;
+	border:3px solid black;
+	margin:auto;
+	padding:10px;
+	display:flex;
+	align-content:flex-end;
+	flex-wrap:wrap;
+}
+
+.parent65{
+	width:80%;
+	height:600px;
+	border:3px solid black;
+	margin:auto;
+	padding:10px;
+	display:flex;
+	align-content:flex-start;
+	flex-wrap:wrap;
+}
+
+.parent66{
+	width:80%;
+	height:600px;
+	border:3px solid black;
+	margin:auto;
+	padding:10px;
+	display:flex;
+	align-content:center;
+	flex-wrap:wrap;
+}
+
+.parent67{
+	width:80%;
+	height:600px;
+	border:3px solid black;
+	margin:auto;
+	padding:10px;
+	display:flex;
+	align-content:space-around;
+	flex-wrap:wrap;
+}
+
+.parent68{
+	width:80%;
+	height:600px;
+	border:3px solid black;
+	margin:auto;
+	padding:10px;
+	display:flex;
+	align-content:space-between;
+	flex-wrap:wrap;
+}
+
+.parent69{
+	width:80%;
+	height:600px;
+	border:3px solid black;
+	margin:auto;
+	padding:10px;
+	display:flex;
+	align-content:space-evenly;
+	flex-wrap:wrap;
+}
+
+.parent70{
+	width:80%;
+	height:600px;
+	border:3px solid black;
+	margin:auto;
+	padding:10px;
+	display:flex;
+	align-content:space-evenly;
+	flex-direction:column;
+}
+
+
+.parent71{
+	width:80%;
+	height:600px;
+	border:3px solid black;
+	margin:auto;
+	padding:10px;
+	display:flex;
+	align-content:space-evenly;
+	flex-direction:column-reverse;
+}
+
+.parent72{
+	width:80%;
+	height:600px;
+	border:3px solid black;
+	margin:auto;
+	padding:10px;
+	display:flex;
+	align-content:flex-start;
+	flex-direction:column;
+}
+
+
+.parent73{
+	width:80%;
+	height:600px;
+	border:3px solid black;
+	margin:auto;
+	padding:10px;
+	display:flex;
+	justify-content:center;
+	flex-direction:column-reverse;
+}
+
+.parent74{
+	width:80%;
+	height:600px;
+	border:3px solid black;
+	margin:auto;
+	padding:10px;
+	display:flex;
+	justify-content:space-between;
+	flex-direction:column-reverse;
+}
+
+.parent75{
+	width:80%;
+	height:600px;
+	border:3px solid black;
+	margin:auto;
+	padding:10px;
+	display:flex;
+	justify-content:space-around;
+	flex-direction:column-reverse;
+}
+
+.parent76{
+	width:80%;
+	height:600px;
+	border:3px solid black;
+	margin:auto;
+	padding:10px;
+	display:flex;
+	justify-content:space-evenly;
+	flex-direction:column-reverse;
+}
+
+.parent77{
+	width:80%;
+	height:600px;
+	border:3px solid black;
+	margin:auto;
+	padding:10px;
+	display:flex;
+	align-items:flex-end;
+	flex-direction:column-reverse;
+}
+
+.parent78{
+	width:80%;
+	height:600px;
+	border:3px solid black;
+	margin:auto;
+	padding:10px;
+	display:flex;
+	align-items:flex-start;
+	flex-direction:column-reverse;
+}
+
+.parent79{
+	width:80%;
+	height:600px;
+	border:3px solid black;
+	margin:auto;
+	padding:10px;
+	display:flex;
+	align-items:center;
+	flex-direction:column-reverse;
+}
+
+.parent80{
+	width:80%;
+	height:600px;
+	border:3px solid black;
+	margin:auto;
+	padding:10px;
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	flex-direction:column-reverse;
+}
+
+.parent81{
+	width:80%;
+	height:600px;
+	border:3px solid black;
+	margin:auto;
+	padding:10px;
+	display:flex;
+	align-items:center;
+	justify-content:flex-start;
+	flex-direction:column-reverse;
+}
+
+.parent82{
+	width:80%;
+	height:600px;
+	border:3px solid black;
+	margin:auto;
+	padding:10px;
+	display:flex;
+	align-items:center;
+	justify-content:flex-end;
+	flex-direction:column-reverse;
+}
+
+.parent83{
+	width:80%;
+	height:600px;
+	border:3px solid black;
+	margin:auto;
+	padding:10px;
+	display:flex;
+	align-items:center;
+	justify-content:space-around;
+	flex-direction:column-reverse;
+}
+
+.parent84{
+	width:80%;
+	height:600px;
+	border:3px solid black;
+	margin:auto;
+	padding:10px;
+	display:flex;
+	align-items:center;
+	justify-content:space-between;
+	flex-direction:column-reverse;
+}
+
+.parent85{
+	width:80%;
+	height:600px;
+	border:3px solid black;
+	margin:auto;
+	padding:10px;
+	display:flex;
+	align-items:center;
+	justify-content:space-evenly;
+	flex-direction:column-reverse;
+}
+
+.general86{
+	width:80%;
+	border:3px solid black;
+	margin:auto;
+	padding:10px;
+}
+
+.parent1{
+	display:flex;
+}
+
+.parent2{
+	display:flex;
+	flex-direction:column;
+	align-items:center;
+}
+
+.parent87{
+	width:80%;
+	height:600px;
+	border:3px solid black;
+	margin:auto;
+	padding:10px;
+	display:flex;
+	flex-direction:row;
+	align-items:flex-start;
+	justify-content:space-between;
+}
+
+.parent88{
+	width:80%;
+	height:600px;
+	border:3px solid black;
+	margin:auto;
+	padding:10px;
+	display:flex;
+	flex-direction:column;
+	align-items:center;
+}
+
+.parent89{
+	width:80%;
+	height:600px;
+	border:3px solid black;
+	margin:auto;
+	padding:10px;
+	display:flex;
+	flex-direction:column;
+	align-items:flex-end;
+}
+
+.parent90{
+	width:80%;
+	height:600px;
+	border:3px solid black;
+	margin:auto;
+	padding:10px;
+	display:flex;
+	flex-direction:column;
+	align-items:flex-start;
+}
+
+.parent91{
+	width:80%;
+	height:600px;
+	border:3px solid black;
+	margin:auto;
+	padding:10px;
+	display:flex;
+	flex-direction:row;
+}
+
+.parent92{
+	width:80%;
+	height:600px;
+	border:3px solid black;
+	margin:auto;
+	padding:10px;
+	display:flex;
+	flex-direction:column;
+}
+
+.parent93{
+	width:80%;
+	margin:auto;
+	border:3px solid black;
+	background-color:blue;
+	display:flex;
+	flex-direction:row;
+}
+
+.parent94{
+	width:80%;
+	margin:auto;
+	height:500px;
+	border:3px solid black;
+	background-color:blue;
+	display:flex;
+	flex-direction:column;
+}
+
+.parent95{
+	width:300px;
+	margin:auto;
+	height:500px;
+	border:3px solid black;
+	background-color:blue;
+	display:flex;
+	flex-direction:row;
+}
+
+.parent96{
+	width:300px;
+	margin:auto;
+	height:300px;
+	border:3px solid black;
+	background-color:blue;
+	display:flex;
+	flex-direction:column;
+}
+
+.parent97{
+	width:80%;
+	margin:auto;
+	border:3px solid black;
+	display:flex;
+	height:400px;
+	align-items:flex-start;
+	justify-content:space-between;
+}
+
+.parent98{
+	width:80%;
+	margin:auto;
+	border:3px solid black;
+	display:flex;
+	height:400px;
+	align-items:flex-end;
+	justify-content:space-between;
+}
+
+.parent99{
+	width:80%;
+	margin:auto;
+	border:3px solid black;
+	display:flex;
+	flex-direction:column;
+	height:400px;
+	align-items:flex-end;
+	justify-content:space-around;
+}
+
+.parent100{
+	width:80%;
+	margin:auto;
+	border:3px solid black;
+	display:flex;
+	flex-direction:row;
+	height:400px;
+	align-items:flex-end;
+	justify-content:center;
+}

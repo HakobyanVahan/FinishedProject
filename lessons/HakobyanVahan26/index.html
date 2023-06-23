@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        //ՊԱՅՄԱՆԱԿԱՆ ՕՊԵՐԱՏՈՐ_3-1
+//Գտնել տրված n երկնիշ թվի թվանշաններից մեծագույնը:
+// function f1(num) {
+//     if (parseInt(num / 10) > num % 10) {
+//         return parseInt(num / 10);
+//     }
+//     return num % 10;
+// }
+
+// console.log(f1(19));
+
+//ՊԱՅՄԱՆԱԿԱՆ ՕՊԵՐԱՏՈՐ_3-2
+//Գտնել տրված n երկնիշ թվի թվանշաններից փոքրագույնի կրկնապատիկը:
+
+// function f2(num) {
+//     if (parseInt(num / 10) < num % 10) {
+//         return parseInt(num / 10) * 2;
+//     }
+//     return num % 10 * 2;
+// }
+
+// console.log(f2(19));
+
+//ՊԱՅՄԱՆԱԿԱՆ ՕՊԵՐԱՏՈՐ_3-3
+//Գտնել տրված n երկնիշ թվի թվանշաններից մեծագույնը երկուսի բաժանելուց ստացված մնացորդը:
+
+// function f3(num) {
+//     if (parseInt(num / 10) > num % 10) {
+//         return parseInt(num / 10) % 2;
+//     }
+//     return num % 10 % 2;
+// }
+
+// console.log(f3(19));
+
+//ՊԱՅՄԱՆԱԿԱՆ ՕՊԵՐԱՏՈՈՐ_3-4
+//Արտածել տրված n երկնիշ թվի թվանշաններից փոքրագույնը, եթե տրված երկնիշ թիվը զույգ է: Հակառակ դեպքում արտածել երկնիշ թիվը:
+
+// function f4(num) {
+//     if (parseInt(num / 10) < num % 10 && parseInt(num / 10) % 2 == 0) {
+//         return parseInt(num / 10);
+//     } else if (num % 10 < parseInt(num / 10) && (num % 10) % 2 == 0) {
+//         return (num % 10);
+//     }
+//     return num;
+// }
+
+// console.log(f4(19));
+
+//ՊԱՅՄԱՆԱԿԱՆ ՕՊԵՐԱՏՈՈՐ_3-5
+//Արտածել տրված n երկնիշ թվի թվանշաններից մեծագույնը, եթե տրված երկնիշ թվի թվանշանների գումարը կենտ է: Հակառակ դեպքում արտածել փոքրագույն թվանշանը:
+
+// function f5(num) {
+//     if (parseInt(num / 10) > num % 10 && (parseInt(num / 10) + num % 10) % 2 != 0) {
+//         return parseInt(num / 10);
+//     } else if (num % 10 > parseInt(num / 10) && (parseInt(num / 10) + num % 10) % 2 != 0) {
+//         return num % 10;
+//     } else if (parseInt(num / 10) < num % 10) {
+//         return parseInt(num / 10);
+//     } else {
+//         return num % 10;
+//     }
+// }
+
+// console.log(f5(24));
+
+//ՊԱՅՄԱՆԱԿԱՆ ՕՊԵՐԱՏՈՈՐ_3-6
+//Արտածել տրված n երկնիշ թվի թվանշանների գումարը, եթե տրված երկնիշ թվի թվանշանները դասավորված են աճման կարգով: Հակառակ դեպքում արտածել թվանշանների արտադրյալը:
+
+// function f6(num) {
+//     if (parseInt(num / 10) < num % 10) {
+//         return parseInt(num / 10) + num % 10;
+//     }
+//     return num % 10 * parseInt(num / 10);
+// }
+
+// console.log(f6(19));
+
+
+//ՊԱՅՄԱՆԱԿԱՆ ՕՊԵՐԱՏՈՈՐ_3-7
+//Գտնել տրված n եռանիշ թվի թվանշաններից փոքրագույնը:
+
+// function f7(num) {
+//     if (parseInt(num / 100) < parseInt(num / 10) % 10 && parseInt(num / 100) < num % 10) {
+//         return parseInt(num / 100);
+//     } else if (parseInt(num / 10) % 10 < parseInt(num / 100) && parseInt(num / 10) % 10 < num % 10) {
+//         return (parseInt(num / 10) % 10);
+//     }
+//     return num % 10;
+// }
+
+// console.log(f7(195));
+
+//ՊԱՅՄԱՆԱԿԱՆ ՕՊԵՐԱՏՈՈՐ_3-8
+//Գտնել տրված n եռանիշ թվի թվանշաններից մեծագույնի քառապատիկը:
+
+// function f8(num) {
+//     if (parseInt(num / 100) > parseInt(num / 10) % 10 && parseInt(num / 100) > num % 10) {
+//         return parseInt(num / 100) * 4;
+//     } else if (parseInt(num / 10) % 10 > parseInt(num / 100) && parseInt(num / 10) % 10 > num % 10) {
+//         return (parseInt(num / 10) % 10) * 4;
+//     }
+//     return num % 10 * 4;
+// }
+
+// console.log(f8(195));
+
+//ՊԱՅՄԱՆԱԿԱՆ ՕՊԵՐԱՏՈՈՐ_3-9
+//Գտնել տրված n եռանիշ թվի թվանշաններից մեծագույնը երեքի բաժանելուց ստացված մնացորդը:
+
+// function f9(num) {
+//     if (parseInt(num / 100) > parseInt(num / 10) % 10 && parseInt(num / 100) > num % 10) {
+//         return parseInt(num / 100) % 3;
+//     } else if (parseInt(num / 10) % 10 > parseInt(num / 100) && parseInt(num / 10) % 10 > num % 10) {
+//         return (parseInt(num / 10) % 10) % 3;
+//     }
+//     return num % 10 % 3;
+// }
+
+// console.log(f9(195));
+
+//ՊԱՅՄԱՆԱԿԱՆ ՕՊԵՐԱՏՈՈՐ_3-10
+//Գտնել տրված n եռանիշ թվի փոքրագույն և մեծագույն թվանշանների գումարը:
+
+//???
+
+//ՊԱՅՄԱՆԱԿԱՆ ՕՊԵՐԱՏՈՈՐ_3-11
+//Արտածել տրված n եռանիշ թվի թվանշաններից փոքրագույնը, եթե տրված եռանիշ թվի թվանշանների գումարը զույգ է: Հակառակ դեպքում արտածել մեծագույն թվանշանը:
+
+// function f11(num) {
+//     if (parseInt(num / 100) < parseInt(num / 10) % 10 && parseInt(num / 100) < num % 10 && (parseInt(num / 100) + parseInt(num / 10) % 10 + num % 10) % 2 == 0) {
+//         return parseInt(num / 100);
+//     } else if (parseInt(num / 10) % 10 < parseInt(num / 100) && parseInt(num / 10) % 10 < num % 10 && (parseInt(num / 100) + parseInt(num / 10) % 10 + num % 10) % 2 == 0) {
+//         return (parseInt(num / 10) % 10);
+//     } else if (num % 10 > parseInt(num / 100) && num % 10 > parseInt(num / 10) % 10 && (parseInt(num / 100) + parseInt(num / 10) % 10 + num % 10) % 2 == 0) {
+//         return num % 10;
+//     }
+
+//     if (parseInt(num / 100) > parseInt(num / 10) % 10 && parseInt(num / 100) > num % 10) {
+//         return parseInt(num / 100);
+//     } else if (parseInt(num / 10) % 10 > parseInt(num / 100) && parseInt(num / 10) % 10 > num % 10) {
+//         return (parseInt(num / 10) % 10);
+//     }
+//     return num % 10;
+// }
+
+// console.log(f11(195));
+
+//ՊԱՅՄԱՆԱԿԱՆ ՕՊԵՐԱՏՈՐ_3-12
+//Տրված n եռանիշ թվի թվանշանները դասավորել աճման կարգով:
+//??
+
+//Ռեկուրսիայի օգնությամբ 10-ական համակարգի թիվը վերածել 2-ական համակարգի թվի։
+
+// var sum = '';
+
+// function binary(num) {
+//     if (num > 0 && num < 1) {
+//         return sum;
+//     }
+//     sum += parseInt(num % 2);
+//     return binary(num / 2);
+// }
+
+// console.log(binary(1000));
+
+//Խնդիր 2
+
+// function compare(num) {
+//     return function (num2) {
+//         if (num > num2 || num < num2) {
+//             return num > num2;
+//         } else {
+//             return null;
+//         }
+//     }
+// }
+
+// var comp = compare(20);
+// console.log(comp(10));
+// console.log(comp(20));
+// console.log(comp(35));
+
+    </script>
+</body>
+
+</html>

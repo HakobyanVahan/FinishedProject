@@ -1,0 +1,63 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "John",
+      "l_name": "Smith",
+      "email": "john@mail.ru",
+      "age": 45
+    },
+    {
+      "id": 2,
+      "name": "Mike",
+      "l_name": "Doe",
+      "age": 36,
+      "email": "mike@mail.ru"
+    },
+    {
+      "name": "kevin",
+      "l_name": "Smith",
+      "email": "kevin@mail.ru",
+      "age": 63,
+      "id": 3
+    }
+  ],
+  "country": [
+    {
+      "id": 1,
+      "name": "Armenia",
+      "cityes": [
+        {
+          "id": 1,
+          "name": "Gyumri"
+        },
+        {
+          "id": 2,
+          "name": "Yerevane"
+        },
+        {
+          "id": 3,
+          "name": "Vanadzor"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Russia",
+      "cityes": [
+        {
+          "id": 1,
+          "name": "Sochi"
+        },
+        {
+          "id": 2,
+          "name": "Moscow"
+        },
+        {
+          "id": 3,
+          "name": "Anapa"
+        }
+      ]
+    }
+  ]
+}

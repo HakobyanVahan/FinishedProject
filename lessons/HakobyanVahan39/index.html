@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <div id="block"></div>
+    <div class="stopWatch">
+        <div class="stopWatchInput">00 : 00: 00</div>
+        <button class="stopWatchStart">Start</button>
+        <button class="stopWatchReset">Reset</button>
+        <button class="stopWatchStop">Stop</button>
+    </div> -->
+    <select name="" id="select"></select>
+    <button class="close">Close</button>
+    <div class="gallery"></div>
+    <script>
+        //Շախմատ
+
+        // let chess = document.querySelector('div#block');
+        // let table = document.createElement('table');
+        // chess.append(table)
+
+        // for (let i = 0; i < 8; i++) {
+        //     let x = document.createElement('tr');
+        //     table.append(x)
+        //     for (let j = 0; j < 8; j++) {
+        //         let y = document.createElement('th')
+        //         y.style.width = '30px';
+        //         y.style.height = '30px';
+        //         if (j % 2 !== 0 && i % 2 == 0) {
+        //             y.style.backgroundColor = 'black';
+        //         } else if (j % 2 === 0 && i % 2 != 0) {
+        //             y.style.backgroundColor = 'black';
+        //         }
+        //         x.append(y);
+        //     };
+        // }
+
+        //Վայրկյանաչափ
+
+        // let timer = document.querySelector('.stopWatch');
+        // let input = timer.querySelector('.stopWatchInput');
+        // let start = timer.querySelector('.stopWatchStart');
+        // let reset = timer.querySelector('.stopWatchReset');
+        // let finished = timer.querySelector('.stopWatchStop');
+        // timer.style.textAlign = 'center'
+
+        // let date = new Date();
+        // let zeroHours = date.setHours(0);
+        // let zeroMinutes = date.setMinutes(0);
+        // let zeroSec = date.setSeconds(0);
+
+        // input.innerHTML = `${date.getHours()} : ${date.getMinutes()} : ${date.getSeconds()}`
+
+        // start.addEventListener('click', () => {
+        //     setInterval(() => {
+        //         input.innerHTML = `${date.getHours()} : ${date.getMinutes()} : ${new Date(date.setSeconds(date.getSeconds() + 1)).getSeconds()}`
+        //     }, 0)
+        // })
+
+        // reset.addEventListener('click', () => {
+        //     clearInterval(1);
+        //     input.innerHTML = `${zeroHours} : ${zeroMinutes} : ${zeroSec}`;
+        //     setInterval(() => {
+        //         input.innerHTML = `${date.getHours()} : ${date.getMinutes()} : ${new Date(date.setSeconds(date.getSeconds() + 1)).getSeconds()}`
+        //     }, 0)
+        // })
+
+        // finished.addEventListener('click', () => {
+        //     location.reload();
+        // })
+
+        //Select - Option
+
+        // let sel = document.getElementById('select');
+
+        // let country = [
+        //     {
+        //         id: 1,
+        //         name: 'Armenia'
+        //     },
+        //     {
+        //         id: 2,
+        //         name: 'Russia'
+        //     },
+        //     {
+        //         id: 3,
+        //         name: 'USA'
+        //     },
+        //     {
+        //         id: 4,
+        //         name: 'London'
+        //     },
+        //     {
+        //         id: 5,
+        //         name: 'Argentina'
+        //     },
+        //     {
+        //         id: 6,
+        //         name: 'Belarus'
+        //     },
+        //     {
+        //         id: 7,
+        //         name: 'Belgium'
+        //     },
+        //     {
+        //         id: 8,
+        //         name: 'Brazil'
+        //     },
+        //     {
+        //         id: 9,
+        //         name: 'Cambodia'
+        //     },
+        //     {
+        //         id: 10,
+        //         name: 'Cameroon'
+        //     },
+        //     {
+        //         id: 11,
+        //         name: 'Canada'
+        //     },
+        //     {
+        //         id: 12,
+        //         name: 'China'
+        //     },
+        //     {
+        //         id: 13,
+        //         name: 'Japan'
+        //     },
+        //     {
+        //         id: 14,
+        //         name: 'Cuba'
+        //     },
+        //     {
+        //         id: 15,
+        //         name: 'Cyprus'
+        //     }
+        // ]
+
+        // country.forEach((item) => {
+        //     let y = document.createElement('option');
+        //     y.innerHTML = `${item['name']}`;
+        //     sel.append(y)
+        // })
+
+// let gallery = document.querySelector('.gallery');
+// let toClose = document.querySelector('.close');
+// let firstImage = document.createElement('img');
+// gallery.append(firstImage);
+// firstImage.setAttribute('src', './img/firstImage.jpg')
+// let secondImage = document.createElement('img');
+// secondImage.setAttribute('src', './img/secondImage.jpg')
+// gallery.append(secondImage)
+// let thirdImage = document.createElement('img');
+// thirdImage.setAttribute('src', './img/thirdImage.jpg')
+// gallery.append(thirdImage)
+
+// gallery.style.display = 'flex';
+// gallery.style.justifyContent = 'center';
+
+// toClose.addEventListener('click', () => {
+//     location.reload();
+// })
+
+// firstImage.addEventListener('click', () => {
+//     firstImage.style.position = 'fixed';
+//     firstImage.style.width = '50%';
+//     firstImage.style.heigth = '50%';
+//     firstImage.style.border = '10px solid black';
+// })
+
+
+// secondImage.addEventListener('click', () => {
+//     secondImage.style.position = 'fixed';
+//     secondImage.style.width = '50%';
+//     secondImage.style.heigth = '50%';
+//     secondImage.style.border = '10px solid black';
+// })
+
+// thirdImage.addEventListener('click', () => {
+//     thirdImage.style.position = 'fixed';
+//     thirdImage.style.width = '50%';
+//     thirdImage.style.heigth = '50%';
+//     thirdImage.style.border = '10px solid black';
+
+// })
+
+
+    </script>
+</body>
+
+</html>

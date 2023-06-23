@@ -1,0 +1,44 @@
+<main class="main">
+    <header class="category-header">
+        <div class="category-header-container">
+            <div class="category-header-inner">
+                <div class="category-header-textBlock">
+                    <h1 class="category-title">Business</h1>
+                    <p class="category-paragraph">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore.
+                    </p>
+                    <p class="category-nameless">Blog > Business</p>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="category-section">
+        <div class="category-section-container">
+            <div class="category-section-inner">
+                <div class="category-section-items">
+                    <div class="category-section__item" *ngFor="let item of categoryAllPosts">
+                        <app-mypostscom [myPostsInner]="item"></app-mypostscom>
+                    </div>
+                </div>
+                <div class="categories">
+                    <div class="categories-items">
+                        <h2 class="categories-title">Categories</h2>
+                        <div class="categories-item" *ngFor="let item of minCategoryData">
+                            <app-min-category [minCategoryInner]="item"></app-min-category>
+                        </div>
+                    </div>
+
+                    <div class="all-tags">
+                        <h2 class="all-tags__title">All Tags</h2>
+                        <div class="all-tag-items">
+                            <div *ngFor="let item of minTagsData">
+                                <app-min-tags [minTagsInner]="item"></app-min-tags>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>

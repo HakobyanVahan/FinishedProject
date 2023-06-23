@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //forEach - ի աշխատելու սկզբունքը
+
+// var arr = ['hello', 1, true, false, 'js'];
+
+// function forEach() {
+//     for (var i = 0; i < this.length; i++) {
+//         console.log(this[i], i, this);
+//     }
+// }
+
+// forEach.call(arr);
+
+//filter - ի աշխատելու սկզբունքը
+
+// var arr = [12, 25, 11, 15, 75, 25]
+
+// function filter(f) {
+//     var newArr = [];
+//     var j = 0;
+//     for (var i = 0; i < this.length; i++) {
+//         if (f(this[i]) % 2 == 0) {
+//             newArr[j] = f(this[i]);
+//         }
+//     }
+//     return newArr;
+// }
+
+// var filt = filter.call(arr, function (some) {
+//     return (some);
+// });
+
+// console.log(filt);
+
+//push ֆունկցիան
+
+// var arr = [true, 'Hello', 'JavaScript', null, undefined]
+// var j = arr.length - 1;
+// var x = 1
+
+// function push() {
+//     for (var i = 0; i < arguments.length; i++) {
+//         arr[j + x] = arguments[i];
+//         x++;
+//     }
+//     return arr;
+// }
+
+// console.log(push.call(arr, 10, 20, true, false, 80, 'Hello'));
+
+//pop ֆունկցիան
+
+// var arr = [true, 'Hello', 'JavaScript', null, undefined]
+// function pop() {
+//     this.length = this.length - 1;
+//     return this;
+// }
+
+// console.log(pop.call(arr));
+// console.log(pop.call(arr));
+
+//toString ֆունկցիան
+
+// var arr = [true, false, 50, 60];
+// var result = '';
+
+// function toString() {
+//     for (var i = 0; i < this.length; i++) {
+//         if (i == this.length - 1) {
+//             result += this[i];
+//         } else {
+//             result += this[i] + ',';
+//         }
+//     }
+//     return result;
+// }
+
+// console.log(toString.call(arr));
+
+//indexOf ֆունկցիան
+
+// var arr = [true, false, 9, 'Hello', 'js']
+
+// function indexOf() {
+//     if (typeof arguments[0] !== 'object' || typeof arguments[0] !== 'function') {
+//         for (var i = 0; i < arr.length; i++) {
+//             if (arr[i] === arguments[0]) {
+//                 return i;
+//             }
+//         }
+//     }
+//     return -1;
+// }
+
+// console.log(indexOf.call(arr, { name: 'Mike' }));
+
+//lastIndexOf ֆունկցիան
+
+// var arr = [58, 'hello', 'Joe', true, 58, true, NaN, 46, { name: 'Mike' }];
+
+// function lastIndexOf() {
+//     if (typeof arguments[0] !== 'object' || typeof arguments[0] !== 'function') {
+//         for (var i = arr.length - 1; i > -1; i--) {
+//             if (arr[i] === arguments[0]) {
+//                 return i;
+//             }
+//         }
+//     }
+//     return -1;
+// }
+
+// console.log(lastIndexOf.call(arr, 46));
+    </script>
+</body>
+
+</html>

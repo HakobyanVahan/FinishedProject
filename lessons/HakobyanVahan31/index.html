@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //Ստեղծել includes անունով ֆունկցիա վերադարձնե true կամ false
+
+// var arr = [true, false, 9, 'Hello', 'js']
+
+// function search(p) {
+//     for (var i = 0; i < this.length; i++) {
+//         if (this[i] === p) {
+//             return true
+//         }
+//     }
+//     return false;
+// }
+
+// console.log(search.call(arr, 'dgf'));
+
+
+// Գրել indexOf մեթոդը տողի համար
+
+// function indexOf(str, p) {
+//     // debugger;
+//     for (var i = 0; i < str.length; i++) {
+//         for (var j = 0; j < p.length; j++) {
+//             if (str[i] === p[0]) {
+//                 return i;
+//             }
+//         }
+//     }
+//     return -1;
+// }
+
+// console.log(indexOf(str, 'Hello'));
+
+//Գրել join մեթոդը
+
+// var x = '';
+// var arr = [true, false, 60, 90, 'bar', 'tar']
+
+// function join(p) {
+//     for (var i = 0; i < this.length; i++) {
+//         if (i == this.length - 1) {
+//             x += this[i]
+//         } else {
+//             x += this[i] + p;
+//         }
+//     }
+// }
+
+// join.call(arr, ' ');
+
+// console.log(x);
+
+//Replace ֆունկցիան
+
+// var str = 'Hello world';
+// var emptyStr = '';
+
+// function replace(a, b) {
+//     for (var i = 0; i < str.length; i++) {
+//         if (str[i] === a) {
+//             emptyStr += b;
+//             break;
+//         } else {
+//             emptyStr += str[i];
+//         }
+//     }
+//     for (var j = i + 1; j < str.length; j++) {
+//         emptyStr += str[j]
+//     }
+//     return emptyStr;
+// }
+
+// console.log(replace('o', 'd'));
+
+//Replace
+
+// function replace(a, b) {
+//     debugger;
+//     for (var i = 0; i < str.length; i++) {
+//         switch (true) {
+//             case (str[i] == a): for (var j = 0; j < 1; j++) {
+//                 emptyStr += b;
+//             }
+//                 break;
+//         }
+//         emptyStr += str[i];
+//     }
+//     return emptyStr;
+// }
+
+
+// console.log(replace('l', 'd'));
+
+//ASCII1_01
+// var x = prompt('Enter a letter');
+// console.log(x.charCodeAt(0));
+
+//ASCII1_02
+// var x = prompt('Enter a letter');
+// var y = x.toUpperCase();
+// console.log(y.charCodeAt(0));
+
+//ASCII1_03
+// var x = prompt('Enter a num');
+// console.log(x.charCodeAt(0));
+
+//ASCII1_04
+// var x = prompt('Enter a num');
+// console.log(String.fromCharCode(x));
+
+//ASCII1_05
+// var x = prompt('Enter a num');
+// console.log(String.fromCharCode(x));
+
+//ASCII1_06
+// var x = prompt('Enter a num');
+// console.log(String.fromCharCode(x));
+
+//ASCII1_07
+// var x = prompt('Enter a letter');
+// var y = x.toUpperCase();
+// console.log(y);
+
+//ASCII1_08
+// var x = prompt('Enter a letter');
+// var y = x.toLowerCase();
+// console.log(y);
+
+//ASCII1_09
+// var x = prompt('Enter a letter');
+// var y;
+
+// if (x[0] === x.toUpperCase()) {
+//     y = x.toLowerCase();
+// } else {
+//     y = x.toUpperCase();
+// }
+
+// console.log(y);
+
+//ASCII1_10
+// var x = prompt('Enter a letter');
+// var y;
+
+// if (x[0] === x.toUpperCase()) {
+//     y = x.toLowerCase();
+// } else {
+//     y = x.toUpperCase();
+// }
+
+// console.log(y);
+
+//ASCII1_11
+// var x = prompt('Enter a letter');
+// var y = prompt('Enter a second number');
+// var str = '';
+
+// for (var i = x.charCodeAt(0); i <= y.charCodeAt(0); i++) {
+//     str += String.fromCharCode(i)
+// }
+
+// console.log(str);
+
+//ASCII1_12
+// var x = prompt('Enter a letter');
+// var y = prompt('Enter a second number');
+// var str = '';
+
+// for (var i = x.charCodeAt(0); i <= y.charCodeAt(0); i++) {
+//     str += String.fromCharCode(i)
+// }
+
+// console.log(str);
+
+// ASCII1_13
+// var x = prompt('Enter a letter');
+// var y = prompt('Enter a second number');
+// var str = '';
+
+// for (var i = x.charCodeAt(0); i <= y.charCodeAt(0); i++) {
+//     str += String.fromCharCode(i)
+// }
+
+// console.log(str);
+
+// ASCII1_14
+// var x = prompt('Enter a letter');
+// var y = prompt('Enter a second number');
+// var str = '';
+
+// for (var i = x.charCodeAt(0); i >= y.charCodeAt(0); i--) {
+//     str += String.fromCharCode(i)
+// }
+
+// console.log(str);
+
+// ASCII1_15
+// var x = prompt('Enter a letter');
+// var y = prompt('Enter a second number');
+// var str = '';
+
+// for (var i = x.charCodeAt(0); i >= y.charCodeAt(0); i--) {
+//     str += String.fromCharCode(i)
+// }
+
+// console.log(str);
+
+// ASCII1_16
+// var x = prompt('Enter a letter');
+// var y = prompt('Enter a second number');
+// var str = '';
+
+// for (var i = x.charCodeAt(0); i >= y.charCodeAt(0); i--) {
+//     str += String.fromCharCode(i)
+// }
+
+// console.log(str);
+
+// ASCII1_17
+// var x = prompt('Enter a letter');
+// var y = prompt('Enter a second number');
+// var str = '';
+
+// for (var i = x.charCodeAt(0); i <= y.charCodeAt(0); i++) {
+//     str += String.fromCharCode(i)
+// }
+
+// console.log(str);
+
+// ASCII1_18
+// var x = prompt('Enter a letter');
+// var y = prompt('Enter a second number');
+// var str = '';
+
+// for (var i = x.charCodeAt(0); i >= y.charCodeAt(0); i--) {
+//     str += String.fromCharCode(i)
+// }
+
+// console.log(str);
+
+// ASCII1_19
+// var x = prompt('Enter a letter');
+// var y = prompt('Enter a second number');
+// var str = '';
+
+// for (var i = x.charCodeAt(0) + 1; i < y.charCodeAt(0); i++) {
+//     str += String.fromCharCode(i)
+// }
+
+// console.log(str);
+
+// ASCII1_20
+// var x = prompt('Enter a letter');
+// var y = prompt('Enter a second number');
+// var str = '';
+
+// for (var i = x.charCodeAt(0) - 1; i > y.charCodeAt(0); i--) {
+//     str += String.fromCharCode(i)
+// }
+
+// console.log(str);
+
+//ՏՈՂԻ ՁԵՎԱՓՈԽՈւՄ_1-1
+
+// var str = 'arev';
+// var res = '';
+// for (var i = 0; i < str.length; i++) {
+//     res += str[i].repeat(2);
+// }
+
+// console.log(res);
+
+//ՏՈՂԻ ՁԵՎԱՓՈԽՈւՄ_1-2
+// var str = 'arev';
+// var res = '';
+
+// for (var i = 0; i < str.length; i++) {
+//     if (i == str.length - 1) {
+//         res += str[i];
+//     } else {
+//         res += str[i] + '-';
+//     }
+// }
+
+// console.log(res);
+
+//ՏՈՂԻ ՁԵՎԱՓՈԽՈւՄ_1-4
+// var str = 'Milye druzya';
+// var res = '';
+// for (var i = 0; i < str.length; i++) {
+//     if (i % 2 != 0) {
+//         res += '#';
+//     } else {
+//         res += str[i];
+//     }
+// }
+
+// console.log(res);
+
+//ՏՈՂԻ ՁԵՎԱՓՈԽՈւՄ_1-5
+// var str = 'Programmer';
+// var res = '';
+
+// for (var i = 0; i < str.length; i++) {
+//     if (i % 2 == 0) {
+//         res += str[i];
+//     }
+// }
+
+// console.log(res);
+
+//ՏՈՂԻ ՁԵՎԱՓՈԽՈւՄ_1-6
+// var str = 'N#am# n#us#h#na va#sh#a p#om#ash';
+// var res = '';
+
+// for (var i = 0; i < str.length; i++) {
+//     if (str[i] !== '#') {
+//         res += str[i];
+//     }
+// }
+
+// console.log(res);
+
+//ՏՈՂԻ ՁԵՎԱՓՈԽՈւՄ_1-7
+
+// var str = '3+5=8';
+// var res = '';
+
+// for (var i = 0; i < str.length; i++) {
+//     if (str[i] !== '+' && str[i] !== '=' && str[i] !== 8) {
+//         res += 8;
+//     } else {
+//         res += str[i];
+//     }
+// }
+
+// console.log(res);
+
+//ՏՈՂԻ ՁԵՎԱՓՈԽՈւՄ_1-8
+// var str = '15pro179gram9 c7h8a9r0'
+// var res = '';
+
+// for (var i = 0; i < str.length; i++) {
+//     if (str[i] - str[i] === 0 && str[i] != ' ') {
+//         res += '';
+//     } else {
+//         res += str[i];
+//     }
+// }
+
+// console.log(res);
+
+//ՏՈՂԻ ՁԵՎԱՓՈԽՈւՄ_1-9
+// var str = 'A1B222a3cdefjhs424'
+// var res = '';
+
+// for (var i = 0; i < str.length; i++) {
+//     if (str[i] - str[i] != 0) {
+//         res += '';
+//     } else {
+//         res += str[i];
+//     }
+// }
+
+// console.log(res);
+
+//ՏՈՂԻ ՁԵՎԱՓՈԽՈւՄ_1-10
+// var str = 'A1B222a3cdefjhs424'
+// var res = '';
+
+// for (var i = str.length - 1; i > -1; i--) {
+//     if (str[i] - str[i] == 0) {
+//         res += str[i];
+//     }
+// }
+
+// console.log(res);
+
+// ՓՈԽԱՐԻՆՈւՄ ՏՈՂՈւՄ-1
+
+// Տրված տողում առկա ‘a’ սիմվոլը փոխարինել ‘b’–ով:
+// Արտածել ստացված տողը և իրականացված փոփոխությունների քանակը:
+
+// var str = 'aabbccabadef';
+// var res = '';
+// var count = 0;
+
+// for (var i = 0; i < str.length; i++) {
+//     if (str[i] === 'a') {
+//         res += 'b';
+//         count++;
+//     } else {
+//         res += str[i];
+//     }
+// }
+
+// console.log(res);
+// console.log(count);
+
+// ՓՈԽԱՐԻՆՈւՄ ՏՈՂՈւՄ-2
+// Տրված տողում առկա ‘a’ սիմվոլը փոխարինել ‘b’–ով, իսկ ‘A’–ն՝ ‘B’–ով:
+// Արտածել ստացված տողը և իրականացված փոփոխությունների քանակը:
+
+// var str = 'aabbccAABBCC';
+// var res = '';
+// var count = 0;
+
+// for (var i = 0; i < str.length; i++) {
+//     if (str[i] === 'a') {
+//         res += 'b';
+//         count++;
+//     } else if (str[i] === 'A') {
+//         res += 'B';
+//         count++;
+//     } else {
+//         res += str[i]
+//     }
+// }
+
+// console.log(res);
+// console.log(count);
+
+// ՓՈԽԱՐԻՆՈւՄ ՏՈՂՈւՄ-3
+//Տրված տողում իրականացնել հետևյալ փոփոխությունները. ‘a’–ն` ‘b’–ով, ‘A’–ն՝ ‘B’–ով, ‘b’–ն` ‘a’–ով և ‘B’–ն՝ ‘A’–ով,:
+//Արտածել ստացված տողը և իրականացված փոփոխությունների քանակը:
+
+// var str = 'aabbccAABBCC';
+// var res = '';
+// var count = 0;
+
+// for (var i = 0; i < str.length; i++) {
+//     if (str[i] === 'a') {
+//         res += 'b';
+//         count++;//2
+//     } else if (str[i] === 'A') {
+//         res += 'B';
+//         count++;
+//     } else if (str[i] === 'b') {
+//         res += 'a'
+//         count++;
+//     } else if (str[i] === 'B') {
+//         res += 'A';
+//         count++;
+//     } else (
+//         res += str[i]
+//     )
+// }
+
+// console.log(res);
+// console.log(count);
+
+// ՓՈԽԱՐԻՆՈւՄ ՏՈՂՈւՄ-4
+//Տրված է տող և երկու ենթատող: Տրված տողում առկա առաջին ենթատողը փոխարինել երկրորդ ենթատողով:
+//Արտածել ստացված տողը:
+
+//??
+
+// var x = 'MMXIV';
+// var sum = 0;
+
+// for (var i = 0; i < x.length; i++) {
+//     if (x[i] == 'M') {
+//         sum += 1000;
+//     } else if (x[i] == 'X') {
+//         sum += 10;
+//     } else if (x[i] == 'I') {
+//         sum += 1;
+//     } else {
+//         sum += 5 - 2;
+//     }
+// }
+
+// console.log(sum);
+
+//Բառեր 1-1
+// var str = 'Hello, world!';
+// var arr = str.split(' ');
+// arr.reverse();
+// var res = '';
+// for (var i = 0; i < arr.length; i++) {
+//     res += arr[i] + ' ';
+// }
+
+// console.log(res);
+
+//Բառեր 1—2
+// var str = 'Vasya is a pupil.';
+// var arr = str.split(' ');
+
+// console.log(arr[0]);
+
+//Բառեր 1—3
+// var str = 'Vasya is a pupil.';
+// var arr = str.split(' ');
+// var i = arr.length - 1;
+
+// console.log(arr[i]);
+
+//Բառեր 1-4;
+// var str = 'Vasya is a pupil.';
+// var arr = str.split(' ');
+// var len = arr[0];
+
+
+// for (var i = 1; i < arr.length; i++) {
+//     if (arr[i].length > len.length) {
+//         len = arr[i];
+//     }
+// }
+
+// console.log(len);
+// console.log(len.length);
+    </script>
+</body>
+
+</html>

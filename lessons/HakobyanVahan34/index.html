@@ -1,0 +1,1351 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //String-ի prototype-ի մեջ ավելացնել toCapitalize մեթոդը
+
+// let bar = 'hello world this is a js';
+// String.prototype.capitalize = function (str) {
+//     // debugger;
+//     let emp = '';
+//     emp += this[0].toUpperCase();
+//     // for (let j = 0; j < this.length; j++) {
+//     //     if (this[j] !== ' ' && this[j + 1] !== 0) {
+//     //         emp += this[j].toUpperCase()
+//     //         break;
+//     //     }
+//     // } Չի աշխատի!!!
+//     for (let i = 1; i < this.length; i++) {
+//         if (this[i] == ' ' && this[i + 1] !== ' ') {
+//             emp += ' ' + this[i + 1].toUpperCase();
+//             i++;
+//         } else {
+//             emp += this[i];
+//         }
+//     }
+//     return emp;
+// }
+
+// console.log(bar.capitalize());
+
+//Slide - ի գործնականը class - ով
+
+// class Book {
+//     title;
+//     pubYear;
+//     price;
+
+//     constructor(_title, _pubYear, _price) {
+//         this.title = _title;
+//         this.pubYear = _pubYear;
+//         this.price = _price;
+//     }
+
+//     show() {
+//         console.log(this.title, this.price);
+//     }
+// }
+
+// let sevak = new Book('Anlreli zangakatun', 1959, 5000);
+// let rafi = new Book('Rafi', 1920, 6000)
+// sevak.show();
+// rafi.show();
+
+//Ստեղծել 10 հատ class տարբեր առարկաերի վերաբերյալ
+
+//1
+
+// class Computer {
+//     OS;
+//     CPU;
+//     Mark;
+
+//     constructor(_os, _cpu, _mark) {
+//         this.OS = _os;
+//         this.CPU = _cpu;
+//         this.Mark = _mark;
+//     }
+
+//     characteristics() {
+//         console.log(this.OS);
+//         console.log(this.CPU);
+//         console.log(this.Mark);
+//     }
+// }
+
+// let asus = new Computer('windows', 'intel i5', 'AsusVivoBook')
+
+// asus.characteristics();
+
+//2
+
+// class Cloth {
+//     size;
+//     brand;
+//     color;
+
+//     constructor(_size, _brand, _color) {
+//         this.size = _size;
+//         this.brand = _brand;
+//         this.color = _color;
+//     }
+
+//     yourClothis() {
+//         console.log(`Ձեր շորը ${this.size} չափսի է ${this.color} գույնի է և ${this.brand}-ինն է`);
+//     }
+// }
+
+// let gucci = new Cloth('M', 'gucci', 'red');
+
+// gucci.yourClothis();
+
+//3
+
+// class Building {
+//     floor;
+//     stone;
+//     elevator;
+
+//     constructor(_floor, _stone, _elevator) {
+//         this.floor = _floor;
+//         this.stone = _stone;
+//         this.elevator = _elevator
+//     }
+
+//     yourBuilding() {
+//         console.log(`Ձեր շենքում կա ${this.floor} հատ հարկ։ Այն պատրաստված է ${this.stone}-ից և ${this.elevator} լիֆտ`);
+//     }
+// }
+
+// let gtc = new Building(4, 'Սև տուֆ', 'ունեք');
+// gtc.yourBuilding();
+
+//4
+
+// class Serial {
+//     sezons;
+//     seria;
+//     main_hero;
+
+//     constructor(_sezons, _seria, _main_hero) {
+//         this.sezons = _sezons;
+//         this.seria = _seria;
+//         this.main_hero = _main_hero;
+//     }
+
+//     thisSerial() {
+//         console.log(`Ձեր սերիալը ոնի ${this.sezons} սեզոն ${this.seria} սերիալ նրա գլխավոր հերոսն է ${this.main_hero}-ը`);
+//     }
+// }
+
+// let brigada = new Serial(1, 7, 'Александр Белов');
+// brigada.thisSerial();
+
+
+//5
+
+// class Dog {
+//     name;
+//     breed;
+//     price;
+
+//     constructor(_name, _breed, _price) {
+//         this.name = _name;
+//         this.breed = _breed;
+//         this.price = _price;
+//     }
+
+//     barking() {
+//         console.log(`Ձեր շան անունն է ${this.name}։ Ձեր շան ցեղատեսակը ${this.breed} է։ Ձեր շան գինը ${this.price} դրամ է`);
+//     }
+// }
+
+// let reks = new Dog('reks', 'buldog', 600000);
+// reks.barking();
+
+//6
+
+// class Website {
+//     #creator;
+//     #name;
+//     #price;
+
+//     constructor(_creator, _name, _price) {
+//         this.#creator = _creator;
+//         this.#name = _name;
+//         this.#price = _price;
+//     }
+
+//     WebShow() {
+//         console.log(this.#creator, this.#name);
+//     }
+// }
+
+// let face = new Website('Mark', 'Facebook', 200000);
+// console.log(face.WebShow());
+
+//7
+
+// class Parrot {
+//     #color;
+//     #name;
+//     #age;
+
+//     constructor(_color, _name, _age) {
+//         this.#color = _color;
+//         this.#name = _name;
+//         this.#age = _age;
+//     }
+
+//     #parr() {
+//         console.log(this.#color);
+//     }
+// }
+
+// let yasha = new Parrot('blue', 'yasha', 3);
+// yasha.#parr();
+
+
+//8
+// class Table {
+//     #material;
+//     #heigth;
+//     width;
+
+//     constructor(_material, _heigth, _width) {
+//         this.#material = _material;
+//         this.heigth = _heigth;
+//         this.width = _width;
+//     }
+
+//     myTable() {
+//         console.log(this.#material, this.width);
+//     }
+// }
+
+// let newtable = new Table('wood', 75, 150);
+// newtable.myTable();
+
+//9
+// class Theatre {
+//     #teatre;
+//     #sits;
+//     #name;
+
+//     constructor(_teatre, _sits, _name) {
+//         this.#teatre = _teatre;
+//         this.#sits = _sits;
+//         this.#name = _name;
+//     }
+
+//     show() {
+//         console.log(this.#sits);
+//         console.log(this.#name);
+//     }
+// }
+
+// let gy = new Theatre('some', 10000, 'Aram Xachatryan');
+// gy.show();
+
+//10
+
+// class Gold {
+//     type;
+//     price;
+//     content;
+
+//     constructor(_type, _price, _content) {
+//         this.type = _type;
+//         this.price = _price;
+//         this.content = _content;
+//     }
+
+//     mygold() {
+//         console.log(this.type, this.content);
+//     }
+// }
+
+// let voski = new Gold('Rare', 16000, 999);
+// voski.mygold();
+
+//ԶՈւՅԳ ԵՎ ԿԵՆՏ ԹՎԵՐ-1
+
+// let wind = +prompt('Enter a number');
+
+// if (wind % 2 == 0) {
+//     console.log(1);
+// } else {
+//     console.log(0);
+// }
+
+//ԶՈւՅԳ ԵՎ ԿԵՆՏ ԹՎԵՐ-2
+
+// let wind = +prompt('Enter a number');
+
+// if (wind % 2 == 0) {
+//     console.log(0);
+// } else {
+//     console.log(1);
+// }
+
+//ԶՈւՅԳ ԵՎ ԿԵՆՏ ԹՎԵՐ-3
+
+// let wind = +prompt('Enter a number');
+
+// if (wind % 2 == 0) {
+//     console.log(5555);
+// } else {
+//     console.log(0);
+// }
+
+
+//ԶՈւՅԳ ԵՎ ԿԵՆՏ ԹՎԵՐ-4
+
+// let wind = +prompt('Enter a number');
+
+// if (wind % 2 == 0) {
+//     console.log(0);
+// } else {
+//     console.log(5555);
+// }
+
+//ԶՈւՅԳ ԵՎ ԿԵՆՏ ԹՎԵՐ-5
+
+// let wind = +prompt('Enter a number');
+
+// if (wind % 2 == 0) {
+//     console.log(0);
+// } else {
+//     console.log(5555);
+// }
+
+
+//ԶՈւՅԳ ԵՎ ԿԵՆՏ ԹՎԵՐ-10
+
+// let wind = +prompt('Enter a number');
+
+// if (wind % 2 == 0) {
+//     console.log(-5555);
+// } else {
+//     console.log(5555);
+// }
+
+//ԶՈւՅԳ ԵՎ ԿԵՆՏ ԹՎԵՐ-11
+//Արտածել տրված n բնական թվին հաջորդող զույգ թիվը:
+
+// let wind = +prompt('Enter a number');
+
+// if (wind % 2 == 0) {
+//     console.log(wind + 2);
+// } else {
+//     console.log(wind + 1);
+// }
+
+//ԶՈւՅԳ ԵՎ ԿԵՆՏ ԹՎԵՐ-12
+//Արտածել տրված n բնական թվին նախորդող զույգ թիվը:
+
+// let wind = +prompt('Enter a number');
+
+// if (wind % 2 == 0) {
+//     console.log(wind - 2);
+// } else {
+//     console.log(wind - 1);
+// }
+
+//ԶՈւՅԳ ԵՎ ԿԵՆՏ ԹՎԵՐ-13
+//Արտածել տրված n բնական թվին նախորդող և հաջորդող զույգ թվերը
+
+// let wind = +prompt('Enter a number');
+
+// if (wind % 2 == 0) {
+//     console.log(wind - 2, wind + 2);
+// } else {
+//     console.log(wind - 1, wind + 1);
+// }
+
+
+//ԶՈւՅԳ ԵՎ ԿԵՆՏ ԹՎԵՐ-14
+//Արտածել տրված n բնական թվին նախորդող և հաջորդող զույգ թվերը
+
+// let wind = +prompt('Enter a number');
+
+// if (wind % 2 == 0) {
+//     console.log(wind + 2, wind - 2);
+// } else {
+//     console.log(wind + 1, wind - 1);
+// }
+
+//ՈւՍԽ: ԶՈւՅԳ ԵՎ ԿԵՆՏ ԹՎԵՐ-15
+//Արտածել տրված n բնական թվին հաջորդող կենտ թիվը:
+
+// let wind = +prompt('Enter a number');
+
+// if (wind % 2 == 0) {
+//     console.log(wind + 1);
+// } else {
+//     console.log(wind + 2);
+// }
+
+//ՈւՍԽ: ԶՈւՅԳ ԵՎ ԿԵՆՏ ԹՎԵՐ-16
+//Արտածել տրված n բնական թվին նախորդող կենտ թիվը:
+
+// let wind = +prompt('Enter a number');
+
+// if (wind % 2 == 0) {
+//     console.log(wind - 1);
+// } else {
+//     console.log(wind - 2);
+// }
+
+// ԶՈւՅԳ ԵՎ ԿԵՆՏ ԹՎԵՐ-17
+// Արտածել տրված n բնական թվին նախորդող և հաջորդող կենտ թվերը:
+
+// let wind = +prompt('Enter a number');
+
+// if (wind % 2 == 0) {
+//     console.log(wind - 1, wind + 1);
+// } else {
+//     console.log(wind - 2, wind + 2);
+// }
+
+
+// ԶՈւՅԳ ԵՎ ԿԵՆՏ ԹՎԵՐ-18
+// Արտածել տրված n բնական թվին հաջորդող և նախորդող կենտ թվերը:
+// let wind = +prompt('Enter a number');
+
+// if (wind % 2 == 0) {
+//     console.log(wind + 1, wind - 1);
+// } else {
+//     console.log(wind + 2, wind - 2);
+// }
+
+
+// ԶՈւՅԳ ԵՎ ԿԵՆՏ ԹՎԵՐ-19
+// Արտածել տրված n բնական թվին հաջորդող երկու զույգ թվերը:
+// let wind = +prompt('Enter a number');
+
+// if (wind % 2 == 0) {
+//     console.log(wind + 2, wind + 4);
+// } else {
+//     console.log(wind + 1, wind + 3);
+// }
+
+// ԶՈւՅԳ ԵՎ ԿԵՆՏ ԹՎԵՐ-20
+// Արտածել տրված n բնական թվին նախորդող երկու զույգ թվերը:
+// let wind = +prompt('Enter a number');
+
+// if (wind % 2 == 0) {
+//     console.log(wind - 2, wind - 4);
+// } else {
+//     console.log(wind - 1, wind - 3);
+// }
+
+
+//ՈւՍԽ: ԶՈւՅԳ ԵՎ ԿԵՆՏ ԹՎԵՐ-21
+//Արտածել տրված n բնական թվին հաջորդող երկու կենտ թվերը:
+
+// let wind = +prompt('Enter a number');
+
+// if (wind % 2 == 0) {
+//     console.log(wind + 1, wind + 3);
+// } else {
+//     console.log(wind + 2, wind + 4);
+// }
+
+//ԶՈւՅԳ ԵՎ ԿԵՆՏ ԹՎԵՐ-22
+//Արտածել տրված n բնական թվին նախորդող երկու կենտ թվերը:
+
+// let wind = +prompt('Enter a number');
+
+// if (wind % 2 == 0) {
+//     console.log(wind - 1, wind - 3);
+// } else {
+//     console.log(wind - 2, wind - 4);
+// }
+
+//ԶՈւՅԳ ԵՎ ԿԵՆՏ ԹՎԵՐ-23
+//Արտածել տրված n բնական թվին հաջորդող երեք զույգ թվերը:
+
+// let wind = +prompt('Enter a number');
+
+// if (wind % 2 == 0) {
+//     console.log(wind + 2, wind + 4, wind + 6);
+// } else {
+//     console.log(wind + 1, wind + 3, wind + 5);
+// }
+
+//ՈւՍԽ: ԶՈւՅԳ ԵՎ ԿԵՆՏ ԹՎԵՐ-24
+//Արտածել տրված n բնական թվին նախորդող երեք զույգ թվերը:
+
+// let wind = +prompt('Enter a number');
+
+// if (wind % 2 == 0) {
+//     console.log(wind - 2, wind - 4, wind - 6);
+// } else {
+//     console.log(wind - 1, wind - 3, wind - 5);
+// }
+
+//ԶՈւՅԳ ԵՎ ԿԵՆՏ ԹՎԵՐ-25
+//Արտածել տրված n բնական թվին հաջորդող երեք կենտ թվերը:
+
+// let wind = +prompt('Enter a number');
+
+// if (wind % 2 == 0) {
+//     console.log(wind + 1, wind + 3, wind + 5);
+// } else {
+//     console.log(wind + 2, wind + 4, wind + 6);
+// }
+
+
+//ՈւՍԽ: ԶՈւՅԳ ԵՎ ԿԵՆՏ ԹՎԵՐ-26
+//Արտածել տրված n բնական թվին նախորդող երեք կենտ թվերը:
+
+// let wind = +prompt('Enter a number');
+
+// if (wind % 2 == 0) {
+//     console.log(wind - 1, wind - 3, wind - 5);
+// } else {
+//     console.log(wind - 2, wind - 4, wind - 6);
+// }
+
+//ՈւՍԽ: ԶՈւՅԳ ԵՎ ԿԵՆՏ ԹՎԵՐ-27
+//Տրված երկու բնական թվերից զույգ թվերը փոխարինել 1-ով, իսկ կենտ թվերը 0-ով:
+
+// let n = +prompt('Enter a first number');
+// let m = +prompt('Enter a second number');
+
+// if (n % 2 == 0) {
+//     n = 1;
+// } else {
+//     n = 0;
+// }
+
+// if (m % 2 == 0) {
+//     m = 1
+// } else {
+//     m = 0;
+// }
+
+// console.log(n, m);
+
+//ՈւՍԽ: ԶՈւՅԳ ԵՎ ԿԵՆՏ ԹՎԵՐ-28
+//Տրված երկու բնական թվերից զույգ թվերը փոխարինել 1-ով, իսկ կենտ թվերը -1-ով:
+
+// let n = +prompt('Enter a first number');
+// let m = +prompt('Enter a second number');
+
+// if (n % 2 !== 0) {
+//     n = 1;
+// } else {
+//     n = 0;
+// }
+
+// if (m % 2 !== 0) {
+//     m = 1
+// } else {
+//     m = 0;
+// }
+
+// console.log(n, m);
+
+//ՈւՍԽ: ԶՈւՅԳ ԵՎ ԿԵՆՏ ԹՎԵՐ-31
+//Արտածել տրված երկու բնական թվերից զույգ թվերի քանակը:
+
+// let n = +prompt('Enter a first number');
+// let m = +prompt('Enter a second number');
+
+// if (n % 2 == 0 && m % 2 == 0) {
+//     console.log(2);
+// } else if (n % 2 == 0 && m % 2 != 0) {
+//     console.log(1);
+// } else if (m % 2 == 0 && n % 2 != 0) {
+//     console.log(1);
+// }
+
+//ԶՈւՅԳ ԵՎ ԿԵՆՏ ԹՎԵՐ-32
+//Արտածել տրված երկու բնական թվերից կենտ թվերի քանակը:
+
+// let n = +prompt('Enter a first number');
+// let m = +prompt('Enter a second number');
+
+// if (n % 2 != 0 && m % 2 != 0) {
+//     console.log(2);
+// } else if (n % 2 != 0 && m % 2 == 0) {
+//     console.log(1);
+// } else if (m % 2 != 0 && n % 2 == 0) {
+//     console.log(1);
+// }
+
+//ԶՈւՅԳ ԵՎ ԿԵՆՏ ԹՎԵՐ-33
+//Արտածել 1, եթե տրված երկու բնական թվերը զույգ են և 0-հակառակ դեպքում:
+
+// let n = +prompt('Enter a first number');
+// let m = +prompt('Enter a second number');
+
+// if (n % 2 == 0 && m % 2 == 0) {
+//     console.log(2);
+// } else {
+//     console.log(1);
+// }
+
+//ԶՈւՅԳ ԵՎ ԿԵՆՏ ԹՎԵՐ-34
+//Արտածել 1, եթե տրված երկու բնական թվերը զույգ են և -1 -հակառակ դեպքում:
+
+// let n = +prompt('Enter a first number');
+// let m = +prompt('Enter a second number');
+
+// if (n % 2 == 0 && m % 2 == 0) {
+//     console.log(1);
+// } else {
+//     console.log(-1);
+// }
+
+//ՈւՍԽ: ԶՈւՅԳ ԵՎ ԿԵՆՏ ԹՎԵՐ-35
+//Արտածել 1, եթե տրված երկու բնական թվերի գումարը զույգ է և 0-հակառակ դեպքում:
+
+// let n = +prompt('Enter a first number');
+// let m = +prompt('Enter a second number');
+
+// if ((n + m) % 2 == 0) {
+//     console.log(1);
+// } else {
+//     console.log(0);
+// }
+
+//ՈւՍԽ: ԶՈւՅԳ ԵՎ ԿԵՆՏ ԹՎԵՐ-36
+//Արտածել 1, եթե տրված երկու բնական թվերի գումարը զույգ է և -1-հակառակ դեպքում:
+
+// let n = +prompt('Enter a first number');
+// let m = +prompt('Enter a second number');
+
+// if ((n + m) % 2 == 0) {
+//     console.log(1);
+// } else {
+//     console.log(-1);
+// }
+
+//ՈւՍԽ: ԶՈւՅԳ ԵՎ ԿԵՆՏ ԹՎԵՐ-39
+//Արտածել 1, եթե տրված երկու բնական թվերի գումարը կենտ է և -1-հակառակ դեպքում:
+
+// let n = +prompt('Enter a first number');
+// let m = +prompt('Enter a second number');
+
+// if ((n + m) % 2 != 0) {
+//     console.log(1);
+// } else {
+//     console.log(0);
+// }
+
+
+//ՈւՍԽ: ԶՈւՅԳ ԵՎ ԿԵՆՏ ԹՎԵՐ-40
+//Արտածել 1, եթե տրված երկու բնական թվերի գումարը կենտ է և -1-հակառակ դեպքում:
+
+// let n = +prompt('Enter a first number');
+// let m = +prompt('Enter a second number');
+
+// if ((n + m) % 2 != 0) {
+//     console.log(1);
+// } else {
+//     console.log(-1);
+// }
+
+//ԶՈւՅԳ ԵՎ ԿԵՆՏ ԹՎԵՐ-41
+// //Արտածել 1, եթե տրված երկու բնական թվերի մեջ զույգ թվերի քանակը գերազանցում է կենտ թվերի քանակը և 0-մնացած դեպքերում:
+
+// let n = +prompt('Enter a first number');
+// let m = +prompt('Enter a second number');
+
+// if (n % 2 == 0) {
+//     n = 1;
+// } else {
+//     n = 0;
+// }
+
+// if (m % 2 == 0) {
+//     m = 1;
+// } else {
+//     m = 0;
+// }
+
+// if (m >= n) {
+//     console.log(m);
+// } else {
+//     console.log(0);
+// }
+
+//ՈւՍԽ: ԶՈւՅԳ ԵՎ ԿԵՆՏ ԹՎԵՐ-49
+//Արտածել 1, եթե տրված երկու բնական թվերից առաջինը զույգ թիվ է և 0-հակառակ դեպքում:
+
+// let n = +prompt('Enter a first number');
+// let m = +prompt('Enter a second number');
+
+// if (n % 2 == 0) {
+//     console.log(1);
+// } else {
+//     console.log(0);
+// }
+
+//ՈւՍԽ: ԶՈւՅԳ ԵՎ ԿԵՆՏ ԹՎԵՐ-51
+//Արտածել 1, եթե տրված երկու բնական թվերից երկրորդը զույգ թիվ է և 0-հակառակ դեպքում:
+
+// let n = +prompt('Enter a first number');
+// let m = +prompt('Enter a second number');
+
+// if (m % 2 == 0) {
+//     console.log(1);
+// } else {
+//     console.log(0);
+// }
+
+
+//ՈւՍԽ: ԶՈւՅԳ ԵՎ ԿԵՆՏ ԹՎԵՐ-53
+//Արտածել 1, եթե տրված երկու բնական թվերից առաջինը զույգ, իսկ երկրորդը կենտ թվեր են և 0-հակառակ դեպքում:
+
+// let n = +prompt('Enter a first number');
+// let m = +prompt('Enter a second number');
+
+// if (n % 2 == 0 && m % 2 != 0) {
+//     console.log(1);
+// } else {
+//     console.log(0);
+// }
+
+//ՈւՍԽ: ԶՈւՅԳ ԵՎ ԿԵՆՏ ԹՎԵՐ-55
+//Արտածել 1, եթե տրված երկու բնական թվերից առաջինը կենտ թիվ է և 0-հակառակ դեպքում:
+
+// let n = +prompt('Enter a first number');
+// let m = +prompt('Enter a second number');
+
+// if (n % 2 != 0) {
+//     console.log(1);
+// } else {
+//     console.log(0);
+// }
+
+//ՈւՍԽ: ԶՈւՅԳ ԵՎ ԿԵՆՏ ԹՎԵՐ-57
+//Արտածել 1, եթե տրված երկու բնական թվերից երկրորդը կենտ թիվ է և 0-հակառակ դեպքում:
+
+// let n = +prompt('Enter a first number');
+// let m = +prompt('Enter a second number');
+
+// if (m % 2 != 0) {
+//     console.log(1);
+// } else {
+//     console.log(0);
+// }
+
+//ՈւՍԽ: ԶՈւՅԳ ԵՎ ԿԵՆՏ ԹՎԵՐ-59
+//Արտածել 1, եթե տրված երկու բնական թվերից առաջինը կենտ, իսկ երկրորդը զույգ թվեր են և 0-հակառակ դեպքում:
+
+// let n = +prompt('Enter a first number');
+// let m = +prompt('Enter a second number');
+
+// if (n % 2 != 0 && m % 2 == 0) {
+//     console.log(1);
+// } else {
+//     console.log(0);
+// }
+
+//ԲՆԱԿԱՆ ԹՎԻ ԹՎԱՆՇԱՆՆԵՐ-12
+//Արտածել տրված n բնական թվի այն թվանշանների գումարը, որոնք բազմապատիկ են 3-ի:
+
+// let num = 12345;
+// let sum = 0;
+
+// while (num != 0) {
+//     if (num % 10 % 3 == 0) {
+//         sum += num % 10;
+//     }
+//     num = parseInt(num / 10)
+// }
+// console.log(sum);
+
+
+//ԲՆԱԿԱՆ ԹՎԻ ԹՎԱՆՇԱՆՆԵՐ-13
+//Արտածել տրված n բնական թվի թվանշանների արտադրյալը 4-ի բաժանելուց ստացված մնացորդը:
+
+// let num = 12345;
+// let sum = 1;
+
+// while (num != 0) {
+//     sum *= num % 10;
+//     num = parseInt(num / 10)
+// }
+// console.log(sum % 4);
+
+//ԲՆԱԿԱՆ ԹՎԻ ԹՎԱՆՇԱՆՆԵՐ-14
+//Արտածել տրված n բնական թվի այն թվանշանների արտադրյալը, որոնք բազմապատիկ են 6-ի:
+
+// let num = 123456;
+// let sum = 1;
+
+// while (num != 0) {
+//     if (num % 10 % 6 == 0) {
+//         sum *= num % 10;
+//     }
+//     num = parseInt(num / 10)
+// }
+// console.log(sum);
+
+//ԲՆԱԿԱՆ ԹՎԻ ԹՎԱՆՇԱՆՆԵՐ-15
+//Արտածել տրված n բնական թվի թվանշանների գումարը և արտադրյալը:
+
+//??
+
+//ԲՆԱԿԱՆ ԹՎԻ ԹՎԱՆՇԱՆՆԵՐ-17
+//Արտածել տրված n բնական թվի մեծագույն թվանշանը 3-ի բաժանելուց ստացված մնացորդը:
+
+// let num = 12345;
+// let sum = 0;
+
+// for (; num != 0; num = parseInt(num / 10)) {
+//     if (num % 10 > sum) {
+//         sum += num % 10
+//     }
+// }
+
+// console.log(sum % 3);
+
+//ԲՆԱԿԱՆ ԹՎԻ ԹՎԱՆՇԱՆՆԵՐ-18
+//Արտածել տրված n բնական թվի փոքրագույն և մեծագույն թվանշանները:
+
+// let num = 12345;
+
+// function max(n = num) {
+//     var maxnum = 0;
+//     for (; n != 0; n = parseInt(n / 10)) {
+//         if (n % 10 > maxnum) {
+//             maxnum = n % 10;
+//         }
+//     }
+
+//     return maxnum;
+// }
+
+// function min(n = num) {
+//     var minnum = 9;
+//     for (; n != 0; n = parseInt(n / 10)) {
+//         if (n % 10 < minnum) {
+//             minnum = n % 10;
+//         }
+//     }
+
+//     return minnum;
+// }
+
+
+// console.log(max(), min());
+
+//ԲՆԱԿԱՆ ԹՎԻ ԹՎԱՆՇԱՆՆԵՐ-19
+//Արտածել տրված n բնական թվի ամենամեծ զույգ թվանշանը:
+
+// let num = 12345678;
+// let sum = 2;
+
+// for (; num != 0; num = parseInt(num / 10)) {
+//     if (num % 10 % 2 == 0 && num % 10 > sum) {
+//         sum = num % 10;
+//     }
+// }
+
+// console.log(sum);
+
+//ԲՆԱԿԱՆ ԹՎԻ ԹՎԱՆՇԱՆՆԵՐ-20
+//Արտածել տրված n բնական թվի ամենափոքր կենտ թվանշանը:
+
+// let num = 2345;
+// let sum = 9;
+
+// for (; num != 0; num = parseInt(num / 10)) {
+//     if (num % 2 != 0 && num % 10 < sum) {
+//         sum = num % 10
+//     }
+// }
+
+// console.log(sum);
+
+//ԲՆԱԿԱՆ ԹՎԻ ԹՎԱՆՇԱՆՆԵՐ-20
+//Թվի reverse
+
+// let num = 12345;
+// let rev = '';
+
+// for (; num != 0; num = parseInt(num / 10)) {
+//     rev += num % 10
+// }
+
+// console.log(rev);
+
+//ԲՆԱԿԱՆ ԹՎԻ ԹՎԱՆՇԱՆՆԵՐ-22
+//Արտածել տրված n բնական թվի զույգ թվանշանների կեսերը հակառակ կարգով:
+
+// let num = 12345;
+// let rev = '';
+
+// for (; num != 0; num = parseInt(num / 10)) {
+//     if (num % 10 % 2 == 0) {
+//         rev += num % 10 / 2;
+//     }
+// }
+
+// console.log(rev);
+
+//ԲՆԱԿԱՆ ԹՎԻ ԹՎԱՆՇԱՆՆԵՐ-23
+//Արտածել տրված n բնական թվի կենտ թվանշանների կրկնապատիկները հակառակ կարգով:
+
+// let num = 12345;
+// let rev = '';
+
+// for (; num != 0; num = parseInt(num / 10)) {
+//     if (num % 10 % 2 != 0) {
+//         rev += num % 10 * 2;
+//     }
+// }
+
+// console.log(rev);
+
+//ԲՆԱԿԱՆ ԹՎԻ ԹՎԱՆՇԱՆՆԵՐ-24
+//Արտածել տրված n բնական թվի զույգ թվանշանները հակառակ կարգով՝ առանձին տողերում:
+
+// let num = 123456784;
+// let rev = '';
+
+// for (; num != 0; num = parseInt(num / 10)) {
+//     if (num % 2 == 0) {
+//         rev += num % 10
+//         console.log(rev);
+//     }
+//     rev = ''
+// }
+
+//ԲՆԱԿԱՆ ԹՎԻ ԹՎԱՆՇԱՆՆԵՐ-25
+//Արտածել տրված n բնական թվի կենտ թվանշանները հակառակ կարգով՝ առանձին տողերում:
+
+// let num = 123456;
+// let rev = '';
+
+// for (; num != 0; num = parseInt(num / 10)) {
+//     if (num % 2 != 0) {
+//         rev += num % 10
+//         console.log(rev);
+//     }
+//     rev = ''
+// }
+
+//ԲՆԱԿԱՆ ԹՎԻ ԹՎԱՆՇԱՆՆԵՐ-26
+//Արտածել տրված n բնական թվի թվանշանները, օրինակում բերված տեսքով:
+
+// let num = 12345;
+// let rev = '';
+// let secRev = ''
+
+// for (; num != 0; num = parseInt(num / 10)) {
+//     rev += num % 10 + ' ';
+//     secRev = rev;
+// }
+
+// console.log(rev, secRev);
+
+//ԲՆԱԿԱՆ ԹՎԻ ԹՎԱՆՇԱՆՆԵՐ-27
+//Արտածել տրված n բնական թվի թվանշանները, օրինակում բերված տեսքով:
+
+// let num = 12345;
+// let rev = '';
+
+// for (; num != 0; num = parseInt(num / 10)) {
+//     rev += num % 10 + ' ';
+//     secRev = rev;
+// }
+
+// console.log(rev);
+// console.log(rev);
+
+//ԲՆԱԿԱՆ ԹՎԻ ԹՎԱՆՇԱՆՆԵՐ-28
+//Արտածել տրված n բնական թվի թվանշանները, օրինակում բերված տեսքով:
+
+// let num = 12345;
+// let rev = '';
+
+// for (; num != 0; num = parseInt(num / 10)) {
+//     rev += num % 10 + ' ';
+//     secRev = rev;
+// }
+
+// console.log(rev);
+// console.log(rev);
+// console.log(rev);
+
+//ԲՆԱԿԱՆ ԹՎԻ ԹՎԱՆՇԱՆՆԵՐ-29
+//Արտածել տրված n բնական թվի զույգ և կենտ թվանշանները, օրինակում բերված տեսքով:
+
+// let num = 12345;
+
+// function reverse(n = num, m = num) {
+//     let rev = '';
+//     for (; n != 0; n = parseInt(n / 10)) {
+//         if (n % 10 % 2 == 0) {
+//             rev += n % 10
+//         }
+//     }
+//     for (; m != 0; m = parseInt(m / 10)) {
+//         if (m % 10 % 2 != 0) {
+//             rev += m % 10;
+//         }
+//     }
+
+//     return rev;
+// }
+
+// console.log(reverse());
+
+//ԲՆԱԿԱՆ ԹՎԻ ԹՎԱՆՇԱՆՆԵՐ-30
+//Արտածել տրված n բնական թվի կենտ և զույգ թվանշանները, օրինակում բերված տեսքով:
+
+// let num = 12345;
+
+// function reverse(n = num, m = num) {
+//     let rev = '';
+//     for (; n != 0; n = parseInt(n / 10)) {
+//         if (n % 10 % 2 != 0) {
+//             rev += n % 10
+//         }
+//     }
+//     for (; m != 0; m = parseInt(m / 10)) {
+//         if (m % 10 % 2 == 0) {
+//             rev += m % 10;
+//         }
+//     }
+
+//     return rev;
+// }
+
+// console.log(reverse());
+
+//ԲՆԱԿԱՆ ԹՎԻ ԹՎԱՆՇԱՆՆԵՐ-31
+//Տրված n բնական թիվը շրջել և հեռացնել 0–ին հավասար բոլոր թվանշանները:
+
+// let num = 12045;
+// let res = '';
+
+// for (; num != 0; num = parseInt(num / 10)) {
+//     if (num % 10 != 0) {
+//         res += num % 10;
+//     }
+// }
+
+// console.log(res);
+
+//ԲՆԱԿԱՆ ԹՎԻ ԹՎԱՆՇԱՆՆԵՐ-32
+//Տրված n բնական թիվը շրջել և հեռացնել 0-ից տարբեր բոլոր թվանշանները:
+
+// let num = 12045;
+// let res = '';
+
+// for (; num != 0; num = parseInt(num / 10)) {
+//     if (num % 10 == 0) {
+//         res += num % 10;
+//     }
+// }
+
+// console.log(res);
+
+//ԲՆԱԿԱՆ ԹՎԻ ԹՎԱՆՇԱՆՆԵՐ-33
+//Տրված n բնական թիվը շրջել և հեռացնել 5-ի հավասար բոլոր թվանշանները:
+
+// let num = 12045;
+// let res = '';
+
+// for (; num != 0; num = parseInt(num / 10)) {
+//     if (num % 10 != 5) {
+//         res += num % 10;
+//     }
+// }
+
+// console.log(res);
+
+//ԲՆԱԿԱՆ ԹՎԻ ԹՎԱՆՇԱՆՆԵՐ-34
+//Տրված n բնական թիվը շրջել և հեռացնել 5-ից տարբեր բոլոր թվանշանները:
+
+// let num = 12045;
+// let res = '';
+
+// for (; num != 0; num = parseInt(num / 10)) {
+//     if (num % 10 == 5) {
+//         res += num % 10;
+//     }
+// }
+
+// console.log(res);
+
+//ԲՆԱԿԱՆ ԹՎԻ ԹՎԱՆՇԱՆՆԵՐ-35
+//Տրված n բնական թիվը շրջել և հեռացնել բոլոր զույգ թվանշանները:
+
+// let num = 12345;
+// let res = '';
+
+// for (; num != 0; num = parseInt(num / 10)) {
+//     if (num % 10 % 2 != 0) {
+//         res += num % 10;
+//     }
+// }
+
+// console.log(res);
+
+//ԲՆԱԿԱՆ ԹՎԻ ԹՎԱՆՇԱՆՆԵՐ-36
+//Տրված n բնական թիվը շրջել և հեռացնել բոլոր կենտ թվանշանները:
+
+// let num = 12345;
+// let res = '';
+
+// for (; num != 0; num = parseInt(num / 10)) {
+//     if (num % 10 % 2 == 0) {
+//         res += num % 10;
+//     }
+// }
+
+// console.log(res);
+
+//ԲՆԱԿԱՆ ԹՎԻ ԹՎԱՆՇԱՆՆԵՐ-37
+//Տրված n բնական թիվը շրջել և հեռացնել բոլոր 4-ին բազմապատիկ թվանշանները:
+
+// let num = 12345;
+// let res = '';
+
+// for (; num != 0; num = parseInt(num / 10)) {
+//     if (num % 10 % 4 != 0) {
+//         res += num % 10;
+//     }
+// }
+
+// console.log(res);
+
+// ԲՆԱԿԱՆ ԹՎԻ ԹՎԱՆՇԱՆՆԵՐ-38
+//Տրված n բնական թիվը շրջել և հեռացնել 3-ին և 4-ին բազմապատիկ բոլոր թվանշանները:
+
+// let num = 12345;
+// let res = '';
+
+// for (; num != 0; num = parseInt(num / 10)) {
+//     if (num % 10 % 4 != 0 && num % 10 % 3 != 0) {
+//         res += num % 10;
+//     }
+// }
+
+// console.log(res);
+
+//ԲՆԱԿԱՆ ԹՎԻ ԹՎԱՆՇԱՆՆԵՐ-39
+//Տրված n բնական թիվը շրջել և հեռացնել 3-ից մեծ բոլոր թվանշանները:
+
+// let num = 12345;
+// let res = '';
+
+// for (; num != 0; num = parseInt(num / 10)) {
+//     if (num % 10 <= 3) {
+//         res += num % 10;
+//     }
+// }
+
+// console.log(res);
+
+//ԲՆԱԿԱՆ ԹՎԻ ԹՎԱՆՇԱՆՆԵՐ-40
+//Տրված n բնական թիվը շրջել և հեռացնել 4-ից փոքր բոլոր թվանշանները:
+
+// let num = 12345;
+// let res = '';
+
+// for (; num != 0; num = parseInt(num / 10)) {
+//     if (num % 10 >= 4) {
+//         res += num % 10;
+//     }
+// }
+
+// console.log(res);
+
+//ԲՆԱԿԱՆ ԹՎԻ ԹՎԱՆՇԱՆՆԵՐ-59
+//Արտածել տրված n բնական թվի թվանշանները, օրինակում բերված տեսքով:
+
+// let num = 12345678;
+// let last = num % 10 + 1;
+// let res = '';
+
+// for (; num != 0; num = parseInt(num / 10)) {
+//     res += num % 10;
+//     last += num % 10 + '';
+// }
+
+// console.log(res);
+// console.log(last);
+
+//ԲՆԱԿԱՆ ԹՎԻ ԹՎԱՆՇԱՆՆԵՐ-60
+//Արտածել տրված n բնական թվի թվանշանները, օրինակում բերված տեսքով:
+
+// let num = prompt('Enter a number');
+// let num2 = parseInt(num / 100 % 10);
+// let res = '';
+
+// for (let i = 1; i <= 5; i++) {
+//     res += num2 + i;
+// }
+
+// console.log(res)
+
+//ԲՆԱԿԱՆ ԹՎԻ ԹՎԱՆՇԱՆՆԵՐ-61
+//Արտածել տրված n բնական թվի թվանշանները, օրինակում բերված տեսքով:
+
+// let num = prompt('Enter a number');
+
+// for (; num != 0; num = parseInt(num / 10)) {
+//     let res = '';
+//     res += `${num % 10}${num % 10 + 1}`;
+//     console.log(res);
+// }
+
+//ԲՆԱԿԱՆ ԹՎԻ ԹՎԱՆՇԱՆՆԵՐ-62
+//Արտածել տրված n բնական թվի թվանշանները, օրինակում բերված տեսքով:
+
+// let num = prompt('Enter a number');
+
+// for (let i = 4; i <= 8; i++) {
+//     let res = '';
+//     res += `${num % 10}${i}`
+//     console.log(res);
+//     num = parseInt(num / 10)
+// }
+
+//ԲՆԱԿԱՆ ԹՎԻ ԹՎԱՆՇԱՆՆԵՐ-63
+//Արտածել տրված n բնական թվի թվանշանները, օրինակում բերված տեսքով:
+
+// let num = prompt('Enter a number');
+// for (let i = 65; num != 0; i -= 11) {
+//     let res = '';
+//     res += `${num % 10}${i}`;
+//     console.log(res);
+//     num = parseInt(num / 10);
+// }
+
+//ԲՆԱԿԱՆ ԹՎԻ ԹՎԱՆՇԱՆՆԵՐ-64
+//Արտածել տրված n բնական թվի թվանշանները, օրինակում բերված տեսքով:
+
+// let num = prompt('Enter a number');
+// for (let i = 45; num != 0; i += 9) {
+//     let res = '';
+//     res += `${num % 10}${i}`;
+//     console.log(res);
+//     num = parseInt(num / 10);
+// }
+
+//ԲՆԱԿԱՆ ԹՎԻ ԹՎԱՆՇԱՆՆԵՐ-65
+//Արտածել տրված n բնական թվի թվանշանները, օրինակում բերված տեսքով:
+
+// let num = prompt('Enter a number');
+// for (let i = 5; num != 0; i -= 1) {
+//     let res = '';
+//     res += `${num % 10}0${i}`;
+//     console.log(res);
+//     num = parseInt(num / 10);
+// }
+
+//ԲՆԱԿԱՆ ԹՎԻ ԹՎԱՆՇԱՆՆԵՐ-66
+//Արտածել տրված n բնական թվի թվանշանները, օրինակում բերված տեսքով:
+
+//??
+
+//ԲՆԱԿԱՆ ԹՎԻ ԹՎԱՆՇԱՆՆԵՐ-68
+//Արտածել տրված n բնական թվի թվանշանները, օրինակում բերված տեսքով:
+
+// let num = prompt('Enter a number');
+// let res = '';
+
+// for (; num != 0; num = parseInt(num / 10)) {
+//     res += num % 10;
+// }
+
+// console.log(`${res}
+//     ${res}`);
+
+//ԲՆԱԿԱՆ ԹՎԻ ԹՎԱՆՇԱՆՆԵՐ-70
+//Արտածել տրված n բնական թվի թվանշանները, օրինակում բերված տեսքով:
+
+// let num = prompt('Enter a number');
+// let res = '';
+
+// for (; num != 0; num = parseInt(num / 10)) {
+//     res += num % 10;
+// }
+
+// console.log(`${res}
+//     ${res}
+// ${res}`);
+
+//ԲՆԱԿԱՆ ԹՎԻ ԹՎԱՆՇԱՆՆԵՐ-71
+//Արտածել տրված n բնական թվի թվանշանները, օրինակում բերված տեսքով:
+
+// let num = prompt('Enter a number');
+// let res = '';
+
+// for (; num != 0; num = parseInt(num / 10)) {
+//     res += num % 10;
+// }
+
+// console.log(`${res}       ${res}
+//       ${res}`);
+
+// ԲՆԱԿԱՆ ԹՎԻ ԹՎԱՆՇԱՆՆԵՐ-72
+// Արտածել տրված n բնական թվի թվանշանները, օրինակում բերված տեսքով:
+
+// let num = prompt('Enter a number');
+// let res = '';
+
+// for (; num != 0; num = parseInt(num / 10)) {
+//     res += num % 10;
+// }
+
+// console.log(`${res}
+//       ${res}
+//             ${res}`);
+
+//ԲՆԱԿԱՆ ԹՎԻ ԹՎԱՆՇԱՆՆԵՐ-73
+//Արտածել տրված n բնական թվի թվանշանները, օրինակում բերված տեսքով:
+
+// let num = prompt('Enter a number');
+// let res = '';
+
+// for (; num != 0; num = parseInt(num / 10)) {
+//     res += num % 10;
+// }
+
+// console.log(`${res}
+//       ${res}
+//       ${res}
+// ${res}`);
+
+//ԲՆԱԿԱՆ ԹՎԻ ԹՎԱՆՇԱՆՆԵՐ-74
+//Արտածել տրված n բնական թվի թվանշանները, օրինակում բերված տեսքով:
+
+// let num = prompt('Enter a number');
+// let res = '';
+
+// for (; num != 0; num = parseInt(num / 10)) {
+//     res += num % 10;
+// }
+
+// console.log(`${res}         ${res}
+//     ${res}${res}`);
+
+//ԲՆԱԿԱՆ ԹՎԻ ԹՎԱՆՇԱՆՆԵՐ-75
+//Արտածել տրված n բնական թվի թվանշանները, օրինակում բերված տեսքով:
+
+// 
+
+    </script>
+</body>
+
+</html>
