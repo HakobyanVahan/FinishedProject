@@ -300,10 +300,11 @@
     .mau-second-image-block {
         display: none;
     }
-
+     
     .authors-items {
         justify-content: space-around;
     }
+
 }
 
 @media screen and (max-width:950px) {
@@ -335,6 +336,7 @@
     .missionVission-inner {
         flex-direction: column;
         align-items: center;
+        padding: 127px 0;
     }
 
     .missionVissionFirstTextBlock {
@@ -347,6 +349,14 @@
         width: 100%;
         margin-bottom: 50px;
         text-align: center;
+    }
+
+    .moreAboutUs-inner{
+        padding: 40px 20px;
+    }
+
+    .about-us-header-inner{
+        padding-bottom: 50px;
     }
 }
 
@@ -383,5 +393,15 @@
     .about-us-header-secondTextBlock {
         width: 100%;
         text-align: center;
+    }
+
+    .missionVission-inner{
+        padding: 50px 0;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .about-us-header-firstTextBlock{
+        padding: 34px 0;
     }
 }

@@ -14,80 +14,61 @@ export class AboutUsComponent {
       img: 'assets/img/image3.png',
       name: 'Floyd Miles',
       paragraph: 'Content Writer @Company',
-      icon1: 'assets/img/facebook.png',
-      icon2: 'assets/img/Group.png',
-      icon3: 'assets/img/twitter.png',
-      icon4: 'assets/img/linkedin.png'
+      socialIcons: ['assets/img/facebook.png', 'assets/img/Group.png', 'assets/img/twitter.png', 'assets/img/linkedin.png']
+
     },
     {
       id: 2,
       img: 'assets/img/image4.png',
       name: 'Dianna Rusel',
       paragraph: 'Content Writer @Company',
-      icon1: 'assets/img/facebook.png',
-      icon2: 'assets/img/Group.png',
-      icon3: 'assets/img/twitter.png',
-      icon4: 'assets/img/linkedin.png'
+      socialIcons: ['assets/img/facebook.png', 'assets/img/Group.png', 'assets/img/twitter.png', 'assets/img/linkedin.png']
     },
     {
       id: 3,
       img: 'assets/img/image5.png',
       name: 'Jenny Wilson',
       paragraph: 'Content Writer @Company',
-      icon1: 'assets/img/facebook.png',
-      icon2: 'assets/img/Group.png',
-      icon3: 'assets/img/twitter.png',
-      icon4: 'assets/img/linkedin.png'
+      socialIcons: ['assets/img/facebook.png', 'assets/img/Group.png', 'assets/img/twitter.png', 'assets/img/linkedin.png']
     },
     {
       id: 4,
       img: 'assets/img/image6.png',
       name: 'Leslie Alexander',
       paragraph: 'Content Writer @Company',
-      icon1: 'assets/img/facebook.png',
-      icon2: 'assets/img/Group.png',
-      icon3: 'assets/img/twitter.png',
-      icon4: 'assets/img/linkedin.png'
+      socialIcons: ['assets/img/facebook.png', 'assets/img/Group.png', 'assets/img/twitter.png', 'assets/img/linkedin.png']
+
     },
     {
       id: 5,
       img: 'assets/img/image19.png',
       name: 'Leslie Alexander',
       paragraph: 'Content Writer @Company',
-      icon1: 'assets/img/facebook.png',
-      icon2: 'assets/img/Group.png',
-      icon3: 'assets/img/twitter.png',
-      icon4: 'assets/img/linkedin.png'
+      socialIcons: ['assets/img/facebook.png', 'assets/img/Group.png', 'assets/img/twitter.png', 'assets/img/linkedin.png']
+
     },
     {
       id: 6,
       img: 'assets/img/image22.png',
       name: 'Leslie Alexander',
       paragraph: 'Content Writer @Company',
-      icon1: 'assets/img/facebook.png',
-      icon2: 'assets/img/Group.png',
-      icon3: 'assets/img/twitter.png',
-      icon4: 'assets/img/linkedin.png'
+      socialIcons: ['assets/img/facebook.png', 'assets/img/Group.png', 'assets/img/twitter.png', 'assets/img/linkedin.png']
+
     },
     {
       id: 7,
       img: 'assets/img/image20.png',
       name: 'Leslie Alexander',
       paragraph: 'Content Writer @Company',
-      icon1: 'assets/img/facebook.png',
-      icon2: 'assets/img/Group.png',
-      icon3: 'assets/img/twitter.png',
-      icon4: 'assets/img/linkedin.png'
+      socialIcons: ['assets/img/facebook.png', 'assets/img/Group.png', 'assets/img/twitter.png', 'assets/img/linkedin.png']
+
     },
     {
       id: 8,
       img: 'assets/img/image21.png',
       name: 'Leslie Alexander',
       paragraph: 'Content Writer @Company',
-      icon1: 'assets/img/facebook.png',
-      icon2: 'assets/img/Group.png',
-      icon3: 'assets/img/twitter.png',
-      icon4: 'assets/img/linkedin.png'
+      socialIcons: ['assets/img/facebook.png', 'assets/img/Group.png', 'assets/img/twitter.png', 'assets/img/linkedin.png']
     }
   ]
 

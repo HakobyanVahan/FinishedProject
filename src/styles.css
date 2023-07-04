@@ -508,8 +508,9 @@
         align-items: center;
     }
 
-    .cta-textBlock {
-        width: auto;
+
+    .cta-block{
+        padding: 30px 10px;
     }
 
     .cta-textBlock__title {
@@ -538,5 +539,9 @@
 
     .hidden-button {
         display: block;
+    }
+
+    .cta-textBlock__title{
+        font-size: 20px;
     }
 }

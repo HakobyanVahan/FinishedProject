@@ -2,7 +2,7 @@
     width: 405px;
 }
 
-.other-image{
+.other-image {
     margin-bottom: 32px;
 }
 
@@ -34,4 +34,14 @@
     font-size: 16px;
     line-height: 28px;
     color: #B1B3B9;
+}
+
+@media screen and (max-width:500px) {
+    .other-image {
+        width: 100%;
+    }
+
+    .other-item-text{
+        width: 100%;
+    }
 }

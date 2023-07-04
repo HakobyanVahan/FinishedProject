@@ -5,7 +5,6 @@
     margin-bottom: 125px;
 }
 
-
 .mau-first-text-block {
     width: 520px;
 }
@@ -38,4 +37,33 @@
     font-size: 16px;
     line-height: 28px;
     color: #232536;
+}
+
+@media screen and (max-width:1100px) {
+    .mau-first-img{
+        width: 400px;
+    }
+
+    .mau-first__subtitle{
+        font-size: 18px;
+    }
+
+    .mau-first__title {
+        font-size: 26px;
+    }
+}
+
+@media screen and (max-width: 970px) {
+    .moreAboutUsblock{
+        flex-direction: column !important;
+    }
+
+    .mau-first-img{
+        display: none;
+    }
+
+    .mau-first-text-block{
+        width: 100%;
+        text-align: center;
+    }
 }

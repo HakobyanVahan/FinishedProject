@@ -73,9 +73,9 @@
     <section class="moreAboutUs">
         <div class="moreAboutUs-container">
             <div class="moreAboutUs-inner">
-                <!-- <div class="moreAboutUsblock" *ngFor="let item of knowMoreData">
-                    <app-know-more [knowMoreInner]="item"></app-know-more>
-                </div> -->
+                <div class="moreAboutUsblock" *ngFor="let item of knowMoreData let i = index">
+                    <app-know-more [knowMoreInner]="item" [knowMoreIndex]="i"></app-know-more>
+                </div>
             </div>
         </div>
     </section>

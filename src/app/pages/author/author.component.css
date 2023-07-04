@@ -173,4 +173,8 @@
         margin-right: 0;
         width: 80%;
     }
+
+    .author-header-inner{
+        padding: 50px 20px;
+    }
 }

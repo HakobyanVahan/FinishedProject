@@ -283,6 +283,10 @@
     text-decoration: none;
 }
 
+.authors-inner{
+    padding: 0 20px;
+}
+
 .second-block-subtitle {
     font-family: 'Inter';
     font-style: normal;
@@ -375,7 +379,7 @@
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    padding: 0 20px 100px 20px;
+    padding: 100px 20px;
 }
 
 
@@ -567,7 +571,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin-bottom: 30px;
+        margin-bottom: 50px;
     }
 
     .main-block-secondBlock {
@@ -653,12 +657,28 @@
     .profileBlock {
         margin-bottom: 20px;
     }
+
+    .special-post__title{
+        font-size: 34px;
+    }
 }
 
 @media screen and (max-width:650px) {
     .authors-items{
         flex-direction: column;
         align-items: center;
+    }
+
+    .authors-inner{
+        padding: 0;
+    }
+    
+    .header-text-block__title{
+        font-size: 40px;
+    }
+
+    .posts-inner{
+        padding: 50px 20px;
     }
 }
 
@@ -670,7 +690,7 @@
     }
 
     .special-post__title {
-        font-size: 20px;
+        font-size: 28px;
     }
 
     .testimonials-secondTextBlock {
@@ -683,6 +703,18 @@
 
     .all-posts-block-item{
         text-align: center;
+    }
+
+    .main-block{
+        padding: 90px 10px;
+    }
+
+    .first-block-title{
+        font-size: 28px;
+    }
+
+    .all-posts-block-item{
+        padding: 35px 0;
     }
 }
 

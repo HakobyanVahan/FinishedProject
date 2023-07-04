@@ -37,7 +37,7 @@
     margin-bottom: 105px;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 900px) {
     .author-header-firstBlock {
         flex-direction: column;
         align-items: center;
@@ -50,5 +50,11 @@
 
     .author-header-image {
         margin: 0 0 30px 0;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .firstTextBlock__title{
+        font-size: 24px;
     }
 }

@@ -201,3 +201,9 @@ textarea {
         text-align: center;
     }
 }
+
+@media screen and (max-width: 400px) {
+    .working-secondTitle{
+        font-size: 15px;    
+    }
+}

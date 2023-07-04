@@ -8,4 +8,5 @@ import { Knowmore } from 'src/app/Models/know-more';
 })
 export class KnowMoreComponent {
   @Input() knowMoreInner!: Knowmore;
+  @Input() knowMoreIndex!: number;
 }

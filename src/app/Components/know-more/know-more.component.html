@@ -1,4 +1,4 @@
-<div class="moreAboutUsblock">
+<div class="moreAboutUsblock" [ngStyle]="{'flexDirection': knowMoreIndex % 2 !== 0 ? 'row-reverse' : 'row'}">
     <div class="mau-first-text-block">
         <h2 class="mau-first__title">{{knowMoreInner.title}}</h2>
         <h3 class="mau-first__subtitle">
