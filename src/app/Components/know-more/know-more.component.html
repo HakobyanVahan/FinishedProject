@@ -1,14 +1,15 @@
-<div class="moreAboutUsblock" [ngStyle]="{'flexDirection': knowMoreIndex % 2 !== 0 ? 'row-reverse' : 'row'}">
+<div class="moreAboutUsblock" *ngFor="let item of data let i = index"
+    [ngStyle]="{'flexDirection': i % 2 !== 0 ? 'row-reverse' : 'row'}">
     <div class="mau-first-text-block">
-        <h2 class="mau-first__title">{{knowMoreInner.title}}</h2>
+        <h2 class="mau-first__title">{{item.title}}</h2>
         <h3 class="mau-first__subtitle">
-            {{knowMoreInner.subtitle}}
+            {{item.subtitle}}
         </h3>
         <p class="mau-first__paragraph">
-            {{knowMoreInner.paragraph}}
+            {{item.paragraph}}
         </p>
     </div>
     <div class="mau-first-image-block">
-        <img src="{{knowMoreInner.img}}" alt="" class="mau-first-img">
+        <img src="{{item.img}}" alt="" class="mau-first-img">
     </div>
 </div>

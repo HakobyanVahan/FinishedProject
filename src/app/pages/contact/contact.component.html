@@ -30,19 +30,28 @@
 
                 <div class="contact-us-form">
                     <div class="form-inner">
-                        <form class="cs-form">
-                            <input type="text" name="name" placeholder="Full Name">
-                            <input type="email" name="email" placeholder="Your Email">
-                            <select name="select" class="select">
-                                <option value="1" class="option">Query Related</option>
-                                <option value="2" class="option">Option</option>
-                                <option value="3" class="option">Option</option>
-                                <option value="4" class="option">Option</option>
-                                <option value="5" class="option">Option</option>
+                        <form [formGroup]="form" class="cs-form">
+                            <span *ngIf="form.get('name')?.hasError('minlength')">Fill in correctly</span>
+                            <span *ngIf="form.get('name')?.hasError('required') && form.get('name')?.touched">Filling is requerid</span>
+                            <input type="text" name="name" placeholder="Full Name" formControlName="name">
+
+                            <span *ngIf="form.get('email')?.hasError('pattern')">Fill in correctly</span>
+                            <span *ngIf="form.get('email')?.hasError('required') && form.get('email')?.touched">Filling is requerid</span>
+                            <input type="email" name="email" placeholder="Your Email" formControlName="email">
+                            
+                            <span *ngIf="form.get('select')?.hasError('required') && form.get('select')?.touched">Filling is requerid</span>
+                            <select name="select" class="select" formControlName="select">
+                                <option class="option">Query Related</option>
+                                <option class="option">Option</option>
+                                <option class="option">Option</option>
+                                <option class="option">Option</option>
+                                <option class="option">Option</option>
                             </select>
-                            <textarea name="message" cols="30" rows="5" placeholder="Message"
-                                class="textarea"></textarea>
-                            <button class="general-button">Send Message</button>
+
+                            <span *ngIf="form.get('textarea')?.hasError('required') && form.get('textarea')?.touched">Filling is requerid</span>
+                            <textarea name="message" cols="30" rows="5" placeholder="Message" class="textarea"
+                                formControlName="textarea"></textarea>
+                            <button class="general-button" [disabled]="form.invalid" (click)="send()">Send Message</button>
                         </form>
                     </div>
                 </div>

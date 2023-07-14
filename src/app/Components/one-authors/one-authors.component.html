@@ -1,15 +1,17 @@
-<div class="author-header-firstBlock">
-    <img src="{{oneAuthorInner.img}}" alt="" class="author-header-image">
+<div class="author-header-firstBlock" *ngIf="data && data.length > 0">
+    <img src="{{data[id].img2}}" alt="" class="author-header-image">
     <div class="header-firstBlock-textBlock">
         <h1 class="firstTextBlock__title">
-            {{oneAuthorInner.title}}
+            Hey there, I’m {{data[id].name}} and welcome to my Blog
         </h1>
         <p class="firstTextBlock__paragraph">
-            {{oneAuthorInner.paragraph}}
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua. Non blandit massa enim nec. Scelerisque viverra mauris in aliquam sem. At risus viverra
+            adipiscing at in tellus.
         </p>
         <div class="author-social-links">
-            <a href="" class="social-links" *ngFor="let item of oneAuthorInner.socialsIcons">
-                <img src="{{item}}" alt="" class="social-links__img">
+            <a href="" class="social-links" *ngFor="let socItem of data[id].socialIcons">
+                <img src="{{socItem}}" alt="" class="social-links__img">
             </a>
         </div>
     </div>

@@ -8,6 +8,10 @@
     margin-bottom: 15px;
 }
 
+span{
+    color: #592EA9
+}
+
 .all-posts-block-item__title {
     font-family: 'Sen';
     font-style: normal;
@@ -16,4 +20,23 @@
     line-height: 32px;
     color: #232536;
     margin-bottom: 32px;
+}
+
+.all-posts-block-item {
+    padding: 35px;
+    display: block;
+    text-decoration: none;
+}
+
+.all-posts-block-item:hover {
+    background-color: #FBF6EA;
+}
+
+@media screen and (max-width:600px) {
+    .all-posts-block-item{
+        text-align: center;
+    }
+    .all-posts-block-item{
+        padding: 35px 0;
+    }
 }

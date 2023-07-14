@@ -79,7 +79,7 @@
     background-size: cover;
     display: flex;
     flex-direction: column;
-    justify-content: end;
+    justify-content: flex-end;
 }
 
 
@@ -220,7 +220,7 @@
 }
 
 .moreAboutUs-inner {
-    padding: 130px 20px;
+    padding:20px;
 }
 
 .mau-first-text-block {
@@ -398,6 +398,10 @@
     .missionVission-inner{
         padding: 50px 0;
     }
+
+    .authors-inner{
+        padding: 0;
+    }    
 }
 
 @media screen and (max-width: 400px) {

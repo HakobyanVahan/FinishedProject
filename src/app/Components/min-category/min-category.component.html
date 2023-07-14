@@ -1,4 +1,6 @@
-<div class="categories-item">
-    <img src="{{minCategoryInner.img}}" alt="image" class="categories-item__img">
-    <h3 class="categories-item__heading">{{minCategoryInner.title}}</h3>
+<div class="categories-items">
+    <div class="categories-item"  *ngFor="let item of data"> 
+        <img src="{{item.img}}" alt="image" class="categories-item__img">
+        <h3 class="categories-item__heading">{{item.title}}</h3>
+    </div>    
 </div>

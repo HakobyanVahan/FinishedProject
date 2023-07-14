@@ -79,9 +79,6 @@
     width: 512px;
 }
 
-.categories-items {
-    margin-bottom: 60px;
-}
 
 .category-section__item {
     width: 838px;
@@ -134,12 +131,6 @@
     color: #6D6E76;
 }
 
-.all-tag-items {
-    width: 300px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
 
 .all-tags__title {
     font-family: 'Sen';
@@ -214,19 +205,9 @@
         flex-direction: column;
     }
 
-    .categories-items{
-        width: 100%;
-        text-align: center;
-    }
-
     .all-tags{
         width: 100%;
         text-align: center;
-    }
-
-    .all-tag-items{
-        width: 100%;
-        flex-direction: column;
     }
 
     .all-tag__item{

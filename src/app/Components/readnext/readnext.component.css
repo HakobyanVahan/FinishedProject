@@ -1,3 +1,14 @@
+.other-items{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.other-item{
+    margin-bottom: 50px;
+    text-decoration: none;  
+}
+
 .other-item-text {
     width: 405px;
 }
@@ -34,6 +45,18 @@
     font-size: 16px;
     line-height: 28px;
     color: #B1B3B9;
+}
+
+@media screen and (max-width: 1250px) {
+    .other-items{
+        justify-content: space-around;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .other-items{
+        justify-content: center;
+    }
 }
 
 @media screen and (max-width:500px) {

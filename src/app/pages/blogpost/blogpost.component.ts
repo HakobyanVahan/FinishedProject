@@ -1,36 +1,26 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { Allposts } from 'src/app/Models/allposts';
+import { Allpostsslide } from 'src/app/Models/apppostsslide';
 import { Readnext } from 'src/app/Models/readnext';
+import { RequestService } from 'src/app/services/request.service';
+import { enviroment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-blogpost',
   templateUrl: './blogpost.component.html',
   styleUrls: ['./blogpost.component.css']
 })
-export class BlogpostComponent {
-  readNextArr: Readnext[] = [
-    {
-      id: 1,
-      img: 'assets/img/image13.jpg',
-      name: 'John Doe',
-      date: 'Aug 23, 2021',
-      title: 'A UX Case Study Creating a Studious Environment for Students:',
-      paragraph: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.'
-    },
-    {
-      id: 2,
-      img: 'assets/img/image14.jpg',
-      name: 'John Doe',
-      date: 'Aug 23, 2021',
-      title: 'A UX Case Study Creating a Studious Environment for Students:',
-      paragraph: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.'
-    },
-    {
-      id: 3,
-      img: 'assets/img/image15.jpg',
-      name: 'John Doe',
-      date: 'Aug 23, 2021',
-      title: 'A UX Case Study Creating a Studious Environment for Students:',
-      paragraph: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.'
-    }
-  ]
+export class BlogpostComponent implements OnInit{
+  url: string = enviroment.home.allPosts;
+  id: number = +this.activeRoute.snapshot.params['id'] - 1;
+  data: Allposts[] = []
+  constructor(public service: RequestService, public activeRoute: ActivatedRoute){}
+
+  ngOnInit(): void {
+    this.service.getRequest<Allposts[]>(this.url).subscribe((data) => {
+      this.data = data;
+      console.log(this.data);
+    })
+  }
 }

@@ -73,8 +73,8 @@
     <section class="moreAboutUs">
         <div class="moreAboutUs-container">
             <div class="moreAboutUs-inner">
-                <div class="moreAboutUsblock" *ngFor="let item of knowMoreData let i = index">
-                    <app-know-more [knowMoreInner]="item" [knowMoreIndex]="i"></app-know-more>
+                <div class="moreAboutUsBlock">
+                    <app-know-more></app-know-more>
                 </div>
             </div>
         </div>
@@ -84,9 +84,9 @@
             <div class="authors-inner">
                 <h2 class="authors-title">List of Authors</h2>
                 <div class="authors-items">
-                    <div *ngFor="let item of authorsData">
+                    <a [routerLink]="['/layout/author', item.id]" class="authors-item" *ngFor="let item of data" >
                         <app-authors [authorsInner]="item"></app-authors>
-                    </div>
+                    </a>    
                 </div>
             </div>
         </div>

@@ -3,12 +3,12 @@
         <div class="category-header-container">
             <div class="category-header-inner">
                 <div class="category-header-textBlock">
-                    <h1 class="category-title">Business</h1>
+                    <h1 class="category-title">{{data[id].title}}</h1>
                     <p class="category-paragraph">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                         labore.
                     </p>
-                    <p class="category-nameless">Blog > Business</p>
+                    <p class="category-nameless">Blog > {{data[id].title}}</p>
                 </div>
             </div>
         </div>
@@ -17,24 +17,22 @@
         <div class="category-section-container">
             <div class="category-section-inner">
                 <div class="category-section-items">
-                    <div class="category-section__item" *ngFor="let item of categoryAllPosts">
-                        <app-mypostscom [myPostsInner]="item"></app-mypostscom>
+                    <div class="category-section__item">
+                        <app-category-all-posts [categoryData]="data" [categoryId]="id"></app-category-all-posts>
                     </div>
                 </div>
                 <div class="categories">
                     <div class="categories-items">
                         <h2 class="categories-title">Categories</h2>
-                        <div class="categories-item" *ngFor="let item of minCategoryData">
-                            <app-min-category [minCategoryInner]="item"></app-min-category>
+                        <div>
+                            <app-min-category></app-min-category>
                         </div>
                     </div>
 
                     <div class="all-tags">
                         <h2 class="all-tags__title">All Tags</h2>
                         <div class="all-tag-items">
-                            <div *ngFor="let item of minTagsData">
-                                <app-min-tags [minTagsInner]="item"></app-min-tags>
-                            </div>
+                            <app-min-tags></app-min-tags>
                         </div>
                     </div>
                 </div>

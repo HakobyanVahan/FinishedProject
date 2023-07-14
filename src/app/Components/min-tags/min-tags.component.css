@@ -1,3 +1,10 @@
+.all-tag-items {
+    width: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
 .all-tag__item {
     border: 2px solid #6D6E76;
     padding: 8px 38px;
@@ -9,4 +16,11 @@
     font-size: 14px;
     line-height: 32px;
     color: #99999F;
+}
+
+@media screen and (max-width: 700px) {
+    .all-tag-items{
+        width: 100%;
+        flex-direction: column;
+    }
 }

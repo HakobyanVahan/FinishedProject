@@ -28,8 +28,8 @@
                 <h2 class="allPosts-title">All Posts</h2>
                 <div class="line"></div>
                 <div class="allPosts-items">
-                    <div *ngFor="let item of allPostsSlideInner">
-                        <app-allpostsslide [allPostsSlideInner]="item"></app-allpostsslide>
+                    <div>
+                        <app-allpostsslide></app-allpostsslide>
                     </div>
                 </div>
                 <div class="pagination">
@@ -51,10 +51,8 @@
                 <h2 class="global-category-title">
                     Choose A Catageory
                 </h2>
-                <div class="global-category-item-parent">
-                    <a routerLink="/layout/category" class="global-category-item" *ngFor="let item of categoryData">
-                        <app-category [categoryInner]="item"></app-category>
-                    </a>
+                <div>
+                    <app-category></app-category>
                 </div>
             </div>
         </div>

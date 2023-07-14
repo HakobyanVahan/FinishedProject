@@ -61,7 +61,7 @@
                     <a routerLink="/layout/home" class="general-footer-link">Home</a>
                     <a routerLink="/layout/blog" class="general-footer-link">Blog</a>
                     <a routerLink="/layout/about-us" class="general-footer-link">About Us</a>
-                    <a routerLink="/layout/contact"  class="general-footer-link">Contact Us</a>
+                    <a routerLink="/layout/contact" class="general-footer-link">Contact Us</a>
                     <a routerLink="/layout/privacy-policy" class="general-footer-link">Privacy Policy</a>
                 </div>
             </div>
@@ -71,12 +71,15 @@
                         Subscribe to our news letter to get latest updates and news
                     </h2>
                 </div>
-                <div class="cta-formBlock">
+                <div class="cta-formBlock" [formGroup]="form">
                     <form class="cta-form" name="subscribe">
-                        <input type="email" name="email-address" class="cta-form__email"
-                            placeholder="Enter Your Email">
-                        <button class="cta-form__button general-button">Subscribe</button>
-                        <button class="cta-form__button general-button hidden-button">Subscribe</button>
+                        <label for="">
+                            <span class="war-message" *ngIf="form.get('email')?.hasError('pattern')">Fill in correctly</span>
+                            <input formControlName="email" type="email" name="email-address" class="cta-form__email"
+                                placeholder="Enter Your Email">
+                        </label>
+                        <button class="cta-form__button general-button" [disabled]="form.invalid" (click)="send()">Subscribe</button>
+                        <button class="cta-form__button general-button hidden-button" [disabled]="form.invalid" (click)="send()">Subscribe</button>
                     </form>
                 </div>
             </div>
@@ -90,16 +93,16 @@
                     </div>
                     <div class="contacts-socialBlock">
                         <a href="" class="social-links">
-                            <img src="./img/facebook1.png" alt="" class="social-icons">
+                            <img src="assets/img/facebook1.png" alt="" class="social-icons">
                         </a>
                         <a href="" class="social-links">
-                            <img src="./img/twitter1.png" alt="" class="social-icons">
+                            <img src="assets/img/twitter1.png" alt="" class="social-icons">
                         </a>
                         <a href="" class="social-links">
-                            <img src="./img/instagram.png" alt="" class="social-icons">
+                            <img src="assets/img/instagram.png" alt="" class="social-icons">
                         </a>
                         <a href="" class="social-links">
-                            <img src="./img/linkedin1.png" alt="" class="social-icons">
+                            <img src="assets/img/linkedin1.png" alt="" class="social-icons">
                         </a>
                     </div>
                 </div>

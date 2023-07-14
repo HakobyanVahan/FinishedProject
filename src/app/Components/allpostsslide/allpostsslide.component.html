@@ -1,14 +1,14 @@
-<div class="allPosts-item">
+<a [routerLink]="['/layout/blog-post', item.id]" class="allPosts-item" *ngFor="let item of data">
     <div class="allPosts-image">
-        <img src="{{allPostsSlideInner.img}}" alt="" class="allPosts-img">
+        <img src="{{item.img2}}" alt="" class="allPosts-img">
     </div>
     <div class="allPosts-text">
-        <p class="allPosts-text__subtitle">{{allPostsSlideInner.subtitle}}</p>
+        <p class="allPosts-text__subtitle">{{item.subtitle}}</p>
         <h3 class="allPosts-text__title">
-            {{allPostsSlideInner.title}}
+            {{item.title}}
         </h3>
         <p class="allPosts-text__paragraph">
-            {{allPostsSlideInner.paragraph}}
+            {{item.paragraph}}
         </p>
     </div>
-</div>
+</a>

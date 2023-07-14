@@ -1,13 +1,13 @@
-<div class="my-posts-item">
-    <img src="{{myPostsInner.img}}" alt="" class="posts-item-img">
+<div class="my-posts-item" *ngFor="let item of data">
+    <img src="{{item.img}}" alt="" class="posts-item-img">
     <div class="posts-item-textBlock">
-        <p class="posts-textBlock__nameless">{{myPostsInner.subtitle}}
+        <p class="posts-textBlock__nameless">{{item.subtitle}}
         <p>
         <h2 class="posts-textBlock__title">
-            {{myPostsInner.title}}
+            {{item.title}}
         </h2>
         <p class="posts-textBlock__paragraph">
-            {{myPostsInner.paragraph}}
+            {{item.paragraph}}
         </p>
     </div>
 </div>

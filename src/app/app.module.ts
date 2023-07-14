@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+import { HttpClientModule } from "@angular/common/http";
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './Components/header/header.component';
 import { NavComponent } from './Components/header/nav/nav.component';
@@ -26,9 +27,18 @@ import { OneAuthorsComponent } from './Components/one-authors/one-authors.compon
 import { MypostscomComponent } from './Components/mypostscom/mypostscom.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { PrivacypolicyComponent } from './pages/privacypolicy/privacypolicy.component';
-import { TextcomComponent } from './Components/textcom/textcom.component';
+import { CategoryAllPostsComponent } from './Components/category-all-posts/category-all-posts.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { AdminPanelComponent } from './pages/admin-panel/admin-panel.component';
+import { LoginComponent } from './pages/login/login.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatIconModule} from '@angular/material/icon';
+import {MatButtonModule} from '@angular/material/button';
+import {MatInputModule} from '@angular/material/input';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatDividerModule} from '@angular/material/divider';
 
-const Paths:Route[] = [
+const Paths: Route[] = [
   {
     path: 'layout',
     component: LayoutComponent,
@@ -42,7 +52,7 @@ const Paths:Route[] = [
         component: BlogComponent
       },
       {
-        path: 'blog-post',
+        path: 'blog-post/:id',
         component: BlogpostComponent,
       },
       {
@@ -50,11 +60,11 @@ const Paths:Route[] = [
         component: AboutUsComponent
       },
       {
-        path: 'category',
+        path: 'category/:id',
         component: CategorypageComponent
       },
       {
-        path: 'author',
+        path: 'author/:id',
         component: AuthorComponent
       },
       {
@@ -66,7 +76,15 @@ const Paths:Route[] = [
         component: PrivacypolicyComponent
       }
     ]
-  } 
+  },
+  {
+    path: 'login',
+    component: LoginComponent
+  },
+  {
+    path: 'admin-panel',
+    component: AdminPanelComponent
+  }
 ]
 @NgModule({
   declarations: [
@@ -94,11 +112,21 @@ const Paths:Route[] = [
     MypostscomComponent,
     ContactComponent,
     PrivacypolicyComponent,
-    TextcomComponent,
+    CategoryAllPostsComponent,
+    AdminPanelComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(Paths)
+    RouterModule.forRoot(Paths),
+    HttpClientModule,
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    MatFormFieldModule, 
+    MatInputModule, 
+    MatButtonModule, 
+    MatIconModule,
+    MatDividerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

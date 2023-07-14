@@ -48,9 +48,9 @@
                         <a routerLink="/layout/blog" class="all-posts__links">View All</a>
                     </div>
                     <div class="all-posts-block">
-                        <div class="all-posts-block-item" *ngFor="let item of allPostsData">
-                           <app-allposts  [allPostsInner]="item"></app-allposts>
-                        </div>
+                        <a [routerLink]="['/layout/blog-post', item.id]" class="all-posts-block-item" *ngFor="let item of AllPostsData">
+                            <app-allposts [allPostsInner]="item"></app-allposts>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -100,10 +100,8 @@
                 <h2 class="global-category-title">
                     Choose A Catageory
                 </h2>
-                <div class="global-category-item-parent">
-                    <a routerLink="/layout/category" class="global-category-item" *ngFor="let item of categoryData">
-                        <app-category [categoryInner]="item"></app-category>
-                    </a>
+                <div>
+                    <app-category></app-category>
                 </div>
             </div>
         </div>
@@ -132,9 +130,9 @@
             <div class="authors-inner">
                 <h2 class="authors-title">List of Authors</h2>
                 <div class="authors-items">
-                    <a *ngFor="let item of authorsData">
+                    <a [routerLink] = "['/layout/author', item.id]" class="authors-item" *ngFor="let item of data" >
                         <app-authors [authorsInner]="item"></app-authors>
-                    </a>
+                    </a>    
                 </div>
             </div>
         </div>

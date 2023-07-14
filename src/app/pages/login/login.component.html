@@ -1,0 +1,17 @@
+<form [formGroup]="form" (ngSubmit)="send()" class="example-container">
+    <span>Fill is requerid</span>
+    <mat-form-field>
+        <mat-label>Enter your nickname</mat-label>
+        <input formControlName="nickname" matInput type="text" class="example-right-align">
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>Enter your password</mat-label>
+        <input formControlName="password" matInput [type]="hide ? 'password' : 'text'">
+        <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+            [attr.aria-pressed]="hide">
+            <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+        </button>
+    </mat-form-field>
+    <button mat-button>Basic</button>
+</form>
+

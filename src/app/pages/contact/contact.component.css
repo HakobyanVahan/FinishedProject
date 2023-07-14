@@ -185,6 +185,8 @@ textarea {
     margin-bottom: 16px;
 }
 
+
+
 @media screen and (max-width: 600px) {
     .our-information-inner {
         flex-direction: column;
