@@ -1,1 +1,78 @@
-<p>admin-panel works!</p>
+<mat-drawer-container class="example-container">
+    <mat-drawer #drawer [mode]="mode.value">
+        <img src="assets/img/Logo.png" alt="" class="logo">
+        <div class="components-links">
+            <a routerLink="all-posts-table" class="components all-posts-component">
+                <div class="img-parent">
+                    <img src="assets/img/icon2.png" alt="">
+                </div>
+                All Posts
+            </a>
+            <a routerLink="category-table" class="components category-component">
+                <div class="img-parent">
+                    <img src="assets/img/icon4.png" alt="">
+                </div>
+                Category
+            </a>
+            <a routerLink="authors-table" class="components auhtors-components">
+                <div class="img-parent">
+                    <img src="assets/img/icon10.png" alt="">
+                </div>
+                Authors
+            </a>
+            <a routerLink="read-next-table" class="components read-next-components">
+                <div class="img-parent">
+                    <img src="assets/img/icon3.png" alt="">
+                </div>
+                Read Next
+            </a>
+            <a routerLink="know-more-table" class="components know-more">
+                <div class="img-parent">
+                    <img src="assets/img/icon6.png" alt="">
+                </div>
+                Know More
+            </a>
+            <a routerLink="category-all-table" class="components category-all-posts">
+                <div class="img-parent">
+                    <img src="assets/img/icon8.png" alt="">
+                </div>
+                Category All Posts
+            </a>
+            <a routerLink="min-category-table" class="components min-category">
+                <div class="img-parent">
+                    <img src="assets/img/icon9.png" alt="">
+                </div>
+                Min Category
+            </a>
+            <a routerLink="min-tags-table" class="components all-tags">
+                <div class="img-parent">
+                    <img src="assets/img/icon1.png" alt="">
+                </div>
+                Min Tags
+            </a>
+            <a routerLink="author-posts-table" class="components author-posts">
+                <div class="img-parent">
+                    <img src="assets/img/icon7.png" alt="">
+                </div>
+                Author Posts
+            </a>
+        </div>
+    </mat-drawer>
+    <mat-drawer-content>
+        <mat-form-field class="mat-form-field">
+            <mat-select #mode value="over"></mat-select>
+        </mat-form-field>
+        <div class="header-container">
+            <button #matmdcraisedbutton mat-raised-button (click)="drawer.toggle()">
+                <img src="assets/img/layout.png" alt="" class="layout">
+            </button>
+            <header class="header">
+                <div class="title-block">
+                    <img src="assets/img/settings.png" alt="" class="admin-panel-logo">
+                    <h1 class="finesweet-title">Finesweet <br> Admin Panel</h1>
+                </div>
+            </header>
+        </div>
+        <app-main class="main"></app-main>
+    </mat-drawer-content>
+</mat-drawer-container>

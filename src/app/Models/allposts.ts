@@ -3,9 +3,9 @@ export interface Allposts{
     author?: string;
     date?:string;
     title: string;
-    img?: string,
-    icon?: string;
     subtitle?: string,
-    title2?: string,
     paragraph?: string;
+    icon?: string;
+    img?: string,
+    img2?: string,
 }

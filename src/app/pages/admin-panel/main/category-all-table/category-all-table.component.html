@@ -1,0 +1,77 @@
+<div class="table-parent">
+    <div class="add-button-div">
+        <button class="add-button" (click)="openPostForm()">Add a new record</button>
+    </div>
+    <table>
+        <thead>
+            <th>Image</th>
+            <th>Title</th>
+            <th>Subtitle</th>
+            <th>Paragraph</th>
+            <th>Action</th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of data">
+                <td>
+                    <img src="{{item.img}}" alt="">
+                </td>
+                <td>{{item.title}}</td>
+                <td>{{item.subtitle}}</td>
+                <td>{{item.paragraph}}</td>
+                <td>
+                    <button class="deleteButton" (click)="openConfirmWindow(item)">
+                        <img src="assets/img/delete.png" alt="" class="deleteIcon">
+                    </button>
+                    <button class="editButton" (click)="openForm(item)">
+                        <img src="assets/img/pencil.png" alt="" class="editIcon">
+                    </button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+<div class="all-screen" [ngStyle]="{ 'display': isTrue ? 'flex' : 'none' }">
+    <div class="block">
+        <div class="block-text">
+            <h2 class="block-text__title">Category All Posts</h2>
+            <p class="block-text__paragraph">Changes for the CATEGORY ALL POSTS component</p>
+        </div>
+    </div>
+    <div class="second-block">
+        <form class="form" [formGroup]="form" (ngSubmit)="send(item?.id)">
+            <mat-form-field>
+                <mat-label>Image</mat-label>
+                <input formControlName="img" matInput type="text" class="example-right-align" readonly>
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Title</mat-label>
+                <input formControlName="title" matInput type="text" class="example-right-align">
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Subtitle</mat-label>
+                <input formControlName="subtitle" matInput type="text" class="example-right-align">
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Paragraph</mat-label>
+                <input formControlName="paragraph" matInput type="text" class="example-right-align">
+            </mat-form-field>
+            <button type="submit" class="send-button">Send</button>
+        </form>
+    </div>
+
+    <span class="close-button" (click)="closeForm()">
+        <img src="assets/img/cross.png" alt="">
+    </span>
+</div>
+
+<div class="confirm-window-parent" [ngStyle]="{ 'display': openConfirm ? 'flex' : 'none' }">
+    <div class="confirm-window">
+        <h2 class="confirm-window__title">
+            Are you sure you want to delete this record?
+        </h2>
+        <button class="confirmation" (click)="confirmation(item?.id)">Yes</button>
+        <button class="cancellation" (click)="closeForm()">Cancel</button>
+    </div>
+</div>

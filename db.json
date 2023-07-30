@@ -7,7 +7,7 @@
       "title": "Design tips for designers that cover everything you need",
       "subtitle": "Startup",
       "paragraph": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.",
-      "icon": "assets/img/Group4.png",
+      "icon": "assets/img/group4.png",
       "img": "assets/img/bimage9.png",
       "img2": "assets/img/image8.jpg"
     },
@@ -353,7 +353,7 @@
       "name": "Վահան",
       "email": "vahan.hakobyan97@gmail.com",
       "select": "Query Related",
-      "textarea": "Hello world\n",
+      "textarea": "Hello world",
       "id": 1
     }
   ]

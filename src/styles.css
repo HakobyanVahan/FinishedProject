@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Chela+One&family=Mynerve&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chela+One&family=VT323&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -216,7 +219,7 @@
 }
 
 
-.war-message{
+.war-message {
     position: absolute;
     top: -30px;
 }
@@ -425,6 +428,200 @@
     margin-right: 0;
 }
 
+.mdc-text-field--filled:not(.mdc-text-field--disabled) {
+    border-radius: 20px;
+}
+
+.mat-drawer-inner-container::-webkit-scrollbar {
+    display: none;
+}
+
+/* Admin Components styles */
+
+app-main>.ng-star-inserted {
+    width: 80%;
+}
+
+td,
+th {
+    border-bottom: solid #343c87;
+    font-family: 'Sen';
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: #FFD050;
+}
+
+td:not(:last-child) {
+    border-right: solid #343c87;
+    margin: auto;
+}
+
+td>img {
+    /* width: 50px; */
+    height: 50px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 20px;
+}
+
+.all-screen {
+    position: fixed;
+    background-color: rgb(0 0 0 / 69%);
+    background-size: cover;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.block {
+    width: 500px;
+    min-height: 500px;
+    text-align: center;
+    background-color: #ffc012;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+::ng-deep .block-text__title {
+    font-family: 'Mynerve', cursive;
+    font-size: 100px;
+    margin-bottom: 70px;
+}
+
+.block-text__paragraph {
+    font-family: 'VT323', monospace;
+    font-size: 40px;
+    line-height: 40px;
+}
+
+.second-block {
+    width: 500px;
+    min-height: 500px;
+    background-color: #343c87;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.form {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+mat-form-field {
+    width: 100%;
+}
+
+.close-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.send-button {
+    background-color: #4d559e;
+    color: #FFFFFF;
+    width: 70%;
+    border-radius: 5px;
+}
+
+.add-button {
+    background-color: #FFD050;
+    font-size: 18px;
+}
+
+button {
+    font-family: 'Sen';
+    display: block;
+    margin-bottom: 5px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    padding: 15px 0;
+    border-radius: 5px;
+    width: 100%;
+
+}
+
+.deleteButton {
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: red;
+    padding: 5px;
+    width: 200px;
+    margin: auto;
+    margin-bottom: 10px;
+}
+
+.editButton {
+    background-color: #343c87;
+    padding: 5px;
+    width: 200px;
+    margin: auto;
+}
+
+.confirm-window-parent {
+    position: fixed;
+    background-color: rgb(0 0 0 / 69%);
+    background-size: cover;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.confirm-window {
+    background-color: white;
+    padding: 30px;
+}
+
+.cancellation,
+.confirmation {
+    font-size: 20px;
+    padding: 7px;
+}
+
+.confirmation {
+    background-color: red;
+}
+
+.socItemtd>img {
+    width: 16px;
+    height: 16px;
+    margin-right: 5px;
+}
+
+.paragraph-td {
+    width: 40%;
+}
+
+.titletd {
+    width: 50%;
+}
+
 @media screen and (max-width:950px) {
     .cta-block {
         flex-direction: column;
@@ -558,6 +755,3 @@
         font-size: 20px;
     }
 }
-
-/* html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; } */

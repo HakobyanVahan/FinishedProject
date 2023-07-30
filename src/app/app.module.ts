@@ -37,6 +37,22 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatDividerModule} from '@angular/material/divider';
+import {MatSelectModule} from '@angular/material/select';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatTreeModule} from '@angular/material/tree';
+import { MainComponent } from './pages/admin-panel/main/main.component';
+import { CategoryTableComponent } from './pages/admin-panel/main/category-table/category-table.component';
+import { ExampleComponent } from './pages/example/example.component';
+import {MatTableModule} from '@angular/material/table';
+import { AuthorsTableComponent } from './pages/admin-panel/main/authors-table/authors-table.component';
+import { ReadNextTableComponent } from './pages/admin-panel/main/read-next-table/read-next-table.component';
+import { KnowMoreTableComponent } from './pages/admin-panel/main/know-more-table/know-more-table.component';
+import { CategoryAllTableComponent } from './pages/admin-panel/main/category-all-table/category-all-table.component';
+import { MinCategoryTableComponent } from './pages/admin-panel/main/min-category-table/min-category-table.component';
+import { MinTagsTableComponent } from './pages/admin-panel/main/min-tags-table/min-tags-table.component';
+import { AuthorPostsTableComponent } from './pages/admin-panel/main/author-posts-table/author-posts-table.component';
+import { AllPostsTableComponent } from './pages/admin-panel/main/all-posts-table/all-posts-table.component';
+
 
 const Paths: Route[] = [
   {
@@ -83,7 +99,49 @@ const Paths: Route[] = [
   },
   {
     path: 'admin-panel',
-    component: AdminPanelComponent
+    component: AdminPanelComponent,
+    children:[
+      {
+        path: 'category-table',
+        component: CategoryTableComponent
+      },
+      {
+        path: 'authors-table',
+        component: AuthorsTableComponent
+      },
+      {
+        path: 'read-next-table',
+        component: ReadNextTableComponent
+      },
+      {
+        path: 'know-more-table',
+        component: KnowMoreTableComponent
+      },
+      {
+        path: 'category-all-table',
+        component: CategoryAllTableComponent
+      },
+      {
+        path: 'min-category-table',
+        component: MinCategoryTableComponent
+      },
+      {
+        path: 'min-tags-table',
+        component: MinTagsTableComponent
+      },
+      {
+        path: 'author-posts-table',
+        component: AuthorPostsTableComponent
+      },
+      {
+        path: 'all-posts-table',
+        component: AllPostsTableComponent
+      }
+    ]
+  },
+  {
+    path: 'example',
+    component: ExampleComponent
   }
 ]
 @NgModule({
@@ -115,6 +173,17 @@ const Paths: Route[] = [
     CategoryAllPostsComponent,
     AdminPanelComponent,
     LoginComponent,
+    MainComponent,
+    CategoryTableComponent,
+    ExampleComponent,
+    AuthorsTableComponent,
+    ReadNextTableComponent,
+    KnowMoreTableComponent,
+    CategoryAllTableComponent,
+    MinCategoryTableComponent,
+    MinTagsTableComponent,
+    AuthorPostsTableComponent,
+    AllPostsTableComponent,
   ],
   imports: [
     BrowserModule,
@@ -122,11 +191,17 @@ const Paths: Route[] = [
     HttpClientModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
-    MatFormFieldModule, 
+    MatFormFieldModule,
     MatInputModule, 
     MatButtonModule, 
     MatIconModule,
-    MatDividerModule
+    MatDividerModule,
+    MatSidenavModule,
+    MatSelectModule,
+    MatTreeModule, 
+    MatButtonModule,
+    MatIconModule,
+    MatTableModule
   ],
   providers: [],
   bootstrap: [AppComponent]

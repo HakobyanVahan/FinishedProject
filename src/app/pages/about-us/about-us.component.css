@@ -9,6 +9,10 @@
     --ligthYellow: #FBF6FEA;
 }
 
+a{
+    text-decoration: none;
+}
+
 .about-us-header-container {
     max-width: 1133px;
     background-color: #FFFFFF;
