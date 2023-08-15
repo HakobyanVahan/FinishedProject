@@ -16,8 +16,16 @@
                     <img src="{{item.img}}" alt="">
                 </td>
                 <td>{{item.title}}</td>
-                <td>{{item.subtitle}}</td>
-                <td>{{item.paragraph}}</td>
+                <td>
+                    <textarea disabled>
+                        {{item.subtitle}}
+                    </textarea>
+                </td>
+                <td>
+                    <textarea disabled>
+                        {{item.paragraph}}
+                    </textarea>
+                </td>
                 <td>
                     <button class="deleteButton" (click)="openConfirmWindow(item)">
                         <img src="assets/img/delete.png" alt="" class="deleteIcon">

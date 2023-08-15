@@ -1,5 +1,7 @@
+import { NgForOf, NgStyle } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
+import { MatInputModule } from '@angular/material/input';
 import { Myposts } from 'src/app/Models/myposts';
 import { RequestService } from 'src/app/services/request.service';
 import { enviroment } from 'src/environments/environment';
@@ -7,7 +9,9 @@ import { enviroment } from 'src/environments/environment';
 @Component({
   selector: 'app-category-all-table',
   templateUrl: './category-all-table.component.html',
-  styleUrls: ['./category-all-table.component.css']
+  styleUrls: ['./category-all-table.component.css'],
+  standalone: true,
+  imports: [NgStyle, MatInputModule, ReactiveFormsModule, NgForOf] 
 })
 export class CategoryAllTableComponent implements OnInit{
   constructor(public service: RequestService, public fb: FormBuilder) { }

@@ -1,5 +1,5 @@
 <div class="global-category-item-parent">
-    <a [routerLink]="['/layout/category', item.id]" class="global-category-item" *ngFor="let item of data">
+    <a [routerLink]="['/category', item.id]" class="global-category-item" *ngFor="let item of data">
         <img src="{{item.img}}" alt="" class="global-category-item__icon">
         <h3 class="global-category-item__title">{{item.title}}</h3>
         <p class="global-category-item__paragraph">{{item.paragraph}}</p>

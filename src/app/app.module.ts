@@ -1,87 +1,61 @@
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { HttpClientModule } from "@angular/common/http";
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './Components/header/header.component';
 import { NavComponent } from './Components/header/nav/nav.component';
 import { LayoutComponent } from './Layout/layout/layout.component';
-import { FooterComponent } from './Components/footer/footer.component';
-import { HomeComponent } from './pages/home/home.component';
-import { CategoryComponent } from './Components/category/category.component';
-import { AuthorsComponent } from './Components/authors/authors.component';
-import { AsideComponent } from './Components/aside/aside.component';
-import { AllpostsComponent } from './Components/allposts/allposts.component';
-import { BlogComponent } from './pages/blog/blog.component';
 import { Route, RouterModule } from '@angular/router';
-import { AllpostsslideComponent } from './Components/allpostsslide/allpostsslide.component';
-import { BlogpostComponent } from './pages/blogpost/blogpost.component';
-import { ReadnextComponent } from './Components/readnext/readnext.component';
-import { AboutUsComponent } from './pages/about-us/about-us.component';
-import { KnowMoreComponent } from './Components/know-more/know-more.component';
-import { CategorypageComponent } from './pages/categorypage/categorypage.component';
-import { MinCategoryComponent } from './Components/min-category/min-category.component';
-import { MinTagsComponent } from './Components/min-tags/min-tags.component';
-import { AuthorComponent } from './pages/author/author.component';
-import { OneAuthorsComponent } from './Components/one-authors/one-authors.component';
-import { MypostscomComponent } from './Components/mypostscom/mypostscom.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { PrivacypolicyComponent } from './pages/privacypolicy/privacypolicy.component';
-import { CategoryAllPostsComponent } from './Components/category-all-posts/category-all-posts.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AdminPanelComponent } from './pages/admin-panel/admin-panel.component';
 import { LoginComponent } from './pages/login/login.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MatIconModule} from '@angular/material/icon';
-import {MatButtonModule} from '@angular/material/button';
-import {MatInputModule} from '@angular/material/input';
-import {MatFormFieldModule} from '@angular/material/form-field';
-import {MatDividerModule} from '@angular/material/divider';
-import {MatSelectModule} from '@angular/material/select';
-import {MatSidenavModule} from '@angular/material/sidenav';
-import {MatTreeModule} from '@angular/material/tree';
-import { MainComponent } from './pages/admin-panel/main/main.component';
-import { CategoryTableComponent } from './pages/admin-panel/main/category-table/category-table.component';
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
+import { MatSelectModule } from '@angular/material/select';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatInputModule } from '@angular/material/input';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatTreeModule } from '@angular/material/tree';
 import { ExampleComponent } from './pages/example/example.component';
-import {MatTableModule} from '@angular/material/table';
-import { AuthorsTableComponent } from './pages/admin-panel/main/authors-table/authors-table.component';
-import { ReadNextTableComponent } from './pages/admin-panel/main/read-next-table/read-next-table.component';
-import { KnowMoreTableComponent } from './pages/admin-panel/main/know-more-table/know-more-table.component';
-import { CategoryAllTableComponent } from './pages/admin-panel/main/category-all-table/category-all-table.component';
-import { MinCategoryTableComponent } from './pages/admin-panel/main/min-category-table/min-category-table.component';
+import { MatTableModule } from '@angular/material/table';
 import { MinTagsTableComponent } from './pages/admin-panel/main/min-tags-table/min-tags-table.component';
 import { AuthorPostsTableComponent } from './pages/admin-panel/main/author-posts-table/author-posts-table.component';
-import { AllPostsTableComponent } from './pages/admin-panel/main/all-posts-table/all-posts-table.component';
-
+import { StartComponent } from './pages/admin-panel/main/start/start.component';
+import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
+import { canactiveGuard } from './guards/canactive.guard';
 
 const Paths: Route[] = [
   {
-    path: 'layout',
+    path: '',
     component: LayoutComponent,
     children: [
       {
-        path: 'home',
-        component: HomeComponent
+        path: '',
+        loadChildren: () => import('./pages/home/home.module').then(m => m.HomeModule)
       },
       {
         path: 'blog',
-        component: BlogComponent
+        loadChildren: () => import('./pages/blog/blog/blog.module').then(m => m.BlogModule)
       },
       {
         path: 'blog-post/:id',
-        component: BlogpostComponent,
+        loadChildren: () => import('./pages/blogpost/blogpost/blogpost.module').then(m => m.BlogpostModule)
       },
       {
         path: 'about-us',
-        component: AboutUsComponent
+        loadChildren: () => import('./pages/about-us/about-us.module').then(m => m.AboutUsModule)
       },
       {
         path: 'category/:id',
-        component: CategorypageComponent
+        loadChildren: () => import('./pages/categorypage/categorypage/categorypage.module').then(m => m.CategorypageModule)
       },
       {
         path: 'author/:id',
-        component: AuthorComponent
+        loadChildren: () => import('./pages/author/author/author.module').then(m => m.AuthorModule)
       },
       {
         path: 'contact',
@@ -95,113 +69,92 @@ const Paths: Route[] = [
   },
   {
     path: 'login',
-    component: LoginComponent
+    component: LoginComponent,
   },
   {
     path: 'admin-panel',
     component: AdminPanelComponent,
-    children:[
+    canActivate: [canactiveGuard],
+    children: [
+      {
+        path: '',
+        component: StartComponent
+      },
       {
         path: 'category-table',
-        component: CategoryTableComponent
+        loadChildren: () => import('./pages/admin-panel/main/category-table/category-table-module/category-table-module.module').then(m => m.CategoryTableModuleModule)
       },
       {
         path: 'authors-table',
-        component: AuthorsTableComponent
+        loadChildren: () => import('./pages/admin-panel/main/authors-table/authors-table-module/authors-table-module.module').then(m => m.AuthorsTableModuleModule)
       },
       {
         path: 'read-next-table',
-        component: ReadNextTableComponent
+        loadChildren: () => import('./pages/admin-panel/main/read-next-table/read-next-table-module/read-next-table-module.module').then(m => m.ReadNextTableModuleModule)
       },
       {
         path: 'know-more-table',
-        component: KnowMoreTableComponent
+        loadChildren: () => import('./pages/admin-panel/main/category-all-table/category-all-table-module/category-all-table-module.module').then(m => m.CategoryAllTableModuleModule)
       },
       {
         path: 'category-all-table',
-        component: CategoryAllTableComponent
+        loadChildren: () => import('./pages/admin-panel/main/category-all-table/category-all-table-module/category-all-table-module.module').then(m => m.CategoryAllTableModuleModule)
       },
       {
         path: 'min-category-table',
-        component: MinCategoryTableComponent
+        loadChildren: () => import('./pages/admin-panel/main/min-category-table/min-category-table-module/min-category-table-module.module').then(m => m.MinCategoryTableModuleModule)
       },
       {
         path: 'min-tags-table',
-        component: MinTagsTableComponent
+        loadChildren: () => import('./pages/admin-panel/main/min-tags-table/min-tags-module/min-tags-module.module').then(m => m.MinTagsModuleModule)
       },
       {
         path: 'author-posts-table',
-        component: AuthorPostsTableComponent
+        loadChildren: () => import('./pages/admin-panel/main/author-posts-table/author-posts-table-module/author-posts-table-module.module').then(m => m.AuthorPostsTableModuleModule)
       },
       {
         path: 'all-posts-table',
-        component: AllPostsTableComponent
+        loadChildren: () => import('./pages/admin-panel/main/all-posts-table/all-posts-table-module/all-posts-table-module.module').then(m => m.AllPostsTableModuleModule)
       }
     ]
   },
   {
     path: 'example',
     component: ExampleComponent
+  },
+  {
+    path: '**',
+    component: PageNotFoundComponent
   }
 ]
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
     NavComponent,
-    LayoutComponent,
-    FooterComponent,
-    HomeComponent,
-    CategoryComponent,
-    AuthorsComponent,
-    AsideComponent,
-    AllpostsComponent,
-    BlogComponent,
-    AllpostsslideComponent,
-    BlogpostComponent,
-    ReadnextComponent,
-    AboutUsComponent,
-    KnowMoreComponent,
-    CategorypageComponent,
-    MinCategoryComponent,
-    MinTagsComponent,
-    AuthorComponent,
-    OneAuthorsComponent,
-    MypostscomComponent,
     ContactComponent,
     PrivacypolicyComponent,
-    CategoryAllPostsComponent,
-    AdminPanelComponent,
     LoginComponent,
-    MainComponent,
-    CategoryTableComponent,
     ExampleComponent,
-    AuthorsTableComponent,
-    ReadNextTableComponent,
-    KnowMoreTableComponent,
-    CategoryAllTableComponent,
-    MinCategoryTableComponent,
-    MinTagsTableComponent,
-    AuthorPostsTableComponent,
-    AllPostsTableComponent,
+    StartComponent,
+    PageNotFoundComponent,
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(Paths),
+    RouterModule.forRoot(Paths, { scrollPositionRestoration: 'enabled' }),
     HttpClientModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
     MatFormFieldModule,
-    MatInputModule, 
-    MatButtonModule, 
+    MatInputModule,
+    MatButtonModule,
     MatIconModule,
     MatDividerModule,
     MatSidenavModule,
     MatSelectModule,
-    MatTreeModule, 
+    MatTreeModule,
     MatButtonModule,
     MatIconModule,
-    MatTableModule
+    MatTableModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

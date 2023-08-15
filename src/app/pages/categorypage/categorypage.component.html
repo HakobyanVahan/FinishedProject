@@ -3,12 +3,12 @@
         <div class="category-header-container">
             <div class="category-header-inner">
                 <div class="category-header-textBlock">
-                    <h1 class="category-title">{{data[id].title}}</h1>
+                    <h1 class="category-title">{{data.title}}</h1>
                     <p class="category-paragraph">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                         labore.
                     </p>
-                    <p class="category-nameless">Blog > {{data[id].title}}</p>
+                    <p class="category-nameless">Blog > {{data.title}}</p>
                 </div>
             </div>
         </div>
@@ -18,7 +18,7 @@
             <div class="category-section-inner">
                 <div class="category-section-items">
                     <div class="category-section__item">
-                        <app-category-all-posts [categoryData]="data" [categoryId]="id"></app-category-all-posts>
+                        <app-category-all-posts [categoryData]="data"></app-category-all-posts>
                     </div>
                 </div>
                 <div class="categories">

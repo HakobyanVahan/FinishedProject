@@ -1,5 +1,7 @@
+import { NgForOf, NgStyle } from '@angular/common';
 import { Component } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
+import { MatInputModule } from '@angular/material/input';
 import { Myposts } from 'src/app/Models/myposts';
 import { RequestService } from 'src/app/services/request.service';
 import { enviroment } from 'src/environments/environment';
@@ -7,7 +9,9 @@ import { enviroment } from 'src/environments/environment';
 @Component({
   selector: 'app-author-posts-table',
   templateUrl: './author-posts-table.component.html',
-  styleUrls: ['./author-posts-table.component.css']
+  styleUrls: ['./author-posts-table.component.css'],
+  standalone: true,
+  imports: [NgStyle, MatInputModule, ReactiveFormsModule, NgForOf] 
 })
 export class AuthorPostsTableComponent {
   constructor(public service: RequestService, public fb: FormBuilder) { }
@@ -42,7 +46,7 @@ export class AuthorPostsTableComponent {
     this.item = item;
 
     this.form.patchValue({
-      img: 'assets/img/categories.png',
+      img: 'assets/img/post.png',
       subtitle: this.item?.subtitle,
       title: this.item?.title,
       paragraph: this.item?.paragraph
@@ -55,7 +59,7 @@ export class AuthorPostsTableComponent {
     this.putOrPost = false;
     this.form.reset()
     this.form.patchValue({
-      img: 'assets/img/categories.png'
+      img: 'assets/img/post.png'
     })
   }
 

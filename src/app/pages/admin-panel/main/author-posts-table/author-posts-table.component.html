@@ -16,8 +16,16 @@
                     <img src="{{item.img}}" alt="">
                 </td>
                 <td>{{item.subtitle}}</td>
-                <td>{{item.title}}</td>
-                <td>{{item.paragraph}}</td>
+                <td>
+                    <textarea disabled>
+                        {{item.title}}
+                    </textarea>
+                </td>
+                <td>
+                    <textarea disabled>
+                        {{item.paragraph}}
+                    </textarea>
+                </td>
                 <td>
                     <button class="deleteButton" (click)="openConfirmWindow(item)">
                         <img src="assets/img/delete.png" alt="" class="deleteIcon">
@@ -35,7 +43,8 @@
 <div class="all-screen" [ngStyle]="{ 'display': isTrue ? 'flex' : 'none' }">
     <div class="block">
         <div class="block-text">
-            <h2 class="block-text__title">Author Posts</h2>
+            <h2 class="block-text__title">Author</h2> 
+            <h2 class="block-text__title">Posts</h2>
             <p class="block-text__paragraph">Changes for the AUTHORS POSTS component</p>
         </div>
     </div>

@@ -2,7 +2,7 @@
     <div class="general-nav-container">
         <div class="general-nav-inner">
             <div class="general-nav-logoBlock">
-                <a routerLink="/layout/home" class="general-nav-logoBlock__link">
+                <a routerLink="/" class="general-nav-logoBlock__link">
                     <svg xmlns="http://www.w3.org/2000/svg" width="140" height="29" viewBox="0 0 140 29" fill="none">
                         <g clip-path="url(#clip0_1201_532)">
                             <path
@@ -47,28 +47,28 @@
                 </label>
                 <input type="checkbox" hidden id="op-menu" class="op-checkbox">
                 <div class="general-nav-hidden__links-block">
-                    <a routerLink="/layout/home" class="general-nav-linksBlock__link">Home</a>
-                    <a routerLink="/layout/blog" class="general-nav-linksBlock__link">Blog</a>
-                    <a routerLink="/layout/about-us" class="general-nav-linksBlock__link">About Us</a>
-                    <a routerLink="/layout/contact" class="general-nav-linksBlock__link">Contact Us</a>
-                    <a routerLink="/layout/privacy-policy" class="general-nav-linksBlock__link">Privacy Policy</a>
+                    <a routerLink="/" class="general-nav-linksBlock__link">Home</a>
+                    <a routerLink="/blog" class="general-nav-linksBlock__link">Blog</a>
+                    <a routerLink="/about-us" class="general-nav-linksBlock__link">About Us</a>
+                    <a routerLink="/contact" class="general-nav-linksBlock__link">Contact Us</a>
+                    <a routerLink="/privacy-policy" class="general-nav-linksBlock__link">Privacy Policy</a>
                 </div>
             </div>
             <div class="general-nav-linksBlock">
                 <div class="general-nav-linksBlock__blocks">
-                    <a routerLink="/layout/home" class="general-nav-linksBlock__link">Home</a>
+                    <a routerLink="/" class="general-nav-linksBlock__link">Home</a>
                 </div>
                 <div class="general-nav-linksBlock__blocks">
-                    <a routerLink="/layout/blog" class="general-nav-linksBlock__link">Blog</a>
+                    <a routerLink="/blog" class="general-nav-linksBlock__link">Blog</a>
                 </div>
                 <div class="general-nav-linksBlock__blocks">
-                    <a routerLink="/layout/about-us" class="general-nav-linksBlock__link">About Us</a>
+                    <a routerLink="/about-us" class="general-nav-linksBlock__link">About Us</a>
                 </div>
                 <div class="general-nav-linksBlock__blocks">
-                    <a routerLink="/layout/contact" class="general-nav-linksBlock__link">Contact Us</a>
+                    <a routerLink="/contact" class="general-nav-linksBlock__link">Contact Us</a>
                 </div>
                 <div class="general-nav-linksBlock__blocks">
-                    <button class="general-nav-linksBlock__btn">Subscribe</button>
+                    <button class="general-nav-linksBlock__btn" (click)="scrollToBottom()">Subscribe</button>
                 </div>
             </div>
         </div>

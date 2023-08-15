@@ -1,5 +1,7 @@
+import { NgIf } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 import { Footer } from 'src/app/Models/footer';
 import { RequestService } from 'src/app/services/request.service';
 import { enviroment } from 'src/environments/environment';
@@ -7,7 +9,9 @@ import { enviroment } from 'src/environments/environment';
 @Component({
   selector: 'app-footer',
   templateUrl: './footer.component.html',
-  styleUrls: ['./footer.component.css']
+  styleUrls: ['./footer.component.css'],
+  standalone: true,
+  imports: [ReactiveFormsModule, NgIf, RouterModule]
 })
 export class FooterComponent implements OnInit {
   constructor(public fb: FormBuilder, public service: RequestService) { }

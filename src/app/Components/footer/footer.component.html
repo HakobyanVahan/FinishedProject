@@ -3,7 +3,7 @@
         <div class="general-footer-inner">
             <div class="general-footer-navBlock">
                 <div class="general-footer-logoBlock">
-                    <a href="" class="general-footer-logoBlock__link">
+                    <a routerLink="/" class="general-footer-logoBlock__link">
                         <svg xmlns="http://www.w3.org/2000/svg" width="140" height="29" viewBox="0 0 140 29"
                             fill="none">
                             <g clip-path="url(#clip0_1201_532)">
@@ -58,11 +58,11 @@
                     </div>
                 </div>
                 <div class="general-footer-linksBlock general-nav-linksBlock">
-                    <a routerLink="/layout/home" class="general-footer-link">Home</a>
-                    <a routerLink="/layout/blog" class="general-footer-link">Blog</a>
-                    <a routerLink="/layout/about-us" class="general-footer-link">About Us</a>
-                    <a routerLink="/layout/contact" class="general-footer-link">Contact Us</a>
-                    <a routerLink="/layout/privacy-policy" class="general-footer-link">Privacy Policy</a>
+                    <a routerLink="/" class="general-footer-link">Home</a>
+                    <a routerLink="/blog" class="general-footer-link">Blog</a>
+                    <a routerLink="/about-us" class="general-footer-link">About Us</a>
+                    <a routerLink="/contact" class="general-footer-link">Contact Us</a>
+                    <a routerLink="/privacy-policy" class="general-footer-link">Privacy Policy</a>
                 </div>
             </div>
             <div class="cta-block">
@@ -73,11 +73,9 @@
                 </div>
                 <div class="cta-formBlock" [formGroup]="form">
                     <form class="cta-form" name="subscribe">
-                        <label for="">
-                            <span class="war-message" *ngIf="form.get('email')?.hasError('pattern')">Fill in correctly</span>
-                            <input formControlName="email" type="email" name="email-address" class="cta-form__email"
+                        <span class="war-message" *ngIf="form.get('email')?.hasError('pattern')">Fill in correctly</span>
+                        <input formControlName="email" type="email" name="email-address" class="cta-form__email"
                                 placeholder="Enter Your Email">
-                        </label>
                         <button class="cta-form__button general-button" [disabled]="form.invalid" (click)="send()">Subscribe</button>
                         <button class="cta-form__button general-button hidden-button" [disabled]="form.invalid" (click)="send()">Subscribe</button>
                     </form>

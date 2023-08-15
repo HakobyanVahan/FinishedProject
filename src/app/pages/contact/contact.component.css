@@ -183,6 +183,8 @@ textarea {
     color: #232536;
     resize: none;
     margin-bottom: 16px;
+    border: 0.7px solid;
+    text-align: left;
 }
 
 

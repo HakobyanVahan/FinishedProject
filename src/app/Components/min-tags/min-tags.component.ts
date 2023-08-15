@@ -1,3 +1,4 @@
+import { NgFor, NgForOf } from '@angular/common';
 import { Component, Input, OnInit } from '@angular/core';
 import { Mintags } from 'src/app/Models/min-tags';
 import { RequestService } from 'src/app/services/request.service';
@@ -6,7 +7,9 @@ import { enviroment } from 'src/environments/environment';
 @Component({
   selector: 'app-min-tags',
   templateUrl: './min-tags.component.html',
-  styleUrls: ['./min-tags.component.css']
+  styleUrls: ['./min-tags.component.css'],
+  standalone: true,
+  imports: [NgForOf]
 })
 export class MinTagsComponent implements OnInit{
   @Input() minTagsInner!: Mintags;

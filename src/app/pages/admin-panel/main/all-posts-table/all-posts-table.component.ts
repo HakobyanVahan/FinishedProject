@@ -1,5 +1,8 @@
+import { NgForOf, NgStyle } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
+import { MatFormField, MatLabel } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
 import { Allposts } from 'src/app/Models/allposts';
 import { RequestService } from 'src/app/services/request.service';
 import { enviroment } from 'src/environments/environment';
@@ -7,7 +10,9 @@ import { enviroment } from 'src/environments/environment';
 @Component({
   selector: 'app-all-posts-table',
   templateUrl: './all-posts-table.component.html',
-  styleUrls: ['./all-posts-table.component.css']
+  styleUrls: ['./all-posts-table.component.css'],
+  standalone: true,
+  imports: [NgStyle, MatInputModule, ReactiveFormsModule, NgForOf] 
 })
 export class AllPostsTableComponent implements OnInit{
   constructor(public service: RequestService, public fb: FormBuilder) { }
@@ -49,10 +54,10 @@ export class AllPostsTableComponent implements OnInit{
       author: this.item?.author,
       date: this.item?.date,
       title: this.item?.title,
-      img: this.item?.img,
-      icon: this.item?.icon,
+      img: 'assets/img/statistics.png',
+      icon: 'assets/img/statistics.png',
       subtitle: this.item?.subtitle,
-      secondImage: this.item?.img2,
+      secondImage: 'assets/img/statistics.png',
       paragraph: this.item?.paragraph,
     })
   }
@@ -63,7 +68,9 @@ export class AllPostsTableComponent implements OnInit{
     this.putOrPost = false;
     this.form.reset()
     this.form.patchValue({
-      img: 'assets/img/categories.png'
+      img: 'assets/img/statistics.png',
+      icon: 'assets/img/statistics.png',
+      secondImage:'assets/img/statistics.png',
     })
   }
 

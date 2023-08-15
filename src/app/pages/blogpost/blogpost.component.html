@@ -2,27 +2,30 @@
     <header class="blog-post-header">
         <div class="blog-post-header-container">
             <div class="blog-post-header-inner">
-                <div class="blog-post-header-text" *ngIf="data && data.length > 0">
+                <div class="blog-post-header-text">
                     <div class="blog-post-account">
                         <img src="assets/img/Profilepicture.png" alt="" class="blog-post__img">
                         <div class="blog-post-account-text" >
                             <h3 class="blog-post-account__title">
-                                <a>{{data[id].author}}</a>
+                                <a>{{data.author}}</a>
                             </h3>
-                            <p class="blog-post-account__date">{{data[id].date}}</p>
+                            <p class="blog-post-account__date">{{data.date}}</p>
                         </div>
                     </div>
                     <h2 class="blog-post-header-text__title">
-                        {{data[id].title}}
+                        {{data.title}}
                     </h2>
-                    <img src="{{data[id].icon}}" alt="" class="icon">
+                    <div class="icon-subtitle">
+                        <img src="{{data.icon}}" alt="" class="icon">
+                        <h2 class="subtitle">{{data.subtitle}}</h2>
+                    </div>
                 </div>
             </div>
         </div>
     </header>
     <section class="picture">
-        <div class="picture-container" *ngIf="data && data.length > 0">
-            <img src="{{data[id].img}}" alt="" class="picture-image">
+        <div class="picture-container">
+            <img src="{{data.img}}" alt="" class="picture-image">
         </div>
     </section>
     <section class="text-block">

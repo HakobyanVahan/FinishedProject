@@ -1,3 +1,4 @@
+import { NgFor, NgForOf } from '@angular/common';
 import { Component, Input, OnInit } from '@angular/core';
 import { Readnext } from 'src/app/Models/readnext';
 import { RequestService } from 'src/app/services/request.service';
@@ -6,7 +7,9 @@ import { enviroment } from 'src/environments/environment';
 @Component({
   selector: 'app-readnext',
   templateUrl: './readnext.component.html',
-  styleUrls: ['./readnext.component.css']
+  styleUrls: ['./readnext.component.css'],
+  standalone: true,
+  imports: [NgForOf]
 })
 export class ReadnextComponent implements OnInit{
   constructor(public service: RequestService){}

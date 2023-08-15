@@ -1,5 +1,7 @@
+import { NgForOf, NgStyle } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
+import { MatInputModule } from '@angular/material/input';
 import { Readnext } from 'src/app/Models/readnext';
 import { RequestService } from 'src/app/services/request.service';
 import { enviroment } from 'src/environments/environment';
@@ -7,7 +9,9 @@ import { enviroment } from 'src/environments/environment';
 @Component({
   selector: 'app-read-next-table',
   templateUrl: './read-next-table.component.html',
-  styleUrls: ['./read-next-table.component.css']
+  styleUrls: ['./read-next-table.component.css'],
+  standalone: true,
+  imports: [NgStyle, MatInputModule, ReactiveFormsModule, NgForOf] 
 })
 export class ReadNextTableComponent implements OnInit{
   constructor(public service: RequestService, public fb: FormBuilder) { }

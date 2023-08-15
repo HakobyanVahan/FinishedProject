@@ -30,6 +30,7 @@
     line-height: 40px;
     letter-spacing: -1px;
     color: #232536;
+    margin: 0 !important;
 }
 
 @media screen and (max-width: 700px) {

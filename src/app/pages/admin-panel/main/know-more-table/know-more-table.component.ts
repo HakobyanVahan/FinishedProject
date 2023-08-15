@@ -1,5 +1,7 @@
+import { NgForOf, NgStyle } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
+import { MatInputModule } from '@angular/material/input';
 import { Knowmore } from 'src/app/Models/know-more';
 import { Readnext } from 'src/app/Models/readnext';
 import { RequestService } from 'src/app/services/request.service';
@@ -8,9 +10,11 @@ import { enviroment } from 'src/environments/environment';
 @Component({
   selector: 'app-know-more-table',
   templateUrl: './know-more-table.component.html',
-  styleUrls: ['./know-more-table.component.css']
+  styleUrls: ['./know-more-table.component.css'],
+  standalone: true,
+  imports: [NgStyle, MatInputModule, ReactiveFormsModule, NgForOf] 
 })
-export class KnowMoreTableComponent implements OnInit{
+export class KnowMoreTableComponent implements OnInit {
   constructor(public service: RequestService, public fb: FormBuilder) { }
 
   form!: FormGroup;
@@ -81,9 +85,9 @@ export class KnowMoreTableComponent implements OnInit{
     this.isTrue = false;
   }
 
-  confirmation(id: number | undefined){
+  confirmation(id: number | undefined) {
     this.service.deleteRequest(this.url + `/${id}`).subscribe(() => { })
-    this.openConfirm = false
     this.dataRequest();
+    this.openConfirm = false
   }
 }

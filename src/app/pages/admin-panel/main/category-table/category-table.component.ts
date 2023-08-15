@@ -1,5 +1,7 @@
+import { NgForOf, NgStyle } from '@angular/common';
 import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
+import { MatInput, MatInputModule } from '@angular/material/input';
 import { ActivatedRoute, Data } from '@angular/router';
 import { Category } from 'src/app/Models/category';
 import { RequestService } from 'src/app/services/request.service';
@@ -8,7 +10,9 @@ import { enviroment } from 'src/environments/environment';
 @Component({
   selector: 'app-category-table',
   templateUrl: './category-table.component.html',
-  styleUrls: ['./category-table.component.css']
+  styleUrls: ['./category-table.component.css'],
+  standalone: true,
+  imports: [NgStyle, MatInputModule, ReactiveFormsModule, NgForOf]
 })
 export class CategoryTableComponent implements OnInit {
   constructor(public service: RequestService, public fb: FormBuilder) { }

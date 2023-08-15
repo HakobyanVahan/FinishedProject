@@ -1,5 +1,7 @@
+import { NgForOf, NgStyle } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
+import { MatInputModule } from '@angular/material/input';
 import { Authors } from 'src/app/Models/authors';
 import { RequestService } from 'src/app/services/request.service';
 import { enviroment } from 'src/environments/environment';
@@ -7,7 +9,9 @@ import { enviroment } from 'src/environments/environment';
 @Component({
   selector: 'app-authors-table',
   templateUrl: './authors-table.component.html',
-  styleUrls: ['./authors-table.component.css']
+  styleUrls: ['./authors-table.component.css'],
+  standalone: true,
+  imports: [NgStyle, MatInputModule, ReactiveFormsModule, NgForOf]
 })
 export class AuthorsTableComponent implements OnInit{
   constructor(public service: RequestService, public fb: FormBuilder) { }
@@ -57,7 +61,8 @@ export class AuthorsTableComponent implements OnInit{
     this.putOrPost = false;
     this.form.reset()
     this.form.patchValue({
-      img: 'assets/img/writer.png'
+      img: 'assets/img/writer.png',
+      img2: 'assets/img/writer.png',
     })
   }
 

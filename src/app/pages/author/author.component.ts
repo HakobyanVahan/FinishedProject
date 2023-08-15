@@ -1,16 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import { Allposts } from 'src/app/Models/allposts';
-import { Allpostsslide } from 'src/app/Models/apppostsslide';
-import { Oneauthor } from 'src/app/Models/one-author';
-import { ActivatedRoute } from '@angular/router';
-import { Authors } from 'src/app/Models/authors';
-import { RequestService } from 'src/app/services/request.service';
-import { enviroment } from 'src/environments/environment';
+import { MypostscomComponent } from 'src/app/Components/mypostscom/mypostscom.component';
+import { OneAuthorsComponent } from 'src/app/Components/one-authors/one-authors.component';
 
 @Component({
   selector: 'app-author',
   templateUrl: './author.component.html',
-  styleUrls: ['./author.component.css']
+  styleUrls: ['./author.component.css'],
+  standalone: true,
+  imports:[OneAuthorsComponent, MypostscomComponent]
 })
 export class AuthorComponent{
 

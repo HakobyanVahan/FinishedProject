@@ -1,0 +1,20 @@
+.title-block{
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title-parent{
+    width: 95%;
+    padding: 150px 0;
+    border:#656daf dashed;
+    text-align: center;
+}
+
+.main-title{
+    margin: 0 !important;
+    font-size: 35px;
+    font-family: 'Space Grotesk', sans-serif;
+}

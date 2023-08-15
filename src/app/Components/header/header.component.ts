@@ -1,10 +1,15 @@
 import { Component } from '@angular/core';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.css']
+  styleUrls: ['./header.component.css'],
+  standalone: true,
+  imports: [RouterModule]
 })
 export class HeaderComponent {
-
+  scrollToBottom(){
+    window.scrollTo({top:document.body.scrollHeight, behavior: 'smooth'})
+  }
 }

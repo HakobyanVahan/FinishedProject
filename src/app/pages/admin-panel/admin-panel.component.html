@@ -56,6 +56,10 @@
                 </div>
                 Author Posts
             </a>
+            <a class="log-out components" (click)="openLogOutConfirm()">
+                <span>Log Out</span>
+                <img src="assets/img/log-out.png" alt="" class="log-out__img">
+            </a>
         </div>
     </mat-drawer>
     <mat-drawer-content>
@@ -74,5 +78,14 @@
             </header>
         </div>
         <app-main class="main"></app-main>
+        <div class="log-out-confirm" #logoutconfirm>
+            <div class="log-out-confirm__child">
+                <img src="assets/img/logoutconfirm.png" alt="" class="confirm__image">
+                <h2 class="log-out-confirm__first-title">Oh no! You're leaving...</h2>
+                <h2 class="log-out-confirm__second-title">Are you sure?</h2>
+                <button class="log-out__cancelation" (click)="cancel()">Naah, Just Kidding</button>
+                <button class="log-out__confirmation" (click)="logOut()">Yes, Log Me Out</button>
+            </div>
+        </div>
     </mat-drawer-content>
 </mat-drawer-container>

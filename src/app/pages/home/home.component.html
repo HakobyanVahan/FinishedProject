@@ -45,10 +45,10 @@
                 <div class="all-posts">
                     <div class="all-posts-titleLink">
                         <h2 class="all-posts__title">All Posts</h2>
-                        <a routerLink="/layout/blog" class="all-posts__links">View All</a>
+                        <a routerLink="/blog" class="all-posts__links">View All</a>
                     </div>
                     <div class="all-posts-block">
-                        <a [routerLink]="['/layout/blog-post', item.id]" class="all-posts-block-item" *ngFor="let item of AllPostsData">
+                        <a [routerLink]="['/blog-post', item.id]" class="all-posts-block-item" *ngFor="let item of AllPostsData">
                             <app-allposts [allPostsInner]="item"></app-allposts>
                         </a>
                     </div>
@@ -130,7 +130,7 @@
             <div class="authors-inner">
                 <h2 class="authors-title">List of Authors</h2>
                 <div class="authors-items">
-                    <a [routerLink] = "['/layout/author', item.id]" class="authors-item" *ngFor="let item of data" >
+                    <a [routerLink] = "['/author', item.id]" class="authors-item" *ngFor="let item of data" >
                         <app-authors [authorsInner]="item"></app-authors>
                     </a>    
                 </div>

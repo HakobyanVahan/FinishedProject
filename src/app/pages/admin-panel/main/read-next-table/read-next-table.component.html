@@ -18,8 +18,16 @@
                 </td>
                 <td>{{item.name}}</td>
                 <td>{{item.date}}</td>
-                <td>{{item.title}}</td>
-                <td class="paragraph-td">{{item.paragraph}}</td>
+                <td>
+                    <textarea disabled>
+                        {{item.title}}
+                    </textarea>
+                </td>
+                <td>
+                    <textarea disabled>
+                        {{item.paragraph}}
+                    </textarea>
+                </td>
                 <td>
                     <button class="deleteButton" (click)="openConfirmWindow(item)">
                         <img src="assets/img/delete.png" alt="" class="deleteIcon">

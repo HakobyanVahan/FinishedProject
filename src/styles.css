@@ -1,10 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Chela+One&family=Mynerve&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Chela+One&family=VT323&display=swap');
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    word-break: break-word;
 }
 
 :root {
@@ -111,6 +109,7 @@
     font-weight: 700;
     font-size: 18px;
     cursor: pointer;
+    border-radius: 0;
 }
 
 .general-footer {
@@ -132,7 +131,6 @@
     justify-content: space-between;
     margin-bottom: 60px;
 }
-
 
 .general-footer-linksBlock {
     width: 434px;
@@ -199,8 +197,11 @@
     line-height: 24px;
     color: var(--black);
     border: none;
+    border-radius: 0;
     outline: none;
     transition: 0.5s background-color;
+    margin: 0;
+    width: auto;
 }
 
 .general-button:hover {
@@ -212,7 +213,7 @@
 }
 
 .cta-form {
-    width: 526PX;
+    width: 526px;
     display: flex;
     justify-content: space-between;
     position: relative;
@@ -259,15 +260,15 @@
 }
 
 .global-category-title {
-    font-family: 'Sen';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 48px;
-    letter-spacing: -2px;
+    font-family: 'Sen' !important;
+    font-style: normal !important;
+    font-weight: 700 !important;
+    font-size: 36px !important;
+    line-height: 48px !important;
+    letter-spacing: -2px !important;
     color: #232536;
     text-align: center;
-    margin-bottom: 60px;
+    margin-bottom: 60px !important;
 }
 
 .global-category-item-parent {
@@ -300,12 +301,12 @@
 }
 
 .global-category-item__title {
-    font-family: 'Sen';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 28px;
-    line-height: 40px;
-    letter-spacing: -1px;
+    font-family: 'Sen' !important;
+    font-style: normal !important;
+    font-weight: 700 !important;
+    font-size: 28px !important;
+    line-height: 40px !important;
+    letter-spacing: -1px !important;
     color: #232536;
     margin-bottom: 23px;
 }
@@ -327,25 +328,25 @@
 }
 
 .aside-title {
-    font-family: 'Sen';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 36px;
+    font-family: 'Sen' !important;
+    font-style: normal !important;
+    font-weight: 700 !important;
+    font-size: 36px !important;
     text-align: center;
-    letter-spacing: -2px;
+    letter-spacing: -2px !important;
     color: #232536;
-    margin-bottom: 16px;
+    margin-bottom: 16px !important;
 }
 
 .aside-paragraph {
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 28px;
+    font-family: 'Inter' !important;
+    font-style: normal !important;
+    font-weight: 400 !important;
+    font-size: 16px !important;
+    line-height: 28px !important;
     text-align: center;
     color: #6D6E76;
-    margin-bottom: 32px;
+    margin-bottom: 32px !important;
 }
 
 .aside-link {
@@ -363,14 +364,14 @@
 
 .authors-title {
     text-align: center;
-    font-family: 'Sen';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 48px;
-    letter-spacing: -2px;
+    font-family: 'Sen' !important;
+    font-style: normal !important;
+    font-weight: 700 !important;
+    font-size: 36px !important;
+    line-height: 48px !important;
+    letter-spacing: -2px !important;
     color: #232536;
-    margin-bottom: 60px;
+    margin-bottom: 60px !important;
 }
 
 .authors-item__img {
@@ -439,7 +440,14 @@
 /* Admin Components styles */
 
 app-main>.ng-star-inserted {
-    width: 80%;
+    width: 93%;
+}
+
+app-login {
+    background-image: url('assets/img/loginbackground.jpg');
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 td,
@@ -448,6 +456,7 @@ th {
     font-family: 'Sen';
     padding: 10px;
     text-align: center;
+    font-size: 20px;
 }
 
 th {
@@ -494,16 +503,16 @@ table {
     justify-content: center;
 }
 
-::ng-deep .block-text__title {
-    font-family: 'Mynerve', cursive;
-    font-size: 100px;
-    margin-bottom: 70px;
+.block-text__title {
+    font-family: 'Mynerve', cursive !important;
+    font-size: 100px !important;
+    margin-bottom: 70px !important;
 }
 
 .block-text__paragraph {
-    font-family: 'VT323', monospace;
-    font-size: 40px;
-    line-height: 40px;
+    font-family: 'VT323', monospace !important;
+    font-size: 40px !important;
+    line-height: 40px !important;
 }
 
 .second-block {
@@ -566,7 +575,7 @@ button {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: red;
+    background: #EDC14A;
     padding: 5px;
     width: 200px;
     margin: auto;
@@ -620,6 +629,17 @@ button {
 
 .titletd {
     width: 50%;
+}
+
+textarea {
+    resize: none;
+    border: none;
+    background: none;
+    font-family: 'Sen';
+    font-size: 20px;
+    width: 100%;
+    white-space: wrap;
+    text-align: center;
 }
 
 @media screen and (max-width:950px) {
@@ -755,3 +775,8 @@ button {
         font-size: 20px;
     }
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Chela+One&family=Mynerve&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chela+One&family=VT323&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chela+One&family=Space+Grotesk:wght@300&family=VT323&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Risque&display=swap');

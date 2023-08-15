@@ -1,5 +1,7 @@
+import { NgForOf, NgStyle } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
+import { MatInputModule } from '@angular/material/input';
 import { Minicategory } from 'src/app/Models/mini-category';
 import { RequestService } from 'src/app/services/request.service';
 import { enviroment } from 'src/environments/environment';
@@ -7,7 +9,10 @@ import { enviroment } from 'src/environments/environment';
 @Component({
   selector: 'app-min-category-table',
   templateUrl: './min-category-table.component.html',
-  styleUrls: ['./min-category-table.component.css']
+  styleUrls: ['./min-category-table.component.css'],
+  standalone: true,
+  imports: [NgStyle, MatInputModule, ReactiveFormsModule, NgForOf] 
+
 })
 export class MinCategoryTableComponent implements OnInit{
   constructor(public service: RequestService, public fb: FormBuilder) { }

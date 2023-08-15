@@ -84,7 +84,7 @@
             <div class="authors-inner">
                 <h2 class="authors-title">List of Authors</h2>
                 <div class="authors-items">
-                    <a [routerLink]="['/layout/author', item.id]" class="authors-item" *ngFor="let item of data" >
+                    <a *ngFor="let item of data" [routerLink]="['/author', item.id]" class="authors-item" >
                         <app-authors [authorsInner]="item"></app-authors>
                     </a>    
                 </div>

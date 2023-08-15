@@ -7,7 +7,7 @@
       "title": "Design tips for designers that cover everything you need",
       "subtitle": "Startup",
       "paragraph": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.",
-      "icon": "assets/img/group4.png",
+      "icon": "assets/img/startup.png",
       "img": "assets/img/bimage9.png",
       "img2": "assets/img/image8.jpg"
     },
@@ -19,19 +19,8 @@
       "title": "How to build rapport with your web design clients",
       "paragraph": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.",
       "img": "assets/img/bimage10.png",
-      "icon": "assets/img/Group1.png",
+      "icon": "assets/img/business.png",
       "img2": "assets/img/image9.jpg"
-    },
-    {
-      "id": 3,
-      "author": "John Doe",
-      "date": "Aug 23, 2021",
-      "subtitle": "Startup",
-      "title": "Logo design trends to avoid in 2022",
-      "paragraph": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.",
-      "img": "assets/img/bimage11.png",
-      "img2": "assets/img/image10.jpg",
-      "icon": "assets/img/Group3.png"
     },
     {
       "id": 4,
@@ -42,7 +31,7 @@
       "paragraph": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.",
       "img": "assets/img/bimage12.jpg",
       "img2": "assets/img/image11.jpg",
-      "icon": "assets/img/Group2.png"
+      "icon": "assets/img/technology.png"
     },
     {
       "id": 5,
@@ -53,7 +42,7 @@
       "paragraph": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.",
       "img": "assets/img/bimage9.png",
       "img2": "assets/img/image8.jpg",
-      "icon": "assets/img/Group2.png"
+      "icon": "assets/img/economy.png"
     }
   ],
   "categoryData": [
@@ -355,6 +344,13 @@
       "select": "Query Related",
       "textarea": "Hello world",
       "id": 1
+    },
+    {
+      "name": "ffhhg",
+      "email": "shgfgh@gmail.com",
+      "select": "Option",
+      "textarea": "dgjghkhj",
+      "id": 2
     }
   ]
 }
